@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scSeesContext name="'" org.eventb.core.scTarget="/Behavior Trees/BT_context.bcc" org.eventb.core.source="/Behavior Trees/BT_machine.bum|org.eventb.core.machineFile#BT_machine|org.eventb.core.seesContext#_1g4IwOsUEeyt1KpaR9H6nA"/>
+    <org.eventb.core.scInternalContext name="BT_context">
+        <org.eventb.core.scCarrierSet name="node_status" org.eventb.core.source="/Behavior Trees/BT_context.buc|org.eventb.core.contextFile#BT_context|org.eventb.core.carrierSet#_iscXMOsFEeyt1KpaR9H6nA" org.eventb.core.type="ℙ(node_status)"/>
+        <org.eventb.core.scCarrierSet name="NODES" org.eventb.core.source="/Behavior Trees/BT_context.buc|org.eventb.core.contextFile#BT_context|org.eventb.core.carrierSet#_u9oBsOsVEeyt1KpaR9H6nA" org.eventb.core.type="ℙ(NODES)"/>
+    </org.eventb.core.scInternalContext>
+    <org.eventb.core.scInvariant name="BT_contexu" org.eventb.core.label="inv0;" org.eventb.core.predicate="nodes∈NODES" org.eventb.core.source="/Behavior Trees/BT_machine.bum|org.eventb.core.machineFile#BT_machine|org.eventb.core.invariant#_OqmJwOsWEeyt1KpaR9H6nA" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scVariable name="nodes" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/Behavior Trees/BT_machine.bum|org.eventb.core.machineFile#BT_machine|org.eventb.core.variable#_JauyoOsWEeyt1KpaR9H6nA" org.eventb.core.type="NODES"/>
+    <org.eventb.core.scEvent name="BT_contexv" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/Behavior Trees/BT_machine.bum|org.eventb.core.machineFile#BT_machine|org.eventb.core.event#'">
+        <org.eventb.core.scAction name="'" org.eventb.core.assignment="nodes :∣ ⊤" org.eventb.core.label="GEN" org.eventb.core.source="/Behavior Trees/BT_machine.bum|org.eventb.core.machineFile#BT_machine|org.eventb.core.event#'"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="BT_contexw" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sequence_running" org.eventb.core.source="/Behavior Trees/BT_machine.bum|org.eventb.core.machineFile#BT_machine|org.eventb.core.event#_haQEoOsHEeyt1KpaR9H6nA"/>
+    <org.eventb.core.scEvent name="BT_contexx" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sequence_failure" org.eventb.core.source="/Behavior Trees/BT_machine.bum|org.eventb.core.machineFile#BT_machine|org.eventb.core.event#_haQrs-sHEeyt1KpaR9H6nA"/>
+    <org.eventb.core.scEvent name="BT_contexy" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sequence_success" org.eventb.core.source="/Behavior Trees/BT_machine.bum|org.eventb.core.machineFile#BT_machine|org.eventb.core.event#_haQruOsHEeyt1KpaR9H6nA"/>
+</org.eventb.core.scMachineFile>

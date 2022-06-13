@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="4">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
+        <org.eventb.core.poIdentifier name="node_status" org.eventb.core.type="ℙ(node_status)"/>
+        <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/BT_context.bpo|org.eventb.core.poFile#BT_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4"/>
+</org.eventb.core.poFile>

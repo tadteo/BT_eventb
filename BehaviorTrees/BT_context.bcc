@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scCarrierSet name="node_status" org.eventb.core.source="/Behavior Trees/BT_context.buc|org.eventb.core.contextFile#BT_context|org.eventb.core.carrierSet#_iscXMOsFEeyt1KpaR9H6nA" org.eventb.core.type="ℙ(node_status)"/>
+    <org.eventb.core.scCarrierSet name="NODES" org.eventb.core.source="/Behavior Trees/BT_context.buc|org.eventb.core.contextFile#BT_context|org.eventb.core.carrierSet#_u9oBsOsVEeyt1KpaR9H6nA" org.eventb.core.type="ℙ(NODES)"/>
+</org.eventb.core.scContextFile>
