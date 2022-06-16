@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+    <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="TYPE"/>
+    <org.eventb.core.axiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(TYPE,{ROOT}, {SEQUENCE}, {FALLBACK}, {CONDITION}, {ACTION})"/>
+    <org.eventb.core.constant name=")" org.eventb.core.identifier="ROOT"/>
+    <org.eventb.core.constant name="*" org.eventb.core.identifier="SEQUENCE"/>
+    <org.eventb.core.constant name="+" org.eventb.core.identifier="FALLBACK"/>
+    <org.eventb.core.constant name="," org.eventb.core.identifier="CONDITION"/>
+    <org.eventb.core.constant name="-" org.eventb.core.identifier="ACTION"/>
+    <org.eventb.core.constant name="." org.eventb.core.identifier="RUNNING"/>
+    <org.eventb.core.carrierSet name="/" org.eventb.core.identifier="RESULT"/>
+    <org.eventb.core.axiom name="0" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(RESULT, {RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})"/>
+    <org.eventb.core.constant name="1" org.eventb.core.identifier="SUCCESS"/>
+    <org.eventb.core.constant name="2" org.eventb.core.identifier="FAILURE"/>
+    <org.eventb.core.constant name="3" org.eventb.core.identifier="UNKNOWN"/>
+</org.eventb.core.contextFile>
