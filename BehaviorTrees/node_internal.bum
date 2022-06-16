@@ -1,5 +1,65 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1655378922304" org.eventb.texttools.text_representation="machine node_internal refines node&#10;&#10;events&#10;  event INITIALISATION&#10;  end&#10;&#10;  event ticked_sequence_continue&#10;    where&#10;      @grd1 type = SEQUENCE&#10;      @grd2 tick = TRUE&#10;      @grd3 result = UNKNOWN&#10;      @grd4 previous_child_status =  SUCCESS&#10;      @grd5 next_child ≠ ∅&#10;    then&#10;      @act1 next_child ⇒ tick????? // child_tick ⇒ ????&#10;  end&#10;&#10;  event ticked_sequence_failure&#10;  &#9; where&#10;      @grd1 type = SEQUENCE&#10;      @grd2 tick = TRUE&#10;      @grd3 result = UNKNOWN&#10;      @grd4 previous_child_status =  FAILURE&#10;    then&#10;   &#9;  @act1 result ≔ FAILURE&#10;  end&#10;&#10;  event ticked_sequence_running&#10;  &#9; where&#10;      @grd1 type = SEQUENCE&#10;      @grd2 tick = TRUE&#10;      @grd3 result = UNKNOWN&#10;      @grd4 previous_child_status =  RUNNING&#10;    then&#10;   &#9;  @act1 result ≔ RUNNING&#10;  end&#10;&#10;  event ticked_sequence_success&#10;    where&#10;      @grd1 type = SEQUENCE&#10;      @grd2 tick = TRUE&#10;      @grd3 result = UNKNOWN&#10;      @grd4 previous_child_status =  SUCCESS&#10;      @grd5 next_child = ∅&#10;    then&#10;      @act1 result ≔ SUCCESS&#10;  end&#10;&#10;  event ticked_fallback_running&#10;    where&#10;      @grd1 type = FALLBACK&#10;      @grd2 tick = TRUE&#10;      @grd3 result = UNKNOWN&#10;      @grd4 previous_child_status =  RUNNING&#10;    then&#10;      @act1 result ≔ RUNNING&#10;  end&#10;&#10;  event ticked_fallback_continue&#10;    where&#10;      @grd1 type = FALLBACK&#10;      @grd2 tick = TRUE&#10;      @grd3 result = UNKNOWN&#10;      @grd4 previous_child_status =  FAILURE&#10;      @grd5 next_child ≠ ∅&#10;    then&#10;   &#9;  @act1 next_child _tick ?????????&#10;  end&#10;&#10;  event ticked_fallback_failure&#10;  &#9; where&#10;      @grd1 type = FALLBACK&#10;      @grd2 tick = TRUE&#10;      @grd3 result = UNKNOWN&#10;      @grd4 previous_child_status =  FAILURE&#10;      @grd5 next_child = ∅&#10;    then&#10;   &#9;  @act1 result ≔ FAILURE&#10;  end&#10;&#10;  event ticked_sequence_success&#10;    where&#10;      @grd1 type = FALLBACK&#10;      @grd2 tick = TRUE&#10;      @grd3 result = UNKNOWN&#10;      @grd4 previous_child_status =  SUCCESS&#10;    then&#10;      @act1 result ≔ SUCCESS&#10;  end&#10;&#10;end&#10;" version="5">
     <org.eventb.core.refinesMachine name="(" org.eventb.core.target="node"/>
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION"/>
+    <org.eventb.core.event name=")" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_sequence_continue">
+        <org.eventb.core.guard name="'" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="type = SEQUENCE"/>
+        <org.eventb.core.guard name="(" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="tick = TRUE"/>
+        <org.eventb.core.guard name=")" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="result = UNKNOWN"/>
+        <org.eventb.core.guard name="*" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="previous_child_status =  SUCCESS"/>
+        <org.eventb.core.guard name="+" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="next_child ≠ ∅"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="next_child ⇒ tick?????" org.eventb.core.comment="child_tick ⇒ ????" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="*" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_sequence_failure">
+        <org.eventb.core.guard name="_K5GREO1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="type = SEQUENCE"/>
+        <org.eventb.core.guard name="_K5GREe1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="tick = TRUE"/>
+        <org.eventb.core.guard name="_K5GREu1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="result = UNKNOWN"/>
+        <org.eventb.core.guard name="_K5GRE-1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="previous_child_status =  FAILURE"/>
+        <org.eventb.core.action name="_K5GRFO1mEeyhD45uNTE9mg" org.eventb.core.assignment="result ≔ FAILURE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_QKiVgO1mEeyhD45uNTE9mg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_sequence_running">
+        <org.eventb.core.guard name="_PZO0Ye1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="type = SEQUENCE"/>
+        <org.eventb.core.guard name="_PZO0Yu1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="tick = TRUE"/>
+        <org.eventb.core.guard name="_PZO0Y-1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="result = UNKNOWN"/>
+        <org.eventb.core.guard name="_PZO0ZO1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="previous_child_status =  RUNNING"/>
+        <org.eventb.core.action name="_PZO0Ze1mEeyhD45uNTE9mg" org.eventb.core.assignment="result ≔ RUNNING" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_dIidAO1mEeyhD45uNTE9mg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_sequence_success">
+        <org.eventb.core.guard name="_dIidAe1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="type = SEQUENCE"/>
+        <org.eventb.core.guard name="_dIidAu1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="tick = TRUE"/>
+        <org.eventb.core.guard name="_dIidA-1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="result = UNKNOWN"/>
+        <org.eventb.core.guard name="_dIidBO1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="previous_child_status =  SUCCESS"/>
+        <org.eventb.core.guard name="_dIidBe1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="next_child = ∅"/>
+        <org.eventb.core.action name="_dIidBu1mEeyhD45uNTE9mg" org.eventb.core.assignment="result ≔ SUCCESS" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_zCUMsO1mEeyhD45uNTE9mg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_fallback_running">
+        <org.eventb.core.guard name="_zCUMse1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="type = FALLBACK"/>
+        <org.eventb.core.guard name="_zCUMsu1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="tick = TRUE"/>
+        <org.eventb.core.guard name="_zCUMs-1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="result = UNKNOWN"/>
+        <org.eventb.core.guard name="_zCUMtO1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="previous_child_status =  RUNNING"/>
+        <org.eventb.core.action name="_zCUMte1mEeyhD45uNTE9mg" org.eventb.core.assignment="result ≔ RUNNING" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_F-SugO1nEeyhD45uNTE9mg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_fallback_continue">
+        <org.eventb.core.guard name="_zCUMt-1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="type = FALLBACK"/>
+        <org.eventb.core.guard name="_zCUMuO1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="tick = TRUE"/>
+        <org.eventb.core.guard name="_zCUMue1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="result = UNKNOWN"/>
+        <org.eventb.core.guard name="_zCUMuu1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="previous_child_status =  FAILURE"/>
+        <org.eventb.core.guard name="_zCUzyu1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="next_child ≠ ∅"/>
+        <org.eventb.core.action name="_zCUMu-1mEeyhD45uNTE9mg" org.eventb.core.assignment="next_child _tick ?????????" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_dlm-EO1nEeyhD45uNTE9mg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_fallback_failure">
+        <org.eventb.core.guard name="_zCUzwO1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="type = FALLBACK"/>
+        <org.eventb.core.guard name="_zCUzwe1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="tick = TRUE"/>
+        <org.eventb.core.guard name="_zCUzwu1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="result = UNKNOWN"/>
+        <org.eventb.core.guard name="_zCUzw-1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="previous_child_status =  FAILURE"/>
+        <org.eventb.core.guard name="_F-TVkO1nEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="next_child = ∅"/>
+        <org.eventb.core.action name="_zCUzxO1mEeyhD45uNTE9mg" org.eventb.core.assignment="result ≔ FAILURE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_zCUzxe1mEeyhD45uNTE9mg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_sequence_success">
+        <org.eventb.core.guard name="_zCUzxu1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="type = FALLBACK"/>
+        <org.eventb.core.guard name="_zCUzx-1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="tick = TRUE"/>
+        <org.eventb.core.guard name="_zCUzyO1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="result = UNKNOWN"/>
+        <org.eventb.core.guard name="_zCUzye1mEeyhD45uNTE9mg" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="previous_child_status =  SUCCESS"/>
+        <org.eventb.core.action name="_zCUzy-1mEeyhD45uNTE9mg" org.eventb.core.assignment="result ≔ SUCCESS" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>

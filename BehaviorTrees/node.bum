@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="" org.eventb.core.comment="tick := FALSE" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
     <org.eventb.core.variable name="(" org.eventb.core.identifier="id"/>
     <org.eventb.core.variable name=")" org.eventb.core.identifier="type"/>
     <org.eventb.core.variable name="*" org.eventb.core.identifier="tick"/>
