@@ -19,6 +19,7 @@
         <org.eventb.core.scConstant name="FAILURE" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.constant#2" org.eventb.core.type="RESULT"/>
     </org.eventb.core.scInternalContext>
     <org.eventb.core.scInternalContext name="BT_context">
+        <org.eventb.core.scCarrierSet name="rec1" org.eventb.core.source="/Behavior Trees/BT_context.buc|org.eventb.core.contextFile#BT_context|org.eventb.records.record#_u9oBsOsVEeyt1KpaR9H6nC" org.eventb.core.type="ℙ(rec1)"/>
         <org.eventb.core.scCarrierSet name="NODES" org.eventb.core.source="/Behavior Trees/BT_context.buc|org.eventb.core.contextFile#BT_context|org.eventb.core.carrierSet#_u9oBsOsVEeyt1KpaR9H6nA" org.eventb.core.type="ℙ(NODES)"/>
     </org.eventb.core.scInternalContext>
     <org.eventb.core.scInvariant name="node_contexu" org.eventb.core.label="inv1" org.eventb.core.predicate="type∈TYPE" org.eventb.core.source="/Behavior Trees/node.bum|org.eventb.core.machineFile#node|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>
