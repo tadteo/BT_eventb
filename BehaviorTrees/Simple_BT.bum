@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Definition of a single Behaviour tree with 4 nodes (root, fallback, navigate, recovery) (from nav2)" org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1655477494858" org.eventb.texttools.text_representation="machine Simple_BT // Definition of a single Behaviour tree with 4 nodes (root, fallback, navigate, recovery) (from nav2)&#10; sees node_context&#10;&#10;variables root fallback navigate recovery root_tick fallback_tick navigate_tick recovery_tick root_result fallback_result recovery_result navigate_result&#10;&#10;invariants&#10;  @inv1 root_tick ∈ BOOL&#10;  @inv2 navigate_tick ∈ BOOL&#10;  @inv3 recovery_tick ∈ BOOL&#10;  @inv4 fallback_tick ∈ BOOL&#10;  @inv5 root_result ∈ RESULT&#10;  @inv6 fallback_result ∈ RESULT&#10;  @inv7 navigate_result ∈ RESULT&#10;  @inv8 recovery_result ∈ RESULT&#10;&#10;events&#10;  event INITIALISATION&#10;    then&#10;      @act1 root_tick ≔ TRUE&#10;      @act2 navigate_tick ≔ FALSE&#10;      @act3 fallback_tick ≔ FALSE&#10;      @act4 recovery_tick ≔ FALSE&#10;      @act5 root_result ≔ UNKNOWN&#10;      @act6 fallback_result ≔ UNKNOWN&#10;      @act7 navigate_result ≔ UNKNOWN&#10;      @act8 recovery_result ≔ UNKNOWN&#10;  end&#10;&#10;  event tick_fallback&#10;    where&#10;      @grd1 root_tick = TRUE&#10;    then&#10;      @act1 fallback_tick ≔ TRUE&#10;  end&#10;&#10;  event ticked_fallback_running&#10;    where&#10;      @grd2 fallback_tick = TRUE&#10;      @grd3 fallback_result = UNKNOWN&#10;      @grd4 navigate_result =  RUNNING ∨ recovery_result = RUNNING&#10;    then&#10;      @act1 fallback_result ≔ RUNNING&#10;  end&#10;&#10;  event ticked_fallback_continue&#10;    where&#10;      @grd2 fallback_tick = TRUE&#10;      @grd3 fallback_result = UNKNOWN&#10;      @grd4 navigate_result =  FAILURE&#10;      @grd5 recovery_tick = FALSE&#10;    then&#10;      @act1 recovery_tick ≔ TRUE&#10;  end&#10;&#10;  event ticked_fallback_failure&#10;    where&#10;      @grd2 fallback_tick = TRUE&#10;      @grd3 fallback_result = UNKNOWN&#10;      @grd4 navigate_result =  FAILURE ∧ recovery_result = FAILURE&#10;    then&#10;      @act1 fallback_result ≔ FAILURE&#10;  end&#10;&#10;  event ticked_fallback_success&#10;    where&#10;      @grd2 fallback_tick = TRUE&#10;      @grd3 fallback_result = UNKNOWN&#10;      @grd4 navigate_result =  SUCCESS ∨ recovery_result = SUCCESS&#10;    then&#10;      @act1 result ≔ SUCCESS&#10;  end&#10;&#10;  event ticked_fallback_start&#10;    where&#10;      @grd1 fallback_tick = TRUE&#10;      @grd2 fallback_result = UNKNOWN&#10;      @grd3 navigate_result = UNKNOWN&#10;    then&#10;      @act1 navigate_tick ≔ TRUE&#10;  end&#10;&#10;  event ticked_navigate&#10;    where&#10;      @grd1 navigate_tick = TRUE&#10;    then&#10;      @act1 navigate_result :∈ {SUCCESS, RUNNING, FAILURE}&#10;  end&#10;&#10;  event ticked_recovery&#10;    where&#10;      @grd1 recovery_tick = TRUE&#10;    then&#10;      @act1 recovery_result :∈ {SUCCESS, RUNNING, FAILURE}&#10;  end&#10;&#10;  event result_obtained&#10;    where&#10;      @grd1 fallback_result ≠ UNKNOWN&#10;    then&#10;      @act1 root_result ≔ fallback_result&#10;  end&#10;&#10;  event tree_reset&#10;    where&#10;      @grd1 root_result ≠ UNKNOWN&#10;    then&#10;      @act1 root_tick ≔ TRUE&#10;      @act2 navigate_tick ≔ FALSE&#10;      @act3 fallback_tick ≔ FALSE&#10;      @act4 recovery_tick ≔ FALSE&#10;      @act5 root_result ≔ UNKNOWN&#10;      @act6 fallback_result ≔ UNKNOWN&#10;      @act7 navigate_result ≔ UNKNOWN&#10;      @act8 recovery_result ≔ UNKNOWN&#10;  end&#10;end&#10;" version="5">
+    <org.eventb.core.seesContext name="(" org.eventb.core.target="node_context"/>
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="root_tick ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="navigate_tick ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="fallback_tick ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="recovery_tick ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="root_result ≔ UNKNOWN" org.eventb.core.generated="false" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="," org.eventb.core.assignment="fallback_result ≔ UNKNOWN" org.eventb.core.generated="false" org.eventb.core.label="act6"/>
+        <org.eventb.core.action name="-" org.eventb.core.assignment="navigate_result ≔ UNKNOWN" org.eventb.core.generated="false" org.eventb.core.label="act7"/>
+        <org.eventb.core.action name="." org.eventb.core.assignment="recovery_result ≔ UNKNOWN" org.eventb.core.generated="false" org.eventb.core.label="act8"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name=")" org.eventb.core.generated="false" org.eventb.core.identifier="root"/>
+    <org.eventb.core.variable name="*" org.eventb.core.generated="false" org.eventb.core.identifier="fallback"/>
+    <org.eventb.core.variable name="+" org.eventb.core.generated="false" org.eventb.core.identifier="navigate"/>
+    <org.eventb.core.variable name="," org.eventb.core.generated="false" org.eventb.core.identifier="recovery"/>
+    <org.eventb.core.variable name="-" org.eventb.core.generated="false" org.eventb.core.identifier="root_tick"/>
+    <org.eventb.core.variable name="." org.eventb.core.generated="false" org.eventb.core.identifier="fallback_tick"/>
+    <org.eventb.core.variable name="/" org.eventb.core.generated="false" org.eventb.core.identifier="navigate_tick"/>
+    <org.eventb.core.variable name="0" org.eventb.core.generated="false" org.eventb.core.identifier="recovery_tick"/>
+    <org.eventb.core.variable name="1" org.eventb.core.generated="false" org.eventb.core.identifier="root_result"/>
+    <org.eventb.core.variable name="2" org.eventb.core.generated="false" org.eventb.core.identifier="fallback_result"/>
+    <org.eventb.core.variable name="3" org.eventb.core.generated="false" org.eventb.core.identifier="recovery_result"/>
+    <org.eventb.core.variable name="4" org.eventb.core.generated="false" org.eventb.core.identifier="navigate_result"/>
+    <org.eventb.core.invariant name="5" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="root_tick ∈ BOOL"/>
+    <org.eventb.core.invariant name="6" org.eventb.core.generated="false" org.eventb.core.label="inv2" org.eventb.core.predicate="navigate_tick ∈ BOOL"/>
+    <org.eventb.core.invariant name="7" org.eventb.core.generated="false" org.eventb.core.label="inv3" org.eventb.core.predicate="recovery_tick ∈ BOOL"/>
+    <org.eventb.core.invariant name="8" org.eventb.core.generated="false" org.eventb.core.label="inv4" org.eventb.core.predicate="fallback_tick ∈ BOOL"/>
+    <org.eventb.core.invariant name="9" org.eventb.core.generated="false" org.eventb.core.label="inv5" org.eventb.core.predicate="root_result ∈ RESULT"/>
+    <org.eventb.core.invariant name=":" org.eventb.core.generated="false" org.eventb.core.label="inv6" org.eventb.core.predicate="fallback_result ∈ RESULT"/>
+    <org.eventb.core.invariant name=";" org.eventb.core.generated="false" org.eventb.core.label="inv7" org.eventb.core.predicate="navigate_result ∈ RESULT"/>
+    <org.eventb.core.invariant name="=" org.eventb.core.generated="false" org.eventb.core.label="inv8" org.eventb.core.predicate="recovery_result ∈ RESULT"/>
+    <org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="tick_fallback">
+        <org.eventb.core.guard name="'" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="root_tick = TRUE"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="fallback_tick ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_nR0MgO5KEey6DaZm7xti0w" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_fallback_running">
+        <org.eventb.core.guard name="_nR0Mgu5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="fallback_tick = TRUE"/>
+        <org.eventb.core.guard name="_nR0Mg-5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="fallback_result = UNKNOWN"/>
+        <org.eventb.core.guard name="_nR0MhO5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="navigate_result =  RUNNING ∨ recovery_result = RUNNING"/>
+        <org.eventb.core.action name="_nR0Mhe5KEey6DaZm7xti0w" org.eventb.core.assignment="fallback_result ≔ RUNNING" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_nR0Mhu5KEey6DaZm7xti0w" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_fallback_continue">
+        <org.eventb.core.guard name="_nR0MiO5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="fallback_tick = TRUE"/>
+        <org.eventb.core.guard name="_nR0Mie5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="fallback_result = UNKNOWN"/>
+        <org.eventb.core.guard name="_nR0Miu5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="navigate_result =  FAILURE"/>
+        <org.eventb.core.guard name="_nR0Mi-5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="recovery_tick = FALSE"/>
+        <org.eventb.core.action name="_nR0MjO5KEey6DaZm7xti0w" org.eventb.core.assignment="recovery_tick ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_nR0Mje5KEey6DaZm7xti0w" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_fallback_failure">
+        <org.eventb.core.guard name="_nR0Mj-5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="fallback_tick = TRUE"/>
+        <org.eventb.core.guard name="_nR0zkO5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="fallback_result = UNKNOWN"/>
+        <org.eventb.core.guard name="_nR0zke5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="navigate_result =  FAILURE ∧ recovery_result = FAILURE"/>
+        <org.eventb.core.action name="_nR0zk-5KEey6DaZm7xti0w" org.eventb.core.assignment="fallback_result ≔ FAILURE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_nR0zlO5KEey6DaZm7xti0w" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_fallback_success">
+        <org.eventb.core.guard name="_nR0zlu5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="fallback_tick = TRUE"/>
+        <org.eventb.core.guard name="_nR0zl-5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="fallback_result = UNKNOWN"/>
+        <org.eventb.core.guard name="_nR0zmO5KEey6DaZm7xti0w" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="navigate_result =  SUCCESS ∨ recovery_result = SUCCESS"/>
+        <org.eventb.core.action name="_nR0zme5KEey6DaZm7xti0w" org.eventb.core.assignment="result ≔ SUCCESS" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_nR0zlO5KEey6DaZm7xti0x" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_fallback_start">
+        <org.eventb.core.guard name="'" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="fallback_tick = TRUE"/>
+        <org.eventb.core.guard name="(" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="fallback_result = UNKNOWN"/>
+        <org.eventb.core.guard name=")" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="navigate_result = UNKNOWN"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="navigate_tick ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_nR0zlO5KEey6DaZm7xti0y" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_navigate">
+        <org.eventb.core.guard name="'" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="navigate_tick = TRUE"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="navigate_result :∈ {SUCCESS, RUNNING, FAILURE}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_nR0zlO5KEey6DaZm7xti0z" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="ticked_recovery">
+        <org.eventb.core.guard name="'" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="recovery_tick = TRUE"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="recovery_result :∈ {SUCCESS, RUNNING, FAILURE}" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_nR0zlO5KEey6DaZm7xti0{" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="result_obtained">
+        <org.eventb.core.guard name="'" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="fallback_result ≠ UNKNOWN"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="root_result ≔ fallback_result" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_nR0zlO5KEey6DaZm7xti0|" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="tree_reset">
+        <org.eventb.core.guard name="'" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="root_result ≠ UNKNOWN"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="root_tick ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="_9mMioO5MEey6DaZm7xti0w" org.eventb.core.assignment="navigate_tick ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name="_9mMioe5MEey6DaZm7xti0w" org.eventb.core.assignment="fallback_tick ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="_9mMiou5MEey6DaZm7xti0w" org.eventb.core.assignment="recovery_tick ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="_9mMio-5MEey6DaZm7xti0w" org.eventb.core.assignment="root_result ≔ UNKNOWN" org.eventb.core.generated="false" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="_9mMipO5MEey6DaZm7xti0w" org.eventb.core.assignment="fallback_result ≔ UNKNOWN" org.eventb.core.generated="false" org.eventb.core.label="act6"/>
+        <org.eventb.core.action name="_9mMipe5MEey6DaZm7xti0w" org.eventb.core.assignment="navigate_result ≔ UNKNOWN" org.eventb.core.generated="false" org.eventb.core.label="act7"/>
+        <org.eventb.core.action name="_9mNJsO5MEey6DaZm7xti0w" org.eventb.core.assignment="recovery_result ≔ UNKNOWN" org.eventb.core.generated="false" org.eventb.core.label="act8"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>

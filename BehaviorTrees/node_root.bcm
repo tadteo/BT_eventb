@@ -29,6 +29,6 @@
         <org.eventb.core.scWitness name=")" org.eventb.core.label="type'" org.eventb.core.predicate="⊤" org.eventb.core.source="/Behavior Trees/node_root.bum|org.eventb.core.machineFile#node_root|org.eventb.core.event#'"/>
         <org.eventb.core.scWitness name="*" org.eventb.core.label="tick'" org.eventb.core.predicate="⊤" org.eventb.core.source="/Behavior Trees/node_root.bum|org.eventb.core.machineFile#node_root|org.eventb.core.event#'"/>
     </org.eventb.core.scEvent>
-    <org.eventb.core.scEvent name="node_contexy" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="evt1" org.eventb.core.source="/Behavior Trees/node_root.bum|org.eventb.core.machineFile#node_root|org.eventb.core.event#*"/>
+    <org.eventb.core.scEvent name="node_contexy" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tick_child" org.eventb.core.source="/Behavior Trees/node_root.bum|org.eventb.core.machineFile#node_root|org.eventb.core.event#*"/>
     <org.eventb.core.scEvent name="node_contexz" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="result_arrived" org.eventb.core.source="/Behavior Trees/node_root.bum|org.eventb.core.machineFile#node_root|org.eventb.core.event#+"/>
 </org.eventb.core.scMachineFile>

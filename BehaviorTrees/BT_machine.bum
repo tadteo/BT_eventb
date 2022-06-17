@@ -19,5 +19,4 @@
     <org.eventb.core.invariant name="_6qyLY-sgEeyt1KpaR9H6nA" org.eventb.core.generated="false" org.eventb.core.label="mth4" org.eventb.core.predicate="tcl(parent) ∩ id(NODES) = ∅" org.eventb.core.theorem="true"/>
     <org.eventb.core.seesContext name="_rS3boOsfEeyt1KpaR9H6nB" org.eventb.core.target="BT_context"/>
     <org.eventb.core.refinesMachine name="_rS3boOsfEeyt1KpaR9H6nC" org.eventb.core.target="node"/>
-    <org.eventb.core.refinesMachine name="_rS3boOsfEeyt1KpaR9H6nD"/>
 </org.eventb.core.machineFile>
