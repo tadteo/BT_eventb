@@ -1,2 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<org.eventb.core.psFile/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+    <org.eventb.core.psStatus name="condition_ticked/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="condition_ticked/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="condition_ticked/grd2/THM" org.eventb.core.confidence="0" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="action_ticked/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="action_ticked/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_continue/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_continue/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_continue/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_continue/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="13" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_failure/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_failure/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_failure/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_running/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_running/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_running/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_success/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_success/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="sequence_ticked_success/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_running/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_running/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_running/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_continue/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_continue/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_continue/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_continue/grd8/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_failure/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_failure/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_failure/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_success/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_success/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="fallback_ticked_success/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="12" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="root_ticked/grd1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="root_ticked/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="root_ticked/grd3/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

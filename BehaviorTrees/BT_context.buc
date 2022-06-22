@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.records.ctxRecord" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1655124632198" org.eventb.texttools.text_representation="context BT_context&#10;&#9;sets&#10;&#9; node_status&#10;&#9; NODES&#10;&#10;&#9;axioms&#10;&#9;@axm1 node_status ∈ {SUCCESS, FAILURE, RUNNING}&#10;&#9;@axm2 NODES ∈ {SEQUENCE, FALLBACK, PARALLEL, DECORATOR, CONDITION, ACTION}&#10;&#10;end&#10;" version="3">
-    <org.eventb.core.carrierSet name="_u9oBsOsVEeyt1KpaR9H6nA" org.eventb.core.generated="false" org.eventb.core.identifier="NODES"/>
-    <org.eventb.core.axiom name="_u9oBsOsVEeyt1KpaR9H6nB" org.eventb.core.label="axm1" org.eventb.core.predicate="NODES "/>
-    <org.eventb.records.record name="_u9oBsOsVEeyt1KpaR9H6nC" org.eventb.core.identifier="rec1" org.eventb.core.label="TREE" org.eventb.records.closed="false">
-        <org.eventb.records.field name="'" org.eventb.core.expression="nodes ∈ NODES" org.eventb.core.identifier="fld1" org.eventb.core.label="fld1"/>
-    </org.eventb.records.record>
-</org.eventb.core.contextFile>

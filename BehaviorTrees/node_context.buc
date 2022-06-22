@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.records.ctxRecord" version="3">
-    <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="TYPE"/>
-    <org.eventb.core.axiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(TYPE,{ROOT}, {SEQUENCE}, {FALLBACK}, {CONDITION}, {ACTION})"/>
-    <org.eventb.core.constant name=")" org.eventb.core.identifier="ROOT"/>
-    <org.eventb.core.constant name="*" org.eventb.core.identifier="SEQUENCE"/>
-    <org.eventb.core.constant name="+" org.eventb.core.identifier="FALLBACK"/>
-    <org.eventb.core.constant name="," org.eventb.core.identifier="CONDITION"/>
-    <org.eventb.core.constant name="-" org.eventb.core.identifier="ACTION"/>
-    <org.eventb.core.constant name="." org.eventb.core.identifier="RUNNING"/>
-    <org.eventb.core.carrierSet name="/" org.eventb.core.identifier="RESULT"/>
-    <org.eventb.core.axiom name="0" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(RESULT, {RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})"/>
-    <org.eventb.core.constant name="1" org.eventb.core.identifier="SUCCESS"/>
-    <org.eventb.core.constant name="2" org.eventb.core.identifier="FAILURE"/>
-    <org.eventb.core.constant name="3" org.eventb.core.identifier="UNKNOWN"/>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.records.ctxRecord" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1655905124757" org.eventb.texttools.text_representation="context node_context&#10;&#10;sets TYPE RESULT NODES&#10;&#10;constants ROOT SEQUENCE FALLBACK CONDITION ACTION RUNNING SUCCESS FAILURE UNKNOWN n_type n_tick n_result n_parent&#10;&#10;axioms&#10;  @axm1 partition(TYPE,{ROOT}, {SEQUENCE}, {FALLBACK}, {CONDITION}, {ACTION})&#10;  @axm2 partition(RESULT, {RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})&#10;  @axm3 n_type ∈ NODES → TYPE&#10;  @axm4 n_tick ∈ NODES → BOOL&#10;  @axm5 n_result ∈ NODES → RESULT&#10;  @axm6 n_parent ∈ NODES∖{ n ∣ n ∈ NODES ∧ n_type(n)=ROOT} → NODES&#10;end" version="3">
+    <org.eventb.core.carrierSet name="'" org.eventb.core.generated="false" org.eventb.core.identifier="TYPE"/>
+    <org.eventb.core.axiom name="(" org.eventb.core.generated="false" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(TYPE,{ROOT}, {SEQUENCE}, {FALLBACK}, {CONDITION}, {ACTION})"/>
+    <org.eventb.core.constant name=")" org.eventb.core.generated="false" org.eventb.core.identifier="ROOT"/>
+    <org.eventb.core.constant name="*" org.eventb.core.generated="false" org.eventb.core.identifier="SEQUENCE"/>
+    <org.eventb.core.constant name="+" org.eventb.core.generated="false" org.eventb.core.identifier="FALLBACK"/>
+    <org.eventb.core.constant name="," org.eventb.core.generated="false" org.eventb.core.identifier="CONDITION"/>
+    <org.eventb.core.constant name="-" org.eventb.core.generated="false" org.eventb.core.identifier="ACTION"/>
+    <org.eventb.core.constant name="." org.eventb.core.generated="false" org.eventb.core.identifier="RUNNING"/>
+    <org.eventb.core.carrierSet name="/" org.eventb.core.generated="false" org.eventb.core.identifier="RESULT"/>
+    <org.eventb.core.axiom name="0" org.eventb.core.generated="false" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(RESULT, {RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})"/>
+    <org.eventb.core.constant name="1" org.eventb.core.generated="false" org.eventb.core.identifier="SUCCESS"/>
+    <org.eventb.core.constant name="2" org.eventb.core.generated="false" org.eventb.core.identifier="FAILURE"/>
+    <org.eventb.core.constant name="3" org.eventb.core.generated="false" org.eventb.core.identifier="UNKNOWN"/>
+    <org.eventb.core.constant name="4" org.eventb.core.generated="false" org.eventb.core.identifier="n_type"/>
+    <org.eventb.core.axiom name="5" org.eventb.core.generated="false" org.eventb.core.label="axm3" org.eventb.core.predicate="n_type ∈ NODES → TYPE"/>
+    <org.eventb.core.carrierSet name="6" org.eventb.core.generated="false" org.eventb.core.identifier="NODES"/>
+    <org.eventb.core.axiom name="7" org.eventb.core.generated="false" org.eventb.core.label="axm4" org.eventb.core.predicate="n_tick ∈ NODES → BOOL"/>
+    <org.eventb.core.constant name="8" org.eventb.core.generated="false" org.eventb.core.identifier="n_tick"/>
+    <org.eventb.core.constant name="9" org.eventb.core.generated="false" org.eventb.core.identifier="n_result"/>
+    <org.eventb.core.axiom name=":" org.eventb.core.generated="false" org.eventb.core.label="axm5" org.eventb.core.predicate="n_result ∈ NODES → RESULT"/>
+    <org.eventb.core.constant name=";" org.eventb.core.generated="false" org.eventb.core.identifier="n_parent"/>
+    <org.eventb.core.axiom name="=" org.eventb.core.generated="false" org.eventb.core.label="axm6" org.eventb.core.predicate="n_parent ∈ NODES∖{ n ∣ n ∈ NODES ∧ n_type(n)=ROOT} → NODES"/>
+    <org.eventb.core.constant name="&gt;" org.eventb.core.identifier="n_children"/>
+    <org.eventb.core.axiom name="?" org.eventb.core.label="axm7" org.eventb.core.predicate="n_children ∈ NODES → ℙ(NODES)"/>
+    <org.eventb.core.axiom name="@" org.eventb.core.comment=" TO BE  INSERTED HERE OR IN THE MACHINE?" org.eventb.core.label="axm8" org.eventb.core.predicate="∀n · (n ∈ NODES  n_children(n) ≔ { x ∣ x ∈ nodes ∧ n_parent(x) = n}"/>
+    <org.eventb.core.constant name="A" org.eventb.core.identifier="analyzing_subtree"/>
+    <org.eventb.core.axiom name="B" org.eventb.core.label="axm9" org.eventb.core.predicate="analyzing_subtree ∈ NODES → BOOL"/>
 </org.eventb.core.contextFile>
