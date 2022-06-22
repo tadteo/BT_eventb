@@ -12,7 +12,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="+" org.eventb.core.comment="When a result arrive, the ticks of all nodes need to be reset" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="result_arrived">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="result ≠ UNKNOWN"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="∀node ∈ NODES; tick = FALSE  " org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="∀node ∈ NODES; tick ≔ FALSE  " org.eventb.core.label="act1"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="parent ∈ ∅"/>
 </org.eventb.core.machineFile>

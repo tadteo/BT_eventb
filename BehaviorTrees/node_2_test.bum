@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="nodes ≔{root}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="n_tick(root) ≔ FALSE " org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="(" org.eventb.core.identifier="nodes"/>
+    <org.eventb.core.variable name=")" org.eventb.core.identifier="n_type"/>
+    <org.eventb.core.variable name="*" org.eventb.core.identifier="n_tick"/>
+    <org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="nodes ∈ NODES"/>
+    <org.eventb.core.seesContext name="," org.eventb.core.target="BT_context"/>
+    <org.eventb.core.invariant name="4" org.eventb.core.label="inv6" org.eventb.core.predicate="root ∈ nodes"/>
+    <org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="n_type ∈ nodes → TYPE "/>
+    <org.eventb.core.seesContext name="." org.eventb.core.target="node_context"/>
+    <org.eventb.core.variable name="/" org.eventb.core.identifier="n_result"/>
+    <org.eventb.core.variable name="0" org.eventb.core.identifier="n_parent"/>
+    <org.eventb.core.invariant name="1" org.eventb.core.label="inv3" org.eventb.core.predicate="n_tick ∈ nodes → BOOL"/>
+    <org.eventb.core.invariant name="2" org.eventb.core.label="inv4" org.eventb.core.predicate="n_result ∈ nodes → RESULT"/>
+    <org.eventb.core.invariant name="3" org.eventb.core.label="inv5" org.eventb.core.predicate="n_parent ∈ nodes∖{root} → nodes"/>
+    <org.eventb.core.variable name="5" org.eventb.core.identifier="n_childrens"/>
+    <org.eventb.core.invariant name="6" org.eventb.core.comment="can be a set of nodes (Unsure) --&gt; it should be defined as F with NF being a list of nodes)" org.eventb.core.label="inv7" org.eventb.core.predicate="n_childrens ∈ nodes → nodes"/>
+</org.eventb.core.machineFile>
