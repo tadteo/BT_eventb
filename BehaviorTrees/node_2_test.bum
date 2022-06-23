@@ -7,7 +7,7 @@
         <org.eventb.core.action name=")" org.eventb.core.assignment="n_type(root) ≔ ROOT" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="(" org.eventb.core.generated="false" org.eventb.core.identifier="nodes"/>
-    <org.eventb.core.invariant name="+" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="nodes ∈ NODES"/>
+    <org.eventb.core.invariant name="+" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="nodes ∈ ℙ(NODES)"/>
     <org.eventb.core.invariant name="4" org.eventb.core.generated="false" org.eventb.core.label="inv6" org.eventb.core.predicate="root ∈ nodes"/>
     <org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked">
         <org.eventb.core.guard name="'" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="n_tick(node) = TRUE"/>
@@ -139,4 +139,6 @@
         <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="n_result(node) ≠ UNKNOWN"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="∀n·(n∈nodes ⇒ n_tick(n) = FALSE ∧ n_result = UNKNOWN)" org.eventb.core.label="act1"/>
     </org.eventb.core.event>
+    <org.eventb.core.variable name="_moHyJvIiEeyivrHAG4kxjF" org.eventb.core.identifier="n_parent"/>
+    <org.eventb.core.invariant name="_moHyJvIiEeyivrHAG4kxjG" org.eventb.core.label="inv12" org.eventb.core.predicate="n_parent ∈ nodes∖{root} → nodes"/>
 </org.eventb.core.machineFile>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="22">
-    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="22">
+<org.eventb.core.poFile org.eventb.core.poStamp="24">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="24">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
         <org.eventb.core.poIdentifier name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         <org.eventb.core.poIdentifier name="SUCCESS" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="ROOT" org.eventb.core.type="TYPE"/>
         <org.eventb.core.poIdentifier name="SEQUENCE" org.eventb.core.type="TYPE"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="ACTION" org.eventb.core.type="TYPE"/>
         <org.eventb.core.poIdentifier name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
         <org.eventb.core.poIdentifier name="analyzing_subtree" org.eventb.core.type="ℙ(NODES×BOOL)"/>
         <org.eventb.core.poIdentifier name="UNKNOWN" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="FALLBACK" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.poIdentifier name="n_parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
         <org.eventb.core.poIdentifier name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
         <org.eventb.core.poIdentifier name="n_children" org.eventb.core.type="ℙ(NODES×ℙ(NODES))"/>
         <org.eventb.core.poIdentifier name="CONDITION" org.eventb.core.type="TYPE"/>
@@ -24,11 +24,11 @@
         <org.eventb.core.poPredicate name="analyzing_subtreh" org.eventb.core.predicate="n_type∈NODES → TYPE" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#5"/>
         <org.eventb.core.poPredicate name="analyzing_subtrei" org.eventb.core.predicate="n_tick∈NODES → BOOL" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#7"/>
         <org.eventb.core.poPredicate name="analyzing_subtrej" org.eventb.core.predicate="n_result∈NODES → RESULT" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#:"/>
-        <org.eventb.core.poPredicate name="analyzing_subtrek" org.eventb.core.predicate="n_parent∈NODES ∖ {n⦂NODES·n∈NODES∧n_type(n)=ROOT ∣ n} → NODES" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#="/>
-        <org.eventb.core.poPredicate name="analyzing_subtrel" org.eventb.core.predicate="n_children∈NODES → ℙ(NODES)" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#?"/>
-        <org.eventb.core.poPredicate name="analyzing_subtrem" org.eventb.core.predicate="analyzing_subtree∈NODES → BOOL" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#B"/>
+        <org.eventb.core.poPredicate name="analyzing_subtrek" org.eventb.core.predicate="n_children∈NODES → ℙ(NODES)" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#?"/>
+        <org.eventb.core.poPredicate name="analyzing_subtrel" org.eventb.core.predicate="analyzing_subtree∈NODES → BOOL" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#B"/>
+        <org.eventb.core.poPredicate name="analyzing_subtrem" org.eventb.core.predicate="root∈NODES" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#D"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="22">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="24">
         <org.eventb.core.poIdentifier name="result" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="tick" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="type" org.eventb.core.type="TYPE"/>
@@ -36,19 +36,19 @@
         <org.eventb.core.poPredicate name="resulv" org.eventb.core.predicate="result∈RESULT" org.eventb.core.source="/Behavior Trees/node.bum|org.eventb.core.machineFile#node|org.eventb.core.invariant#0"/>
         <org.eventb.core.poPredicate name="resulw" org.eventb.core.predicate="tick∈BOOL" org.eventb.core.source="/Behavior Trees/node.bum|org.eventb.core.machineFile#node|org.eventb.core.invariant#\/"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTnode_contexx" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="22">
+    <org.eventb.core.poPredicateSet name="EVTIDENTnode_contexx" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="24">
         <org.eventb.core.poIdentifier name="result'" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="tick'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="type'" org.eventb.core.type="TYPE"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contexx" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#EVTIDENTnode_contexx" org.eventb.core.poStamp="22"/>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contexy" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22"/>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contexz" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22"/>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contex{" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22"/>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contex|" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22"/>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contex}" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22"/>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contex~" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22"/>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contey'" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22"/>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contey(" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="22"/>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="22"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contexx" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#EVTIDENTnode_contexx" org.eventb.core.poStamp="24"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contexy" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="24"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contexz" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="24"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contex{" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="24"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contex|" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="24"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contex}" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="24"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contex~" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="24"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contey'" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="24"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPnode_contey(" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="24"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/node_internal.bpo|org.eventb.core.poFile#node_internal|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="24"/>
 </org.eventb.core.poFile>
