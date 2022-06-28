@@ -1,129 +1,132 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="13">
-    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="13">
+<org.eventb.core.poFile org.eventb.core.poStamp="27">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="23">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
         <org.eventb.core.poIdentifier name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         <org.eventb.core.poIdentifier name="SUCCESS" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="ROOT" org.eventb.core.type="TYPE"/>
         <org.eventb.core.poIdentifier name="SEQUENCE" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="ACTION" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.poIdentifier name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-        <org.eventb.core.poIdentifier name="analyzing_subtree" org.eventb.core.type="ℙ(NODES×BOOL)"/>
         <org.eventb.core.poIdentifier name="UNKNOWN" org.eventb.core.type="RESULT"/>
+        <org.eventb.core.poIdentifier name="n_id" org.eventb.core.type="ℙ(NODES×ℤ)"/>
         <org.eventb.core.poIdentifier name="FALLBACK" org.eventb.core.type="TYPE"/>
         <org.eventb.core.poIdentifier name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
-        <org.eventb.core.poIdentifier name="n_children" org.eventb.core.type="ℙ(NODES×ℙ(NODES))"/>
         <org.eventb.core.poIdentifier name="CONDITION" org.eventb.core.type="TYPE"/>
         <org.eventb.core.poIdentifier name="RUNNING" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="FAILURE" org.eventb.core.type="RESULT"/>
-        <org.eventb.core.poIdentifier name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-        <org.eventb.core.poPredicate name="analyzing_subtref" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#("/>
-        <org.eventb.core.poPredicate name="analyzing_subtreg" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#0"/>
-        <org.eventb.core.poPredicate name="analyzing_subtreh" org.eventb.core.predicate="n_type∈NODES → TYPE" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#5"/>
-        <org.eventb.core.poPredicate name="analyzing_subtrei" org.eventb.core.predicate="n_tick∈NODES → BOOL" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#7"/>
-        <org.eventb.core.poPredicate name="analyzing_subtrej" org.eventb.core.predicate="n_result∈NODES → RESULT" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#:"/>
-        <org.eventb.core.poPredicate name="analyzing_subtrek" org.eventb.core.predicate="n_children∈NODES → ℙ(NODES)" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#?"/>
-        <org.eventb.core.poPredicate name="analyzing_subtrel" org.eventb.core.predicate="analyzing_subtree∈NODES → BOOL" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#B"/>
-        <org.eventb.core.poPredicate name="analyzing_subtrem" org.eventb.core.predicate="root∈NODES" org.eventb.core.source="/Behavior Trees/node_context.buc|org.eventb.core.contextFile#node_context|org.eventb.core.axiom#D"/>
+        <org.eventb.core.poPredicate name="CONDITIOO" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#("/>
+        <org.eventb.core.poPredicate name="CONDITIOP" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#0"/>
+        <org.eventb.core.poPredicate name="CONDITIOQ" org.eventb.core.predicate="n_type∈NODES → TYPE" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#5"/>
+        <org.eventb.core.poPredicate name="CONDITIOR" org.eventb.core.predicate="n_id∈NODES → ℕ" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#8"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="26">
+        <org.eventb.core.poIdentifier name="navigate" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="navigate_result" org.eventb.core.type="RESULT"/>
+        <org.eventb.core.poIdentifier name="root" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="fallback_tick" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="root_tick" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="recovery_result" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="navigate_tick" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="fallback" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="root_result" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="recovery_tick" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="fallback_result" org.eventb.core.type="RESULT"/>
+        <org.eventb.core.poIdentifier name="recovery" org.eventb.core.type="NODES"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resulu" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resulu" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="navigate_tick'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="recovery'" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="root_result'" org.eventb.core.type="RESULT"/>
+        <org.eventb.core.poIdentifier name="navigate'" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="fallback_tick'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="navigate_result'" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="recovery_result'" org.eventb.core.type="RESULT"/>
+        <org.eventb.core.poIdentifier name="root'" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="recovery_tick'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="fallback_result'" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="root_tick'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="fallback'" org.eventb.core.type="NODES"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resulu" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resulu" org.eventb.core.poStamp="13"/>
-    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resulv" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resulu" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resulu" org.eventb.core.poStamp="26"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resulv" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="fallback_tick'" org.eventb.core.type="BOOL"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resulv" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resulv" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resulv" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resulv" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="root_tick=TRUE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#&gt;|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resulw" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resulw" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="fallback_result'" org.eventb.core.type="RESULT"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resulw" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resulw" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resulw" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resulw" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fallback_tick=TRUE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0MgO5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0Mgu5KEey6DaZm7xti0w"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fallback_result=UNKNOWN" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0MgO5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0Mg-5KEey6DaZm7xti0w"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="navigate_result=RUNNING∨recovery_result=RUNNING" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0MgO5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0MhO5KEey6DaZm7xti0w"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resulx" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resulx" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="recovery_tick'" org.eventb.core.type="BOOL"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resulx" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resulx" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resulx" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resulx" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fallback_tick=TRUE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0Mhu5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0MiO5KEey6DaZm7xti0w"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fallback_result=UNKNOWN" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0Mhu5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0Mie5KEey6DaZm7xti0w"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="navigate_result=FAILURE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0Mhu5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0Miu5KEey6DaZm7xti0w"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="recovery_tick=FALSE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0Mhu5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0Mi-5KEey6DaZm7xti0w"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resuly" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resuly" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="fallback_result'" org.eventb.core.type="RESULT"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resuly" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resuly" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resuly" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resuly" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fallback_tick=TRUE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0Mje5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0Mj-5KEey6DaZm7xti0w"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fallback_result=UNKNOWN" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0Mje5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0zkO5KEey6DaZm7xti0w"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="navigate_result=FAILURE∧recovery_result=FAILURE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0Mje5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0zke5KEey6DaZm7xti0w"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resulz" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resulz" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="fallback_result'" org.eventb.core.type="RESULT"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resulz" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resulz" org.eventb.core.poStamp="27">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fallback_tick=TRUE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0zlu5KEey6DaZm7xti0w"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fallback_result=UNKNOWN" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0zl-5KEey6DaZm7xti0w"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="navigate_result=SUCCESS∨recovery_result=SUCCESS" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0w|org.eventb.core.guard#_nR0zmO5KEey6DaZm7xti0w"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resul{" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resul{" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="navigate_tick'" org.eventb.core.type="BOOL"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resul{" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resul{" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resul{" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resul{" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fallback_tick=TRUE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0x|org.eventb.core.guard#'"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="fallback_result=UNKNOWN" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0x|org.eventb.core.guard#("/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="navigate_result=UNKNOWN" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0x|org.eventb.core.guard#)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ticked_navigate/act1/FIS" org.eventb.core.accurate="false" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="13">
+    <org.eventb.core.poSequent name="ticked_navigate/act1/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTALLHYPrecovery_resul\|"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{SUCCESS,RUNNING,FAILURE}≠(∅ ⦂ ℙ(RESULT))" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0y|org.eventb.core.action#("/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0y|org.eventb.core.action#("/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTALLHYPrecovery_resul\|"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resul|" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resul|" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="navigate_result'" org.eventb.core.type="RESULT"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resul|" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resul\|" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resul|" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resul\|" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="navigate_tick=TRUE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0y|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="ticked_recovery/act1/FIS" org.eventb.core.accurate="false" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="13">
+    <org.eventb.core.poSequent name="ticked_recovery/act1/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTALLHYPrecovery_resul}"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="{SUCCESS,RUNNING,FAILURE}≠(∅ ⦂ ℙ(RESULT))" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0z|org.eventb.core.action#("/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0z|org.eventb.core.action#("/>
         <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTALLHYPrecovery_resul}"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resul}" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resul}" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="recovery_result'" org.eventb.core.type="RESULT"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resul}" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resul}" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resul}" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resul}" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="recovery_tick=TRUE" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0z|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resul~" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resul~" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="root_result'" org.eventb.core.type="RESULT"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resul~" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resul~" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resul~" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resul~" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fallback_result≠UNKNOWN" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0{|org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resum'" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTIDENTrecovery_resum'" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="navigate_tick'" org.eventb.core.type="BOOL"/>
         <org.eventb.core.poIdentifier name="root_result'" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="fallback_tick'" org.eventb.core.type="BOOL"/>
@@ -133,10 +136,10 @@
         <org.eventb.core.poIdentifier name="fallback_result'" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="root_tick'" org.eventb.core.type="BOOL"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resum'" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resum'" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="EVTALLHYPrecovery_resum'" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#EVTIDENTrecovery_resum'" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="root_result≠UNKNOWN" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.event#_nR0zlO5KEey6DaZm7xti0\||org.eventb.core.guard#'"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="13">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/Simple_BT.bpo|org.eventb.core.poFile#Simple_BT|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="root_tick∈BOOL" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.invariant#5"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="navigate_tick∈BOOL" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.invariant#6"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="recovery_tick∈BOOL" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.invariant#7"/>
@@ -145,5 +148,9 @@
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="fallback_result∈RESULT" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.invariant#:"/>
         <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="navigate_result∈RESULT" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.invariant#;"/>
         <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="recovery_result∈RESULT" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.invariant#="/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="root∈NODES" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.invariant#_nR0zlO5KEey6DaZm7xti0}"/>
+        <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="fallback∈NODES" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.invariant#_nR0zlO5KEey6DaZm7xti0~"/>
+        <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="navigate∈NODES" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.invariant#_nR0zlO5KEey6DaZm7xti1'"/>
+        <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="recovery∈NODES" org.eventb.core.source="/Behavior Trees/Simple_BT.bum|org.eventb.core.machineFile#Simple_BT|org.eventb.core.invariant#_nR0zlO5KEey6DaZm7xti1("/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

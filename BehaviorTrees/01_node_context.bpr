@@ -169,4 +169,39 @@
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
     </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm1/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="TYPE">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1"/>
+            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p2"/>
+            <org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p3"/>
+            <org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p4"/>
+            <org.eventb.core.prAnte name="+" org.eventb.core.prGoal="p5"/>
+            <org.eventb.core.prAnte name="," org.eventb.core.prGoal="p6"/>
+            <org.eventb.core.prAnte name="-" org.eventb.core.prGoal="p7"/>
+            <org.eventb.core.prAnte name="." org.eventb.core.prGoal="p8"/>
+            <org.eventb.core.prAnte name="/" org.eventb.core.prGoal="p9"/>
+            <org.eventb.core.prAnte name="0" org.eventb.core.prGoal="p10"/>
+            <org.eventb.core.prAnte name="1" org.eventb.core.prGoal="p11"/>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
+        <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+        <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
+        <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+        <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ROOT=FALLBACK"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬SEQUENCE=FALLBACK"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ROOT=CONDITION"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬ROOT=SEQUENCE"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="TYPE={ROOT,SEQUENCE,FALLBACK,CONDITION,ACTION}"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬SEQUENCE=ACTION"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ROOT=ACTION"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬FALLBACK=ACTION"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬SEQUENCE=CONDITION"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬FALLBACK=CONDITION"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬CONDITION=ACTION"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+    </org.eventb.core.prProof>
 </org.eventb.core.prFile>
