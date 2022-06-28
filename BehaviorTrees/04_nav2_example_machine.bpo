@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="23">
+<org.eventb.core.poFile org.eventb.core.poStamp="26">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="17">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
@@ -48,7 +48,7 @@
         <org.eventb.core.poPredicate name="condition_6" org.eventb.core.predicate="n_id={root ↦ 0,fallback_1 ↦ 1,condition_1 ↦ 2,action_1 ↦ 3}" org.eventb.core.source="/Behavior Trees/04_nav2_example_context.buc|org.eventb.core.contextFile#04_nav2_example_context|org.eventb.core.axiom#\/"/>
         <org.eventb.core.poPredicate name="condition_7" org.eventb.core.predicate="parent={fallback_1 ↦ root,condition_1 ↦ fallback_1,action_1 ↦ fallback_1}" org.eventb.core.source="/Behavior Trees/04_nav2_example_context.buc|org.eventb.core.contextFile#04_nav2_example_context|org.eventb.core.axiom#0"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Behavior Trees/04_nav2_example_machine.bpo|org.eventb.core.poFile#04_nav2_example_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="23">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Behavior Trees/04_nav2_example_machine.bpo|org.eventb.core.poFile#04_nav2_example_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="26">
         <org.eventb.core.poIdentifier name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
         <org.eventb.core.poIdentifier name="analyzing_subtree" org.eventb.core.type="ℙ(NODES×BOOL)"/>
         <org.eventb.core.poIdentifier name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
@@ -71,5 +71,5 @@
         <org.eventb.core.poIdentifier name="analyzing_subtree'" org.eventb.core.type="ℙ(NODES×BOOL)"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYP04_nav2_example_contexu" org.eventb.core.parentSet="/Behavior Trees/04_nav2_example_machine.bpo|org.eventb.core.poFile#04_nav2_example_machine|org.eventb.core.poPredicateSet#EVTIDENT04_nav2_example_contexu" org.eventb.core.poStamp="23"/>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/04_nav2_example_machine.bpo|org.eventb.core.poFile#04_nav2_example_machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="23"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/04_nav2_example_machine.bpo|org.eventb.core.poFile#04_nav2_example_machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="26"/>
 </org.eventb.core.poFile>

@@ -10,7 +10,7 @@
     <org.eventb.core.event name="_08wl8PbDEeyQiudq0A8KKw" org.eventb.core.comment="when ticking a condition the results can be : n_result(node) :∈ {SUCCESS, FAILURE}" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked">
         <org.eventb.core.parameter name="_08wl8fbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.identifier="node"/>
         <org.eventb.core.guard name="_08wl8vbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="n_tick(node) = TRUE"/>
-        <org.eventb.core.guard name="_08wl8_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="n_type(node) = CONDITION" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="_08wl8_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="n_type(node) = CONDITION"/>
         <org.eventb.core.guard name="_08wl9PbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="node ∈ nodes"/>
         <org.eventb.core.action name="_08ybIfbDEeyQiudq0A8KKw" org.eventb.core.assignment="analyzing_subtree(parent(node)) ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
