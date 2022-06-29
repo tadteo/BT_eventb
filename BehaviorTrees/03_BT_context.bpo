@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="3">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poFile org.eventb.core.poStamp="4">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
         <org.eventb.core.poIdentifier name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
@@ -38,6 +38,7 @@
         <org.eventb.core.poPredicate name="CONDITIO\" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),t⦂ℙ(NODES×NODES)·r∈node_rel∧r⊆t∧r;t⊆t⇒tcl(r)⊆t" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#7"/>
         <org.eventb.core.poPredicate name="CONDITIO]" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈node_rel⇒tcl(r)=r∪(r;tcl(r))" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#8"/>
         <org.eventb.core.poPredicate name="CONDITIO^" org.eventb.core.predicate="node_fn∈nodes ∖ {root} → nodes" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#:"/>
+        <org.eventb.core.poPredicate name="CONDITIO_" org.eventb.core.predicate="n_id∈nodes → ℕ" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#;"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_context.bpo|org.eventb.core.poFile#03_BT_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_context.bpo|org.eventb.core.poFile#03_BT_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4"/>
 </org.eventb.core.poFile>
