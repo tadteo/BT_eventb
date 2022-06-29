@@ -61,11 +61,11 @@
     <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOgz" org.eventb.core.label="inv2" org.eventb.core.predicate="distance_to_object ≥2 "/>
     <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOg{" org.eventb.core.identifier="time"/>
     <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOg|" org.eventb.core.label="inv3" org.eventb.core.predicate="time ∈ ℕ"/>
-    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOg}" org.eventb.core.comment="restart cycle" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tick_root">
-        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="time &gt; prev_time"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="prev_time ≔ time" org.eventb.core.label="act1"/>
-        <org.eventb.core.action name=")" org.eventb.core.assignment="n_tick(root) ≔ TRUE" org.eventb.core.label="act2"/>
-    </org.eventb.core.event>
     <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOg~" org.eventb.core.identifier="prev_time"/>
     <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh'" org.eventb.core.label="inv4" org.eventb.core.predicate="prev_time ∈ ℕ"/>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh(" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick_root">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="tick_root"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="time &gt; prev_time"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="prev_time ≔ time" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>
