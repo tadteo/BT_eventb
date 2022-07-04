@@ -23,4 +23,7 @@
     <org.eventb.core.axiom name=";" org.eventb.core.label="axm13" org.eventb.core.predicate="n_id ∈ nodes → ℕ"/>
     <org.eventb.core.axiom name="=" org.eventb.core.label="axm14" org.eventb.core.predicate="n_type = {root ↦ ROOT}"/>
     <org.eventb.core.axiom name="&gt;" org.eventb.core.comment="all leaf nodes does not have children" org.eventb.core.label="axm15" org.eventb.core.predicate="∀x·x∉ran(parent) ⇒ (tcl(parent))∼[{x}] = ∅"/>
+    <org.eventb.core.axiom name="?" org.eventb.core.label="axm16" org.eventb.core.predicate="∀n1,n2·(n1 ∈ nodes ∧ n2 ∈ nodes ∧ n1 ≠ n2 ∧ n_type(n1) = ROOT ⇔ n_type(n2) ≠ ROOT) "/>
+    <org.eventb.core.axiom name="@" org.eventb.core.comment="nodes of type ROOT cannot be children of other nodes" org.eventb.core.label="axm17" org.eventb.core.predicate="∀n·(n∈nodes ∧ n_type(n) = ROOT ⇔ n=root)"/>
+    <org.eventb.core.axiom name="A" org.eventb.core.label="axm18" org.eventb.core.predicate="∀n,c·(n∈nodes ∧ c∈parent∼[(n)] ⇔ c≠root ∧ n_type(c) ≠ ROOT)"/>
 </org.eventb.core.contextFile>

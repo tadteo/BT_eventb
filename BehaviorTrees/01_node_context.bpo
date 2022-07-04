@@ -1,25 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="10">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="10">
-        <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-        <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
-        <org.eventb.core.poIdentifier name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        <org.eventb.core.poIdentifier name="SUCCESS" org.eventb.core.type="RESULT"/>
-        <org.eventb.core.poIdentifier name="ROOT" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.poIdentifier name="SEQUENCE" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.poIdentifier name="ACTION" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.poIdentifier name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        <org.eventb.core.poIdentifier name="n_id" org.eventb.core.type="ℙ(NODES×ℤ)"/>
-        <org.eventb.core.poIdentifier name="FALLBACK" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.poIdentifier name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
-        <org.eventb.core.poIdentifier name="CONDITION" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.poIdentifier name="RUNNING" org.eventb.core.type="RESULT"/>
-        <org.eventb.core.poIdentifier name="FAILURE" org.eventb.core.type="RESULT"/>
-    </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/01_node_context.bpo|org.eventb.core.poFile#01_node_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="10">
-        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#("/>
-        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#0"/>
-        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="n_type∈NODES → TYPE" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#5"/>
-        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="n_id∈NODES → ℕ" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#8"/>
-    </org.eventb.core.poPredicateSet>
-</org.eventb.core.poFile>
+<org.eventb.core.poFile org.eventb.core.poStamp="11"/>

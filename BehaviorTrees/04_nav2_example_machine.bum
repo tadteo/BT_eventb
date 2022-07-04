@@ -22,7 +22,7 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="_MxKDoveSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="action_ticked">
         <org.eventb.core.refinesEvent name="_MxKDo_eSEeypHJk8uzlOgw" org.eventb.core.target="action_ticked"/>
-        <org.eventb.core.action name="_MxKDo_eSEeypHJk8uzlOgx" org.eventb.core.assignment="distance_to_object ≔ distance_to_object −1" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="_MxKDo_eSEeypHJk8uzlOgx" org.eventb.core.assignment="distance_to_object ≔ distance_to_object − 1" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="_MxKDo_eSEeypHJk8uzlOgy" org.eventb.core.assignment="n_result(node) ≔ SUCCESS" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_TSKvDPeREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="sequence_ticked_continue">
@@ -65,7 +65,7 @@
     <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh'" org.eventb.core.label="inv4" org.eventb.core.predicate="prev_time ∈ ℕ"/>
     <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh(" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick_root">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="tick_root"/>
-        <org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="time &gt; prev_time"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="time &gt; prev_time"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="prev_time ≔ time" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
 </org.eventb.core.machineFile>
