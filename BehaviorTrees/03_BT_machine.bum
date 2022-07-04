@@ -136,16 +136,11 @@
     <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KL." org.eventb.core.generated="false" org.eventb.core.label="inv8" org.eventb.core.predicate="n_result ∈ NODES → RESULT"/>
     <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KL+" org.eventb.core.generated="false" org.eventb.core.label="inv6" org.eventb.core.predicate="analyzing_subtree ∈ NODES → BOOL"/>
     <org.eventb.core.variable name="_08zpV_bDEeyQiudq0A8KL-" org.eventb.core.generated="false" org.eventb.core.identifier="n_result"/>
-    <org.eventb.core.event name="evt1" org.eventb.core.comment="restart cycle" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tick_root">
-        <org.eventb.core.action name=")" org.eventb.core.assignment="n_tick(node) ≔ TRUE" org.eventb.core.label="act2"/>
-        <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="n_tick(node) = FALSE"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="n_type(node) = ROOT"/>
-        <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="n_result(node) = UNKNOWN"/>
-        <org.eventb.core.parameter name="," org.eventb.core.identifier="node"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="node ∈ nodes"/>
-        <org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="node = root"/>
+    <org.eventb.core.event name="evt1" org.eventb.core.comment="restart cycle" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick_root">
+        <org.eventb.core.refinesEvent name="0" org.eventb.core.target="tick_root"/>
+        <org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="node ∈ nodes"/>
     </org.eventb.core.event>
-    <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KL/" org.eventb.core.comment="For each couple of children of a sequence node &#10;two siblings are ticked if and only if one of the two is success" org.eventb.core.label="inv9" org.eventb.core.predicate="∀n1,n2,s·(s∈nodes ∧ n1 ∈ parent∼[{s}]  ∧ n2 ∈ parent∼[{s}] ∧ n_type(s) = SEQUENCE ∧ n_tick(n1) = TRUE ∧ n_tick(n2) = TRUE ⇔ (n_result(n1) = SUCCESS ∨ n_result(n2) = SUCCESS))"/>
-    <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KL0" org.eventb.core.comment="For each couple of children of a fallback node &#10;two siblings are ticked if and only if one of the &#10;two is failed" org.eventb.core.label="inv10" org.eventb.core.predicate="∀n1,n2,s·(s∈nodes ∧ n1 ∈ parent∼[{s}]  ∧ n2 ∈ parent∼[{s}] ∧ n_type(s) = FALLBACK ∧ n_tick(n1) = TRUE ∧ n_tick(n2) = TRUE ⇔ (n_result(n1) = FAILURE ∨ n_result(n2) = FAILURE))"/>
+    <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KL/" org.eventb.core.comment="For each couple of children of a sequence node &#10;two siblings are ticked if and only if one of the two is success" org.eventb.core.label="inv9" org.eventb.core.predicate="∀n1,n2,s·(s∈nodes ∧ n_type(n1) ≠ ROOT ∧ n_type(n2) ≠ ROOT ∧ n_type(s) = SEQUENCE ∧ n1 ∈ parent∼[{s}]  ∧ n2 ∈ parent∼[{s}] ∧ n_tick(n1) = TRUE ∧ n_tick(n2) = TRUE ⇔ (n_result(n1) = SUCCESS ∨ n_result(n2) = SUCCESS))"/>
+    <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KL0" org.eventb.core.comment="For each couple of children of a fallback node &#10;two siblings are ticked if and only if one of the &#10;two is failed" org.eventb.core.label="inv10" org.eventb.core.predicate="∀n1,n2,s·(s∈nodes ∧ n_type(n1) ≠ ROOT ∧ n_type(n2) ≠ ROOT ∧ n_type(s) = FALLBACK ∧ n1 ∈ parent∼[{s}]  ∧ n2 ∈ parent∼[{s}]  ∧ n_tick(n1) = TRUE ∧ n_tick(n2) = TRUE ⇔ (n_result(n1) = FAILURE ∨ n_result(n2) = FAILURE))"/>
     <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KL1" org.eventb.core.label="inv11" org.eventb.core.predicate="n_result(root)≠ UNKNOWN ⇒ (∀n·(n∈nodes ∧ analyzing_subtree(n) = FALSE))"/>
 </org.eventb.core.machineFile>

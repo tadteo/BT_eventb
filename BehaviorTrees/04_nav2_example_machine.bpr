@@ -425,11 +425,11 @@
                                                                                                                         <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p88" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p89"/>
                                                                                                                         <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
                                                                                                                             <org.eventb.core.prAnte name="'">
-                                                                                                                                <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p38,p50,p59,p55,p48,p36,p35,p39,p51,p2,p56,p90,p91,p85,p87,p89"/>
+                                                                                                                                <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p85,p50,p51,p35,p36,p38,p2,p90,p39,p55,p91,p56,p89,p87,p59,p48"/>
                                                                                                                                 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with node_rel=NODES ↔ NODES" org.eventb.core.prHyps="p0">
                                                                                                                                     <org.eventb.core.prAnte name="'">
-                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p48,p36,p35,p39"/>
-                                                                                                                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p63,p64,p65,p66"/>
+                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p36,p48,p35,p39"/>
+                                                                                                                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p66,p63,p65,p64"/>
                                                                                                                                         <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                                                                                                                                             <org.eventb.core.prAnte name="'">
                                                                                                                                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p63" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p67"/>
@@ -443,7 +443,7 @@
                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p85" org.eventb.core.prInfHyps="p94"/>
                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p87" org.eventb.core.prInfHyps="p95"/>
                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p89" org.eventb.core.prInfHyps="p96"/>
-                                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p59,p90,p91,p85,p87,p89"/>
+                                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p85,p91,p87,p59,p90,p89"/>
                                                                                                                                                         <org.eventb.core.prHypAction name="SELECT6" org.eventb.core.prHyps="p78"/>
                                                                                                                                                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                                                                                                                                                             <org.eventb.core.prAnte name="'">
@@ -468,7 +468,7 @@
                                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF10" org.eventb.core.prHyps="p56" org.eventb.core.prInfHyps="p112"/>
                                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF11" org.eventb.core.prHyps="p97" org.eventb.core.prInfHyps="p113"/>
                                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF12" org.eventb.core.prHyps="p98" org.eventb.core.prInfHyps="p114"/>
-                                                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT13" org.eventb.core.prHyps="p4,p29,p30,p31,p32,p33,p44,p53,p58,p61,p56,p97,p98"/>
+                                                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT13" org.eventb.core.prHyps="p97,p30,p33,p31,p32,p53,p4,p29,p98,p56,p61,p44,p58"/>
                                                                                                                                                                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                                                                                                                                                                             <org.eventb.core.prAnte name="'">
                                                                                                                                                                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p102" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p115"/>
@@ -926,13 +926,13 @@
             <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
             <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L"/>
@@ -1336,11 +1336,11 @@
                                                                                                                         <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p88" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p89"/>
                                                                                                                         <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
                                                                                                                             <org.eventb.core.prAnte name="'">
-                                                                                                                                <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p38,p50,p59,p55,p48,p36,p35,p39,p51,p2,p56,p90,p91,p85,p87,p89"/>
+                                                                                                                                <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p85,p50,p51,p35,p36,p38,p2,p90,p39,p55,p91,p56,p89,p87,p59,p48"/>
                                                                                                                                 <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with node_rel=NODES ↔ NODES" org.eventb.core.prHyps="p0">
                                                                                                                                     <org.eventb.core.prAnte name="'">
-                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p48,p36,p35,p39"/>
-                                                                                                                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p63,p64,p65,p66"/>
+                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p36,p48,p35,p39"/>
+                                                                                                                                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p66,p63,p65,p64"/>
                                                                                                                                         <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                                                                                                                                             <org.eventb.core.prAnte name="'">
                                                                                                                                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p63" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p67"/>
@@ -1354,7 +1354,7 @@
                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p85" org.eventb.core.prInfHyps="p94"/>
                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p87" org.eventb.core.prInfHyps="p95"/>
                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p89" org.eventb.core.prInfHyps="p96"/>
-                                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p59,p90,p91,p85,p87,p89"/>
+                                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p85,p91,p87,p59,p90,p89"/>
                                                                                                                                                         <org.eventb.core.prHypAction name="SELECT6" org.eventb.core.prHyps="p78"/>
                                                                                                                                                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                                                                                                                                                             <org.eventb.core.prAnte name="'">
@@ -1379,7 +1379,7 @@
                                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF10" org.eventb.core.prHyps="p56" org.eventb.core.prInfHyps="p112"/>
                                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF11" org.eventb.core.prHyps="p97" org.eventb.core.prInfHyps="p113"/>
                                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF12" org.eventb.core.prHyps="p98" org.eventb.core.prInfHyps="p114"/>
-                                                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT13" org.eventb.core.prHyps="p4,p29,p30,p31,p32,p33,p44,p53,p58,p61,p56,p97,p98"/>
+                                                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT13" org.eventb.core.prHyps="p97,p30,p33,p31,p32,p53,p4,p29,p98,p56,p61,p44,p58"/>
                                                                                                                                                                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                                                                                                                                                                             <org.eventb.core.prAnte name="'">
                                                                                                                                                                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p102" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p115"/>
@@ -1837,20 +1837,20 @@
             <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
             <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="action_ticked/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4">
+    <org.eventb.core.prProof name="action_ticked/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.psManual="true">
         <org.eventb.core.lang name="L"/>
         <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
                 <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
-                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p2,p1,p3">
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4">
                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
@@ -2024,7 +2024,7 @@
                                                                                                                                                                                                             <org.eventb.core.prAnte name=")" org.eventb.core.prHyps="p7">
                                                                                                                                                                                                                 <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
                                                                                                                                                                                                                     <org.eventb.core.prAnte name="'">
-                                                                                                                                                                                                                        <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p50,p45,p48,p54,p60,p47,p5,p58,p53,p43,p42,p46,p61,p55,p4,p51,p59,p52,p8,p1,p12,p57,p56,p44,p105,p106,p107,p108,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p26,p27,p28,p29,p30,p31,p32,p37,p38,p39,p40,p41,p62,p63,p72,p73,p74,p75,p76,p77,p78,p82,p85,p86,p87,p88,p89,p90,p91,p93,p94,p95,p97,p99,p101"/>
+                                                                                                                                                                                                                        <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p85,p42,p41,p62,p43,p105,p32,p46,p5,p14,p37,p106,p15,p89,p91,p107,p19,p50,p20,p52,p12,p53,p78,p56,p17,p93,p57,p24,p58,p88,p16,p8,p101,p59,p86,p82,p60,p21,p61,p74,p97,p38,p39,p28,p44,p45,p77,p47,p22,p26,p27,p95,p72,p48,p75,p18,p51,p30,p73,p94,p54,p55,p40,p1,p108,p87,p29,p4,p23,p90,p63,p76,p31,p99"/>
                                                                                                                                                                                                                         <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with n_result(node)=UNKNOWN" org.eventb.core.prHyps="p0">
                                                                                                                                                                                                                             <org.eventb.core.prAnte name="'">
                                                                                                                                                                                                                                 <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p28" org.eventb.core.prInfHyps="p109"/>
@@ -2033,7 +2033,7 @@
                                                                                                                                                                                                                                 <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p32" org.eventb.core.prInfHyps="p112"/>
                                                                                                                                                                                                                                 <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p99" org.eventb.core.prInfHyps="p113"/>
                                                                                                                                                                                                                                 <org.eventb.core.prHypAction name="FORWARD_INF5" org.eventb.core.prHyps="p101" org.eventb.core.prInfHyps="p114"/>
-                                                                                                                                                                                                                                <org.eventb.core.prHypAction name="DESELECT6" org.eventb.core.prHyps="p28,p30,p31,p32,p99,p101"/>
+                                                                                                                                                                                                                                <org.eventb.core.prHypAction name="DESELECT6" org.eventb.core.prHyps="p30,p31,p99,p32,p101,p28"/>
                                                                                                                                                                                                                                 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with n_type(node)=ACTION" org.eventb.core.prHyps="p9">
                                                                                                                                                                                                                                     <org.eventb.core.prAnte name="'">
                                                                                                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p85" org.eventb.core.prInfHyps="p115"/>
@@ -2045,11 +2045,11 @@
                                                                                                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF6" org.eventb.core.prHyps="p91" org.eventb.core.prInfHyps="p121"/>
                                                                                                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF7" org.eventb.core.prHyps="p93" org.eventb.core.prInfHyps="p122"/>
                                                                                                                                                                                                                                         <org.eventb.core.prHypAction name="FORWARD_INF8" org.eventb.core.prHyps="p94" org.eventb.core.prInfHyps="p123"/>
-                                                                                                                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT9" org.eventb.core.prHyps="p85,p86,p87,p88,p89,p90,p91,p93,p94"/>
+                                                                                                                                                                                                                                        <org.eventb.core.prHypAction name="DESELECT9" org.eventb.core.prHyps="p90,p85,p88,p89,p91,p87,p93,p86,p94"/>
                                                                                                                                                                                                                                         <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with node_rel=NODES ↔ NODES" org.eventb.core.prHyps="p5">
                                                                                                                                                                                                                                             <org.eventb.core.prAnte name="'">
-                                                                                                                                                                                                                                                <org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p53,p43,p42,p46"/>
-                                                                                                                                                                                                                                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p64,p65,p66,p67"/>
+                                                                                                                                                                                                                                                <org.eventb.core.prHypAction name="DESELECT0" org.eventb.core.prHyps="p43,p53,p42,p46"/>
+                                                                                                                                                                                                                                                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p67,p64,p66,p65"/>
                                                                                                                                                                                                                                                 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                                                                                                                                                                                                                                                     <org.eventb.core.prAnte name="'">
                                                                                                                                                                                                                                                         <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p64" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p68"/>
@@ -2080,7 +2080,7 @@
                                                                                                                                                                                                                                                                 <org.eventb.core.prHypAction name="FORWARD_INF19" org.eventb.core.prHyps="p121" org.eventb.core.prInfHyps="p143"/>
                                                                                                                                                                                                                                                                 <org.eventb.core.prHypAction name="FORWARD_INF20" org.eventb.core.prHyps="p122" org.eventb.core.prInfHyps="p144"/>
                                                                                                                                                                                                                                                                 <org.eventb.core.prHypAction name="FORWARD_INF21" org.eventb.core.prHyps="p123" org.eventb.core.prInfHyps="p145"/>
-                                                                                                                                                                                                                                                                <org.eventb.core.prHypAction name="DESELECT22" org.eventb.core.prHyps="p10,p9,p2,p50,p8,p105,p106,p37,p38,p39,p40,p41,p62,p115,p116,p117,p118,p119,p120,p121,p122,p123"/>
+                                                                                                                                                                                                                                                                <org.eventb.core.prHypAction name="DESELECT22" org.eventb.core.prHyps="p117,p38,p39,p120,p40,p41,p62,p118,p119,p115,p2,p122,p105,p116,p37,p106,p123,p8,p9,p50,p10,p121"/>
                                                                                                                                                                                                                                                                 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                                                                                                                                                                                                                                                                     <org.eventb.core.prAnte name="'">
                                                                                                                                                                                                                                                                         <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p124" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p146"/>
@@ -2216,7 +2216,7 @@
             <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
             <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p108" org.eventb.core.predicate="n_result∈NODES ⇸ RESULT"/>
+        <org.eventb.core.prPred name="p107" org.eventb.core.predicate="n_result∈NODES ⇸ RESULT"/>
         <org.eventb.core.prPred name="p147" org.eventb.core.predicate="ROOT=ACTION"/>
         <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬ROOT=ACTION"/>
         <org.eventb.core.prPred name="p50" org.eventb.core.predicate="n_type∈NODES → TYPE"/>
@@ -2415,7 +2415,7 @@
         <org.eventb.core.prPred name="p55" org.eventb.core.predicate="n_id∈nodes → ℕ"/>
         <org.eventb.core.prPred name="p120" org.eventb.core.predicate="¬CONDITION={root ↦ ROOT,fallback_1 ↦ FALLBACK,condition_1 ↦ CONDITION,action_1 ↦ n_type(node)}(node)"/>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="n_id={root ↦ 0,fallback_1 ↦ 1,condition_1 ↦ 2,action_1 ↦ 3}"/>
-        <org.eventb.core.prPred name="p107" org.eventb.core.predicate="node∈dom(n_result)"/>
+        <org.eventb.core.prPred name="p108" org.eventb.core.predicate="node∈dom(n_result)"/>
         <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬RUNNING=SUCCESS">
             <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
             <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
@@ -2446,17 +2446,17 @@
         <org.eventb.core.prPred name="p99" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈nodes∧n∈parent∼[{s}]∧¬n_result(n)=UNKNOWN⇒n_tick(n)=TRUE"/>
         <org.eventb.core.prPred name="p137" org.eventb.core.predicate="{root ↦ ROOT,fallback_1 ↦ FALLBACK,condition_1 ↦ CONDITION,action_1 ↦ {root ↦ ROOT}(node)}(node)={root ↦ ROOT}(node)"/>
         <org.eventb.core.prPred name="p139" org.eventb.core.predicate="¬ROOT={root ↦ ROOT,fallback_1 ↦ FALLBACK,condition_1 ↦ CONDITION,action_1 ↦ {root ↦ ROOT}(node)}(node)"/>
-        <org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-        <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
-        <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
         <org.eventb.core.prReas name="r9" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r10" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+        <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.cut"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+        <org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL3"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r8" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="action_ticked/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0,p1,p2,p3,p4,p5" org.eventb.core.prSets="NODES,TYPE" org.eventb.core.psManual="true">
         <org.eventb.core.lang name="L"/>
@@ -3033,13 +3033,13 @@
             <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
             <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L"/>
@@ -3222,20 +3222,22 @@
                                 <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
                                 <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
                                 <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p35" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
-                                <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
+                                <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p37" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p38"/>
+                                <org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p39" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p40"/>
+                                <org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p41"/>
                                 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                                     <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p38"/>
-                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p39"/>
+                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p42"/>
+                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p43"/>
                                         <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with n_type(node)=ROOT" org.eventb.core.prHyps="p3">
                                             <org.eventb.core.prAnte name="'">
-                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p40"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p9" org.eventb.core.prInfHyps="p41"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p42"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p43"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p12" org.eventb.core.prInfHyps="p44"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p44"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p9" org.eventb.core.prInfHyps="p45"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p46"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p47"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p12" org.eventb.core.prInfHyps="p48"/>
                                                 <org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p8,p9,p10,p11,p12"/>
-                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p3,p6,p2,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p37,p40,p41,p42,p43,p44">
+                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p3,p6,p2,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p41,p44,p45,p46,p47,p48">
                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
                                                 </org.eventb.core.prRule>
                                             </org.eventb.core.prAnte>
@@ -3265,75 +3267,87 @@
         <org.eventb.core.prIdent name="node" org.eventb.core.type="NODES"/>
         <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
         <org.eventb.core.prIdent name="time" org.eventb.core.type="ℤ"/>
-        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="∀x⦂NODES·¬x∈ran(parent)⇒¬x∈ran(tcl(parent))">
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p31" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈nodes∧n∈parent∼[{s}]∧n_result(n)≠UNKNOWN⇒n_tick(n)=TRUE">
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬RUNNING=UNKNOWN"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="n_result(node)≠UNKNOWN"/>
-        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="nodes∈ℙ(NODES)"/>
-        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈nodes∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧n1≠n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n_tick(n2)=FALSE∧n_result(n2)=UNKNOWN">
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="RESULT={RUNNING,SUCCESS,FAILURE,UNKNOWN}"/>
-        <org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬n_type(node)=FALLBACK"/>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬SEQUENCE=CONDITION"/>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬RUNNING=FAILURE"/>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬SUCCESS=FAILURE"/>
+        <org.eventb.core.prPred name="p46" org.eventb.core.predicate="¬n_type(node)=FALLBACK"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬ROOT=FALLBACK"/>
-        <org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬n_type(node)=SEQUENCE"/>
+        <org.eventb.core.prPred name="p45" org.eventb.core.predicate="¬n_type(node)=SEQUENCE"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬SEQUENCE=FALLBACK"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})"/>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="TYPE={ROOT,SEQUENCE,FALLBACK,CONDITION,ACTION}"/>
         <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬SEQUENCE=ACTION"/>
-        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧n1≠n2∧n_type(n1)=ROOT⇔n_type(n2)≠ROOT"/>
         <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬ROOT=ACTION"/>
-        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬n_result(node)=UNKNOWN"/>
-        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬FAILURE=UNKNOWN"/>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})"/>
-        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧¬n1=n2∧n_type(n1)=ROOT⇔¬n_type(n2)=ROOT"/>
-        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="TYPE={n_type(node),SEQUENCE,FALLBACK,CONDITION,ACTION}"/>
-        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬n_type(node)=ACTION"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="n_type(node)=ROOT"/>
+        <org.eventb.core.prPred name="p48" org.eventb.core.predicate="¬n_type(node)=ACTION"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬ROOT=SEQUENCE"/>
-        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬n_result(root)=UNKNOWN⇒(∀n⦂NODES·n∈nodes)∧(∀n⦂NODES·analyzing_subtree(n)=FALSE)">
-            <org.eventb.core.prIdent name="analyzing_subtree" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="root" org.eventb.core.type="NODES"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬RUNNING=SUCCESS"/>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="n_tick(node)=TRUE"/>
-        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="node∈NODES"/>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬FALLBACK=CONDITION"/>
         <org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬CONDITION=ACTION"/>
-        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="n_result(root)≠UNKNOWN⇒(∀n⦂NODES·n∈nodes∧analyzing_subtree(n)=FALSE)">
+        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="n_result(root)≠UNKNOWN⇒(∀n⦂NODES·n∈nodes∧analyzing_subtree(n)=FALSE)">
             <org.eventb.core.prIdent name="analyzing_subtree" org.eventb.core.type="ℙ(NODES×BOOL)"/>
             <org.eventb.core.prIdent name="root" org.eventb.core.type="NODES"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="time∈ℕ"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="time+1∈ℕ"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="node∈nodes"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬ROOT=CONDITION"/>
         <org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈nodes∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧¬n1=n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n_tick(n2)=FALSE∧n_result(n2)=UNKNOWN">
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬n_type(node)=CONDITION"/>
+        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬FALLBACK=ACTION"/>
+        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="∀x⦂NODES·¬x∈ran(parent)⇒¬x∈ran(tcl(parent))">
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬RUNNING=UNKNOWN"/>
+        <org.eventb.core.prPred name="p42" org.eventb.core.predicate="nodes∈ℙ(NODES)"/>
+        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈nodes∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧n1≠n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n_tick(n2)=FALSE∧n_result(n2)=UNKNOWN">
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬SEQUENCE=CONDITION"/>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬RUNNING=FAILURE"/>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬SUCCESS=FAILURE"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="TYPE={ROOT,SEQUENCE,FALLBACK,CONDITION,ACTION}"/>
+        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧n1≠n2∧n_type(n1)=ROOT⇔n_type(n2)≠ROOT"/>
+        <org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬n_result(node)=UNKNOWN"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬FAILURE=UNKNOWN"/>
+        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧¬n1=n2∧n_type(n1)=ROOT⇔¬n_type(n2)=ROOT"/>
+        <org.eventb.core.prPred name="p44" org.eventb.core.predicate="TYPE={n_type(node),SEQUENCE,FALLBACK,CONDITION,ACTION}"/>
+        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="n_type(node)=ROOT"/>
+        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="¬n_result(root)=UNKNOWN⇒(∀n⦂NODES·n∈nodes)∧(∀n⦂NODES·analyzing_subtree(n)=FALSE)">
+            <org.eventb.core.prIdent name="analyzing_subtree" org.eventb.core.type="ℙ(NODES×BOOL)"/>
+            <org.eventb.core.prIdent name="root" org.eventb.core.type="NODES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬RUNNING=SUCCESS"/>
+        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="node∈NODES"/>
+        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES,s⦂NODES·s∈nodes∧n_type(n1)≠ROOT∧n_type(n2)≠ROOT∧n_type(s)=SEQUENCE∧n1∈parent∼[{s}]∧n2∈parent∼[{s}]∧n_tick(n1)=TRUE∧n_tick(n2)=TRUE⇔n_result(n1)=SUCCESS∨n_result(n2)=SUCCESS">
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES,s⦂NODES·s∈nodes∧n_type(n1)≠ROOT∧n_type(n2)≠ROOT∧n_type(s)=FALLBACK∧n1∈parent∼[{s}]∧n2∈parent∼[{s}]∧n_tick(n1)=TRUE∧n_tick(n2)=TRUE⇔n_result(n1)=FAILURE∨n_result(n2)=FAILURE">
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬FALLBACK=CONDITION"/>
+        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="time∈ℕ"/>
+        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES,s⦂NODES·s∈nodes∧¬n_type(n1)=ROOT∧¬n_type(n2)=ROOT∧n_type(s)=FALLBACK∧n1∈parent∼[{s}]∧n2∈parent∼[{s}]∧n_tick(n1)=TRUE∧n_tick(n2)=TRUE⇔n_result(n1)=FAILURE∨n_result(n2)=FAILURE">
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p47" org.eventb.core.predicate="¬n_type(node)=CONDITION"/>
         <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬SUCCESS=UNKNOWN"/>
         <org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈nodes∧n∈parent∼[{s}]∧¬n_result(n)=UNKNOWN⇒n_tick(n)=TRUE">
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬FALLBACK=ACTION"/>
+        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES,s⦂NODES·s∈nodes∧¬n_type(n1)=ROOT∧¬n_type(n2)=ROOT∧n_type(s)=SEQUENCE∧n1∈parent∼[{s}]∧n2∈parent∼[{s}]∧n_tick(n1)=TRUE∧n_tick(n2)=TRUE⇔n_result(n1)=SUCCESS∨n_result(n2)=SUCCESS">
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">

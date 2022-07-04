@@ -4,4 +4,5 @@
     <org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="result_arrived/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
     <org.eventb.core.psStatus name="result_arrived/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="33" org.eventb.core.psManual="false"/>
+    <org.eventb.core.psStatus name="tick_root/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="35" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
