@@ -10,4 +10,8 @@
     <org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="n_tick ∈ NODES → BOOL"/>
     <org.eventb.core.variable name="," org.eventb.core.identifier="n_result"/>
     <org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="n_result ∈ NODES → RESULT"/>
+    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="result_arrived">
+        <org.eventb.core.guard name="_080QafbDEeyQiudq0A8KKy" org.eventb.core.label="grd3" org.eventb.core.predicate="node ∈ nodes"/>
+        <org.eventb.core.refinesEvent name="_080QafbDEeyQiudq0A8KK{" org.eventb.core.target="result_arrived"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>

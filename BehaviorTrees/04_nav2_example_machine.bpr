@@ -945,9 +945,10 @@
                         <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15,p16,p17,p18,p19,p20"/>
                         <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15,p16,p17,p18,p19,p20"/>
                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p25">
                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p23" org.eventb.core.prHyps=""/>
+                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p25" org.eventb.core.prHyps=""/>
                             </org.eventb.core.prAnte>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
@@ -961,21 +962,10 @@
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
             <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ROOT=SEQUENCE">
-            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬RUNNING=UNKNOWN">
             <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
             <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
             <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬RUNNING=SUCCESS">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="10∈ℕ"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="RESULT={RUNNING,SUCCESS,FAILURE,UNKNOWN}">
@@ -990,21 +980,6 @@
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬FALLBACK=CONDITION">
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CONDITION=ACTION">
-            <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
-            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬RUNNING=FAILURE">
             <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
             <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
@@ -1023,11 +998,6 @@
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬SEQUENCE=FALLBACK">
             <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ROOT=CONDITION">
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})">
@@ -1050,6 +1020,13 @@
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧n1≠n2∧n_type(n1)=ROOT⇔n_type(n2)≠ROOT">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+            <org.eventb.core.prIdent name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
+            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬ROOT=ACTION">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
@@ -1060,11 +1037,6 @@
             <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
             <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬SUCCESS=UNKNOWN">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
@@ -1073,14 +1045,57 @@
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧¬n1=n2∧n_type(n1)=ROOT⇔¬n_type(n2)=ROOT">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+            <org.eventb.core.prIdent name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
+            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ROOT=SEQUENCE">
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬RUNNING=SUCCESS">
+            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
+            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
+            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬FALLBACK=CONDITION">
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CONDITION=ACTION">
+            <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ROOT=CONDITION">
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬SUCCESS=UNKNOWN">
+            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
+            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
+            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬FALLBACK=ACTION">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L"/>
@@ -1093,9 +1108,10 @@
                         <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15,p16,p17,p18,p19,p20"/>
                         <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15,p16,p17,p18,p19,p20"/>
                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p25">
                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p23" org.eventb.core.prHyps=""/>
+                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p25" org.eventb.core.prHyps=""/>
                             </org.eventb.core.prAnte>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
@@ -1109,21 +1125,10 @@
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
             <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ROOT=SEQUENCE">
-            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬RUNNING=UNKNOWN">
             <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
             <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
             <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬RUNNING=SUCCESS">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="RESULT={RUNNING,SUCCESS,FAILURE,UNKNOWN}">
             <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
@@ -1136,21 +1141,6 @@
             <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬FALLBACK=CONDITION">
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CONDITION=ACTION">
-            <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
-            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬RUNNING=FAILURE">
             <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
@@ -1170,11 +1160,6 @@
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬SEQUENCE=FALLBACK">
             <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ROOT=CONDITION">
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})">
@@ -1197,6 +1182,13 @@
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧n1≠n2∧n_type(n1)=ROOT⇔n_type(n2)≠ROOT">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+            <org.eventb.core.prIdent name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
+            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬ROOT=ACTION">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
@@ -1207,11 +1199,6 @@
             <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
             <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬SUCCESS=UNKNOWN">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
@@ -1220,15 +1207,58 @@
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="10≥2"/>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧¬n1=n2∧n_type(n1)=ROOT⇔¬n_type(n2)=ROOT">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+            <org.eventb.core.prIdent name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
+            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ROOT=SEQUENCE">
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬RUNNING=SUCCESS">
+            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
+            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
+            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬FALLBACK=CONDITION">
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CONDITION=ACTION">
+            <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ROOT=CONDITION">
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬SUCCESS=UNKNOWN">
+            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
+            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
+            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬FALLBACK=ACTION">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="10≥2"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="condition_ticked_failure/n_result/EQL" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0,p1,p2,p3,p4,p5" org.eventb.core.prSets="NODES,TYPE" org.eventb.core.psManual="true">
         <org.eventb.core.lang name="L"/>
@@ -1815,451 +1845,27 @@
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
     </org.eventb.core.prProof>
-    <org.eventb.core.prProof name="action_ticked/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0,p1,p2,p3" org.eventb.core.prSets="NODES,TYPE" org.eventb.core.psManual="true">
+    <org.eventb.core.prProof name="action_ticked/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4">
         <org.eventb.core.lang name="L"/>
-        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION}))" org.eventb.core.prHyps="">
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
             <org.eventb.core.prAnte name="'">
-                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14"/>
-                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14"/>
-                <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN}))" org.eventb.core.prHyps="">
-                    <org.eventb.core.prAnte name="'">
-                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p15" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p16,p17,p18,p19,p20,p21,p22"/>
-                        <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p16,p17,p18,p19,p20,p21,p22"/>
-                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'">
-                                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p23"/>
-                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p24" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p25"/>
-                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                                    <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p26"/>
-                                        <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with n_type(node)=ACTION" org.eventb.core.prHyps="p1">
-                                            <org.eventb.core.prAnte name="'">
-                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p27"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p28"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p9" org.eventb.core.prInfHyps="p29"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p30"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p14" org.eventb.core.prInfHyps="p31"/>
-                                                <org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p8,p9,p10,p11,p14"/>
-                                                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-                                                    <org.eventb.core.prAnte name="'">
-                                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p32" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33"/>
-                                                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p34" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p35"/>
-                                                        <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
-                                                            <org.eventb.core.prAnte name="'">
-                                                                <org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p33,p36,p37,p38,p39,p40,p41,p42,p43,p0,p44,p45,p46,p8,p9,p47,p48,p10,p49,p50,p51,p52,p53,p54,p55,p56,p57,p2,p58,p14,p59,p60,p35,p61,p62,p25,p63,p11,p64"/>
-                                                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with n_type(node)=ACTION" org.eventb.core.prHyps="p1">
-                                                                    <org.eventb.core.prAnte name="'">
-                                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p60" org.eventb.core.prInfHyps="p65"/>
-                                                                        <org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p60"/>
-                                                                        <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with node_rel=NODES ↔ NODES" org.eventb.core.prHyps="p0">
-                                                                            <org.eventb.core.prAnte name="'">
-                                                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p59" org.eventb.core.prInfHyps="p66"/>
-                                                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p52" org.eventb.core.prInfHyps="p67"/>
-                                                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p38" org.eventb.core.prInfHyps="p68"/>
-                                                                                <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p37" org.eventb.core.prInfHyps="p69"/>
-                                                                                <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p42" org.eventb.core.prInfHyps="p70"/>
-                                                                                <org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p59,p38,p52,p37,p42"/>
-                                                                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
-                                                                                    <org.eventb.core.prAnte name="'">
-                                                                                        <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p67" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p71"/>
-                                                                                        <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p68" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p72"/>
-                                                                                        <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p69" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p73"/>
-                                                                                        <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p70" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p74"/>
-                                                                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-                                                                                            <org.eventb.core.prAnte name="'">
-                                                                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p71" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p75"/>
-                                                                                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p72" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p76"/>
-                                                                                                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p73" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p77"/>
-                                                                                                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p74" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p78"/>
-                                                                                                <org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with n_type={root ↦ ROOT}" org.eventb.core.prHyps="p2">
-                                                                                                    <org.eventb.core.prAnte name="'">
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1" org.eventb.core.prInfHyps="p79"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p27" org.eventb.core.prInfHyps="p80"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p28" org.eventb.core.prInfHyps="p81"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p29" org.eventb.core.prInfHyps="p82"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p30" org.eventb.core.prInfHyps="p83"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF5" org.eventb.core.prHyps="p31" org.eventb.core.prInfHyps="p84"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF6" org.eventb.core.prHyps="p47" org.eventb.core.prInfHyps="p85"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF7" org.eventb.core.prHyps="p41" org.eventb.core.prInfHyps="p86"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF8" org.eventb.core.prHyps="p45" org.eventb.core.prInfHyps="p87"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF9" org.eventb.core.prHyps="p62" org.eventb.core.prInfHyps="p88"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF10" org.eventb.core.prHyps="p57" org.eventb.core.prInfHyps="p89"/>
-                                                                                                        <org.eventb.core.prHypAction name="FORWARD_INF11" org.eventb.core.prHyps="p65" org.eventb.core.prInfHyps="p90"/>
-                                                                                                        <org.eventb.core.prHypAction name="DESELECT12" org.eventb.core.prHyps="p27,p28,p45,p29,p30,p31,p65,p1,p47,p57,p62,p41"/>
-                                                                                                        <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-                                                                                                            <org.eventb.core.prAnte name="'">
-                                                                                                                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p79" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p91"/>
-                                                                                                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p80" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p92"/>
-                                                                                                                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p81" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p93"/>
-                                                                                                                <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p82" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p94"/>
-                                                                                                                <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p83" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p95"/>
-                                                                                                                <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p84" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p96"/>
-                                                                                                                <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p86" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p97"/>
-                                                                                                                <org.eventb.core.prHypAction name="REWRITE7" org.eventb.core.prHidden="p87" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p98"/>
-                                                                                                                <org.eventb.core.prHypAction name="REWRITE8" org.eventb.core.prHidden="p88" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p99"/>
-                                                                                                                <org.eventb.core.prHypAction name="REWRITE9" org.eventb.core.prHidden="p90" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p100"/>
-                                                                                                                <org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p93"/>
-                                                                                                            </org.eventb.core.prAnte>
-                                                                                                        </org.eventb.core.prRule>
-                                                                                                    </org.eventb.core.prAnte>
-                                                                                                </org.eventb.core.prRule>
-                                                                                            </org.eventb.core.prAnte>
-                                                                                        </org.eventb.core.prRule>
-                                                                                    </org.eventb.core.prAnte>
-                                                                                </org.eventb.core.prRule>
-                                                                            </org.eventb.core.prAnte>
-                                                                        </org.eventb.core.prRule>
-                                                                    </org.eventb.core.prAnte>
-                                                                </org.eventb.core.prRule>
-                                                            </org.eventb.core.prAnte>
-                                                        </org.eventb.core.prRule>
-                                                    </org.eventb.core.prAnte>
-                                                </org.eventb.core.prRule>
-                                            </org.eventb.core.prAnte>
-                                        </org.eventb.core.prRule>
-                                    </org.eventb.core.prAnte>
-                                </org.eventb.core.prRule>
-                            </org.eventb.core.prAnte>
-                        </org.eventb.core.prRule>
-                    </org.eventb.core.prAnte>
-                    <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+                <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="ML" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p2,p1,p3">
+                    <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="0;1:500"/>
                 </org.eventb.core.prRule>
             </org.eventb.core.prAnte>
-            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
         </org.eventb.core.prRule>
-        <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
-        <org.eventb.core.prIdent name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
-        <org.eventb.core.prIdent name="node" org.eventb.core.type="NODES"/>
-        <org.eventb.core.prIdent name="node_rel" org.eventb.core.type="ℙ(ℙ(NODES×NODES))"/>
-        <org.eventb.core.prIdent name="root" org.eventb.core.type="NODES"/>
-        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈nodes∧n∈parent∼[{s}]∧n_result(n)≠UNKNOWN⇒n_tick(n)=TRUE">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="distance_to_object≥2">
-            <org.eventb.core.prIdent name="distance_to_object" org.eventb.core.type="ℤ"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="¬CONDITION=n_type(node)"/>
-        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),t⦂ℙ(NODES×NODES)·r∈node_rel∧r⊆t∧r;t⊆t⇒tcl(r)⊆t">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p65" org.eventb.core.predicate="n_type={root ↦ ROOT,fallback_1 ↦ FALLBACK,condition_1 ↦ CONDITION,action_1 ↦ n_type(node)}">
-            <org.eventb.core.prIdent name="action_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="condition_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="fallback_1" org.eventb.core.type="NODES"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p81" org.eventb.core.predicate="¬ROOT={root ↦ ROOT}(node)"/>
-        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈node_rel⇒r;tcl(r)⊆tcl(r)">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬SEQUENCE=FALLBACK"/>
-        <org.eventb.core.prPred name="p45" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES,s⦂NODES·s∈nodes∧n1∈parent∼[{s}]∧n2∈parent∼[{s}]∧n_type(s)=FALLBACK∧n_tick(n1)=TRUE∧n_tick(n2)=TRUE⇔n_result(n1)=FAILURE∨n_result(n2)=FAILURE">
-            <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})">
-            <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p91" org.eventb.core.predicate="ROOT=ACTION"/>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬ROOT=ACTION"/>
-        <org.eventb.core.prPred name="p47" org.eventb.core.predicate="n_type∈NODES → TYPE"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})"/>
-        <org.eventb.core.prPred name="p50" org.eventb.core.predicate="action_1∈nodes">
-            <org.eventb.core.prIdent name="action_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p52" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈node_rel⇒r⊆tcl(r)">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p94" org.eventb.core.predicate="¬SEQUENCE=ROOT"/>
-        <org.eventb.core.prPred name="p55" org.eventb.core.predicate="n_result∈NODES → RESULT">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p88" org.eventb.core.predicate="node∈dom({root ↦ ROOT})"/>
-        <org.eventb.core.prPred name="p58" org.eventb.core.predicate="n_tick∈NODES → BOOL">
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p83" org.eventb.core.predicate="¬FALLBACK={root ↦ ROOT}(node)"/>
-        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬CONDITION=ACTION"/>
-        <org.eventb.core.prPred name="p99" org.eventb.core.predicate="node=root"/>
-        <org.eventb.core.prPred name="p67" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈NODES ↔ NODES⇒r⊆tcl(r)">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬ROOT=CONDITION"/>
-        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈nodes∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧¬n1=n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n_tick(n2)=FALSE∧n_result(n2)=UNKNOWN">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p60" org.eventb.core.predicate="n_type={root ↦ ROOT,fallback_1 ↦ FALLBACK,condition_1 ↦ CONDITION,action_1 ↦ ACTION}">
-            <org.eventb.core.prIdent name="action_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="condition_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="fallback_1" org.eventb.core.type="NODES"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p61" org.eventb.core.predicate="condition_1∈nodes">
-            <org.eventb.core.prIdent name="condition_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬FALLBACK=ACTION"/>
-        <org.eventb.core.prPred name="p63" org.eventb.core.predicate="∀n⦂ℙ(NODES)·n⊆parent∼[n]⇒n=(∅ ⦂ ℙ(NODES))">
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p68" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈NODES ↔ NODES⇒r;tcl(r)⊆tcl(r)">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p84" org.eventb.core.predicate="¬CONDITION={root ↦ ROOT}(node)"/>
-        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀x⦂NODES·¬x∈ran(parent)⇒¬x∈ran(tcl(parent))">
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬ROOT=n_type(node)"/>
-        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="¬SEQUENCE=n_type(node)"/>
-        <org.eventb.core.prPred name="p73" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),t⦂ℙ(NODES×NODES)·⊤∧r⊆t∧r;t⊆t⇒tcl(r)⊆t">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p26" org.eventb.core.predicate="nodes∈ℙ(NODES)">
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p80" org.eventb.core.predicate="TYPE={ROOT,SEQUENCE,FALLBACK,CONDITION,{root ↦ ROOT}(node)}"/>
-        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈nodes∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧n1≠n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n_tick(n2)=FALSE∧n_result(n2)=UNKNOWN">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="analyzing_subtree∈NODES → BOOL">
-            <org.eventb.core.prIdent name="analyzing_subtree" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="n_id∈NODES → ℕ">
-            <org.eventb.core.prIdent name="n_id" org.eventb.core.type="ℙ(NODES×ℤ)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="children∈nodes → ℙ(nodes)">
-            <org.eventb.core.prIdent name="children" org.eventb.core.type="ℙ(NODES×ℙ(NODES))"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬RUNNING=FAILURE">
-            <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬SUCCESS=FAILURE">
-            <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p75" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r⊆tcl(r)">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p100" org.eventb.core.predicate="{root ↦ ROOT}={root ↦ ROOT,fallback_1 ↦ FALLBACK,condition_1 ↦ CONDITION,action_1 ↦ ROOT}">
-            <org.eventb.core.prIdent name="action_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="condition_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="fallback_1" org.eventb.core.type="NODES"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p78" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·tcl(r)=r∪(r;tcl(r))">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p49" org.eventb.core.predicate="n_tick∈NODES ⇸ BOOL">
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p96" org.eventb.core.predicate="¬CONDITION=ROOT"/>
-        <org.eventb.core.prPred name="p79" org.eventb.core.predicate="{root ↦ ROOT}(node)=ACTION"/>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p93" org.eventb.core.predicate="⊥"/>
-        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="¬FALLBACK=n_type(node)"/>
-        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="n_type={root ↦ ROOT}"/>
-        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p69" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),t⦂ℙ(NODES×NODES)·r∈NODES ↔ NODES∧r⊆t∧r;t⊆t⇒tcl(r)⊆t">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p82" org.eventb.core.predicate="¬SEQUENCE={root ↦ ROOT}(node)"/>
-        <org.eventb.core.prPred name="p22" org.eventb.core.predicate="RESULT={RUNNING,SUCCESS,FAILURE,UNKNOWN}">
-            <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p41" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES,s⦂NODES·s∈nodes∧n1∈parent∼[{s}]∧n2∈parent∼[{s}]∧n_type(s)=SEQUENCE∧n_tick(n1)=TRUE∧n_tick(n2)=TRUE⇔n_result(n1)=SUCCESS∨n_result(n2)=SUCCESS">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p95" org.eventb.core.predicate="¬FALLBACK=ROOT"/>
-        <org.eventb.core.prPred name="p42" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈node_rel⇒tcl(r)=r∪(r;tcl(r))">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="node_rel=NODES ↔ NODES"/>
-        <org.eventb.core.prPred name="p70" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈NODES ↔ NODES⇒tcl(r)=r∪(r;tcl(r))">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ROOT=FALLBACK"/>
-        <org.eventb.core.prPred name="p27" org.eventb.core.predicate="TYPE={ROOT,SEQUENCE,FALLBACK,CONDITION,n_type(node)}"/>
-        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬SEQUENCE=ACTION"/>
-        <org.eventb.core.prPred name="p51" org.eventb.core.predicate="parent={fallback_1 ↦ root,condition_1 ↦ fallback_1,action_1 ↦ fallback_1}">
-            <org.eventb.core.prIdent name="action_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="condition_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="fallback_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p74" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·⊤⇒tcl(r)=r∪(r;tcl(r))">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬ROOT=SEQUENCE"/>
-        <org.eventb.core.prPred name="p97" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES,s⦂NODES·s∈nodes∧n1∈parent∼[{s}]∧n2∈parent∼[{s}]∧ROOT=SEQUENCE∧n_tick(n1)=TRUE∧n_tick(n2)=TRUE⇔n_result(n1)=SUCCESS∨n_result(n2)=SUCCESS">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p90" org.eventb.core.predicate="{root ↦ ROOT}={root ↦ ROOT,fallback_1 ↦ FALLBACK,condition_1 ↦ CONDITION,action_1 ↦ {root ↦ ROOT}(node)}">
-            <org.eventb.core.prIdent name="action_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="condition_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="fallback_1" org.eventb.core.type="NODES"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p59" org.eventb.core.predicate="tcl∈node_rel → node_rel">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p62" org.eventb.core.predicate="node∈dom(n_type)"/>
-        <org.eventb.core.prPred name="p87" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES,s⦂NODES·s∈nodes∧n1∈parent∼[{s}]∧n2∈parent∼[{s}]∧{root ↦ ROOT}(s)=FALLBACK∧n_tick(n1)=TRUE∧n_tick(n2)=TRUE⇔n_result(n1)=FAILURE∨n_result(n2)=FAILURE">
-            <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p64" org.eventb.core.predicate="node_fn∈nodes ∖ {root} → nodes">
-            <org.eventb.core.prIdent name="node_fn" org.eventb.core.type="ℙ(NODES×NODES)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p77" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES),t⦂ℙ(NODES×NODES)·r⊆t∧r;t⊆t⇒tcl(r)⊆t">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬RUNNING=UNKNOWN">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p85" org.eventb.core.predicate="{root ↦ ROOT}∈NODES → TYPE"/>
-        <org.eventb.core.prPred name="p86" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES,s⦂NODES·s∈nodes∧n1∈parent∼[{s}]∧n2∈parent∼[{s}]∧{root ↦ ROOT}(s)=SEQUENCE∧n_tick(n1)=TRUE∧n_tick(n2)=TRUE⇔n_result(n1)=SUCCESS∨n_result(n2)=SUCCESS">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬SEQUENCE=CONDITION"/>
-        <org.eventb.core.prPred name="p44" org.eventb.core.predicate="node∈dom(n_tick)">
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p46" org.eventb.core.predicate="root∈nodes">
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="TYPE={ROOT,SEQUENCE,FALLBACK,CONDITION,ACTION}"/>
-        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="n_type(node)=ACTION"/>
-        <org.eventb.core.prPred name="p89" org.eventb.core.predicate="{root ↦ ROOT}∈NODES ⇸ TYPE"/>
-        <org.eventb.core.prPred name="p48" org.eventb.core.predicate="fallback_1∈nodes">
-            <org.eventb.core.prIdent name="fallback_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p92" org.eventb.core.predicate="TYPE={ROOT,SEQUENCE,FALLBACK,CONDITION}"/>
-        <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬FAILURE=UNKNOWN">
-            <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p76" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r;tcl(r)⊆tcl(r)">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p98" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES,s⦂NODES·s∈nodes∧n1∈parent∼[{s}]∧n2∈parent∼[{s}]∧ROOT=FALLBACK∧n_tick(n1)=TRUE∧n_tick(n2)=TRUE⇔n_result(n1)=FAILURE∨n_result(n2)=FAILURE">
-            <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p53" org.eventb.core.predicate="parent∈nodes ∖ {root} → nodes">
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p54" org.eventb.core.predicate="n_id∈nodes → ℕ">
-            <org.eventb.core.prIdent name="n_id" org.eventb.core.type="ℙ(NODES×ℤ)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p56" org.eventb.core.predicate="n_id={root ↦ 0,fallback_1 ↦ 1,condition_1 ↦ 2,action_1 ↦ 3}">
-            <org.eventb.core.prIdent name="action_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="condition_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="fallback_1" org.eventb.core.type="NODES"/>
-            <org.eventb.core.prIdent name="n_id" org.eventb.core.type="ℙ(NODES×ℤ)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬RUNNING=SUCCESS">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p57" org.eventb.core.predicate="n_type∈NODES ⇸ TYPE"/>
-        <org.eventb.core.prPred name="p71" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·⊤⇒r⊆tcl(r)">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬FALLBACK=CONDITION"/>
-        <org.eventb.core.prPred name="p66" org.eventb.core.predicate="tcl∈(NODES ↔ NODES) → (NODES ↔ NODES)">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p72" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·⊤⇒r;tcl(r)⊆tcl(r)">
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬SUCCESS=UNKNOWN">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈nodes∧n∈parent∼[{s}]∧¬n_result(n)=UNKNOWN⇒n_tick(n)=TRUE">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
-            <org.eventb.core.prIdent name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
-            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-        <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-        <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
-        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
+        <org.eventb.core.prIdent name="distance_to_object" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="prev_time" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prIdent name="time" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="time∈ℕ"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="distance_to_object≥2"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="distance_to_object − 1∈ℕ"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="prev_time∈ℕ"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="distance_to_object∈ℕ"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalML:1"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="action_ticked/n_result/EQL" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0,p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13" org.eventb.core.prSets="NODES,RESULT,TYPE" org.eventb.core.psManual="true">
         <org.eventb.core.lang name="L"/>
@@ -3446,9 +3052,10 @@
                         <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15,p16,p17,p18,p19,p20"/>
                         <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15,p16,p17,p18,p19,p20"/>
                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p25">
                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p23" org.eventb.core.prHyps=""/>
+                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p25" org.eventb.core.prHyps=""/>
                             </org.eventb.core.prAnte>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
@@ -3462,21 +3069,10 @@
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
             <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ROOT=SEQUENCE">
-            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬RUNNING=UNKNOWN">
             <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
             <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
             <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬RUNNING=SUCCESS">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="RESULT={RUNNING,SUCCESS,FAILURE,UNKNOWN}">
             <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
@@ -3489,21 +3085,6 @@
             <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬FALLBACK=CONDITION">
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CONDITION=ACTION">
-            <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
-            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬RUNNING=FAILURE">
             <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
@@ -3526,11 +3107,6 @@
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ROOT=CONDITION">
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})">
             <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
             <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
@@ -3551,6 +3127,13 @@
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧n1≠n2∧n_type(n1)=ROOT⇔n_type(n2)≠ROOT">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+            <org.eventb.core.prIdent name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
+            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬ROOT=ACTION">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
@@ -3561,11 +3144,6 @@
             <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
             <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬SUCCESS=UNKNOWN">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
@@ -3574,14 +3152,57 @@
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧¬n1=n2∧n_type(n1)=ROOT⇔¬n_type(n2)=ROOT">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+            <org.eventb.core.prIdent name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
+            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ROOT=SEQUENCE">
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬RUNNING=SUCCESS">
+            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
+            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
+            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬FALLBACK=CONDITION">
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CONDITION=ACTION">
+            <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ROOT=CONDITION">
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬SUCCESS=UNKNOWN">
+            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
+            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
+            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬FALLBACK=ACTION">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="result_arrived/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="NODES,RESULT,TYPE">
         <org.eventb.core.lang name="L"/>
@@ -3596,22 +3217,25 @@
                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
                             <org.eventb.core.prAnte name="'">
                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p26" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p27"/>
-                                <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p28"/>
-                                <org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p29" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p30"/>
+                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p28" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p29"/>
+                                <org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p30"/>
                                 <org.eventb.core.prHypAction name="REWRITE3" org.eventb.core.prHidden="p31" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p32"/>
-                                <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p33"/>
+                                <org.eventb.core.prHypAction name="REWRITE4" org.eventb.core.prHidden="p33" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p34"/>
+                                <org.eventb.core.prHypAction name="REWRITE5" org.eventb.core.prHidden="p35" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p36"/>
+                                <org.eventb.core.prHypAction name="REWRITE6" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p37"/>
                                 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
                                     <org.eventb.core.prAnte name="'">
-                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p34"/>
+                                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p38"/>
+                                        <org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p39"/>
                                         <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="he with n_type(node)=ROOT" org.eventb.core.prHyps="p3">
                                             <org.eventb.core.prAnte name="'">
-                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p35"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p9" org.eventb.core.prInfHyps="p36"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p37"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p38"/>
-                                                <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p12" org.eventb.core.prInfHyps="p39"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p40"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p9" org.eventb.core.prInfHyps="p41"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p10" org.eventb.core.prInfHyps="p42"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p43"/>
+                                                <org.eventb.core.prHypAction name="FORWARD_INF4" org.eventb.core.prHyps="p12" org.eventb.core.prInfHyps="p44"/>
                                                 <org.eventb.core.prHypAction name="DESELECT5" org.eventb.core.prHyps="p8,p9,p10,p11,p12"/>
-                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p3,p2,p6,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p33,p35,p36,p37,p38,p39">
+                                                <org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p3,p6,p2,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p37,p40,p41,p42,p43,p44">
                                                     <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
                                                 </org.eventb.core.prRule>
                                             </org.eventb.core.prAnte>
@@ -3645,61 +3269,72 @@
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
             <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈nodes∧n∈parent∼[{s}]∧n_result(n)≠UNKNOWN⇒n_tick(n)=TRUE">
+        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈nodes∧n∈parent∼[{s}]∧n_result(n)≠UNKNOWN⇒n_tick(n)=TRUE">
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬RUNNING=UNKNOWN"/>
         <org.eventb.core.prPred name="p5" org.eventb.core.predicate="n_result(node)≠UNKNOWN"/>
-        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="nodes∈ℙ(NODES)"/>
-        <org.eventb.core.prPred name="p31" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈nodes∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧n1≠n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n_tick(n2)=FALSE∧n_result(n2)=UNKNOWN">
+        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="nodes∈ℙ(NODES)"/>
+        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈nodes∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧n1≠n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n_tick(n2)=FALSE∧n_result(n2)=UNKNOWN">
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p19" org.eventb.core.predicate="RESULT={RUNNING,SUCCESS,FAILURE,UNKNOWN}"/>
-        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬n_type(node)=FALLBACK"/>
+        <org.eventb.core.prPred name="p42" org.eventb.core.predicate="¬n_type(node)=FALLBACK"/>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬SEQUENCE=CONDITION"/>
         <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬RUNNING=FAILURE"/>
         <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬SUCCESS=FAILURE"/>
         <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬ROOT=FALLBACK"/>
-        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬n_type(node)=SEQUENCE"/>
+        <org.eventb.core.prPred name="p41" org.eventb.core.predicate="¬n_type(node)=SEQUENCE"/>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬SEQUENCE=FALLBACK"/>
         <org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})"/>
         <org.eventb.core.prPred name="p8" org.eventb.core.predicate="TYPE={ROOT,SEQUENCE,FALLBACK,CONDITION,ACTION}"/>
         <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬SEQUENCE=ACTION"/>
+        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧n1≠n2∧n_type(n1)=ROOT⇔n_type(n2)≠ROOT"/>
         <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬ROOT=ACTION"/>
-        <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬n_result(node)=UNKNOWN"/>
+        <org.eventb.core.prPred name="p37" org.eventb.core.predicate="¬n_result(node)=UNKNOWN"/>
         <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬FAILURE=UNKNOWN"/>
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})"/>
-        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="TYPE={n_type(node),SEQUENCE,FALLBACK,CONDITION,ACTION}"/>
-        <org.eventb.core.prPred name="p28" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="¬n_type(node)=ACTION"/>
+        <org.eventb.core.prPred name="p29" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧¬n1=n2∧n_type(n1)=ROOT⇔¬n_type(n2)=ROOT"/>
+        <org.eventb.core.prPred name="p40" org.eventb.core.predicate="TYPE={n_type(node),SEQUENCE,FALLBACK,CONDITION,ACTION}"/>
+        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p44" org.eventb.core.predicate="¬n_type(node)=ACTION"/>
         <org.eventb.core.prPred name="p3" org.eventb.core.predicate="n_type(node)=ROOT"/>
         <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬ROOT=SEQUENCE"/>
+        <org.eventb.core.prPred name="p36" org.eventb.core.predicate="¬n_result(root)=UNKNOWN⇒(∀n⦂NODES·n∈nodes)∧(∀n⦂NODES·analyzing_subtree(n)=FALSE)">
+            <org.eventb.core.prIdent name="analyzing_subtree" org.eventb.core.type="ℙ(NODES×BOOL)"/>
+            <org.eventb.core.prIdent name="root" org.eventb.core.type="NODES"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬RUNNING=SUCCESS"/>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="n_tick(node)=TRUE"/>
+        <org.eventb.core.prPred name="p39" org.eventb.core.predicate="node∈NODES"/>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬FALLBACK=CONDITION"/>
         <org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬CONDITION=ACTION"/>
         <org.eventb.core.prPred name="p26" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
             <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p35" org.eventb.core.predicate="n_result(root)≠UNKNOWN⇒(∀n⦂NODES·n∈nodes∧analyzing_subtree(n)=FALSE)">
+            <org.eventb.core.prIdent name="analyzing_subtree" org.eventb.core.type="ℙ(NODES×BOOL)"/>
+            <org.eventb.core.prIdent name="root" org.eventb.core.type="NODES"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="time∈ℕ"/>
         <org.eventb.core.prPred name="p0" org.eventb.core.predicate="time+1∈ℕ"/>
         <org.eventb.core.prPred name="p2" org.eventb.core.predicate="node∈nodes"/>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬ROOT=CONDITION"/>
-        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈nodes∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧¬n1=n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n_tick(n2)=FALSE∧n_result(n2)=UNKNOWN">
+        <org.eventb.core.prPred name="p34" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈nodes∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧¬n1=n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n_tick(n2)=FALSE∧n_result(n2)=UNKNOWN">
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p38" org.eventb.core.predicate="¬n_type(node)=CONDITION"/>
+        <org.eventb.core.prPred name="p43" org.eventb.core.predicate="¬n_type(node)=CONDITION"/>
         <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬SUCCESS=UNKNOWN"/>
-        <org.eventb.core.prPred name="p30" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈nodes∧n∈parent∼[{s}]∧¬n_result(n)=UNKNOWN⇒n_tick(n)=TRUE">
+        <org.eventb.core.prPred name="p32" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈nodes∧n∈parent∼[{s}]∧¬n_result(n)=UNKNOWN⇒n_tick(n)=TRUE">
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬FALLBACK=ACTION"/>
-        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.he:1"/>
         <org.eventb.core.prReas name="r4" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
         <org.eventb.core.lang name="L"/>
@@ -3712,9 +3347,10 @@
                         <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14,p15,p16,p17,p18,p19,p20"/>
                         <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p14,p15,p16,p17,p18,p19,p20"/>
                         <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p23">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p25">
                                 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p22"/>
-                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p23" org.eventb.core.prHyps=""/>
+                                <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p23" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p24"/>
+                                <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p25" org.eventb.core.prHyps=""/>
                             </org.eventb.core.prAnte>
                         </org.eventb.core.prRule>
                     </org.eventb.core.prAnte>
@@ -3723,27 +3359,15 @@
             </org.eventb.core.prAnte>
             <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
         </org.eventb.core.prRule>
-        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
         <org.eventb.core.prPred name="p22" org.eventb.core.predicate="∀x⦂NODES·¬x∈ran(parent)⇒¬x∈ran(tcl(parent))">
             <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
             <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
             <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ROOT=SEQUENCE">
-            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬RUNNING=UNKNOWN">
             <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
             <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
             <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬RUNNING=SUCCESS">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p14" org.eventb.core.predicate="RESULT={RUNNING,SUCCESS,FAILURE,UNKNOWN}">
             <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
@@ -3756,21 +3380,6 @@
             <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬FALLBACK=CONDITION">
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CONDITION=ACTION">
-            <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
-            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
-            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
-            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p16" org.eventb.core.predicate="¬RUNNING=FAILURE">
             <org.eventb.core.prIdent name="FAILURE" org.eventb.core.type="RESULT"/>
@@ -3790,11 +3399,6 @@
         <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬SEQUENCE=FALLBACK">
             <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
-        </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ROOT=CONDITION">
-            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
-            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p13" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})">
@@ -3817,6 +3421,13 @@
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p23" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧n1≠n2∧n_type(n1)=ROOT⇔n_type(n2)≠ROOT">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+            <org.eventb.core.prIdent name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
+            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬ROOT=ACTION">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
@@ -3827,11 +3438,6 @@
             <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
             <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬SUCCESS=UNKNOWN">
-            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
-            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
-            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
-        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
@@ -3840,14 +3446,58 @@
             <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p24" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧¬n1=n2∧n_type(n1)=ROOT⇔¬n_type(n2)=ROOT">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+            <org.eventb.core.prIdent name="n_type" org.eventb.core.type="ℙ(NODES×TYPE)"/>
+            <org.eventb.core.prIdent name="nodes" org.eventb.core.type="ℙ(NODES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
+        <org.eventb.core.prPred name="p25" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ROOT=SEQUENCE">
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="SEQUENCE" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬RUNNING=SUCCESS">
+            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
+            <org.eventb.core.prIdent name="RUNNING" org.eventb.core.type="RESULT"/>
+            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬FALLBACK=CONDITION">
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬CONDITION=ACTION">
+            <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p21" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))">
+            <org.eventb.core.prIdent name="NODES" org.eventb.core.type="ℙ(NODES)"/>
+            <org.eventb.core.prIdent name="parent" org.eventb.core.type="ℙ(NODES×NODES)"/>
+            <org.eventb.core.prIdent name="tcl" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ROOT=CONDITION">
+            <org.eventb.core.prIdent name="CONDITION" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="ROOT" org.eventb.core.type="TYPE"/>
+            <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬SUCCESS=UNKNOWN">
+            <org.eventb.core.prIdent name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
+            <org.eventb.core.prIdent name="SUCCESS" org.eventb.core.type="RESULT"/>
+            <org.eventb.core.prIdent name="UNKNOWN" org.eventb.core.type="RESULT"/>
+        </org.eventb.core.prPred>
         <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬FALLBACK=ACTION">
             <org.eventb.core.prIdent name="ACTION" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="FALLBACK" org.eventb.core.type="TYPE"/>
             <org.eventb.core.prIdent name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
         </org.eventb.core.prPred>
-        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
         <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
         <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
     </org.eventb.core.prProof>
     <org.eventb.core.prProof name="result_arrived/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15,p16,p17,p18,p19,p20,p21,p22,p23,p24,p25,p26,p27,p28,p29,p30,p31,p32,p33,p34,p35,p36" org.eventb.core.prSets="NODES,RESULT,TYPE">
         <org.eventb.core.lang name="L"/>
