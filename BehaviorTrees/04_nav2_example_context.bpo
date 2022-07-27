@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="5">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
         <org.eventb.core.poIdentifier name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
@@ -39,15 +39,14 @@
         <org.eventb.core.poPredicate name="CONDITIO]" org.eventb.core.predicate="∀r⦂ℙ(NODES×NODES)·r∈node_rel⇒tcl(r)=r∪(r;tcl(r))" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#8"/>
         <org.eventb.core.poPredicate name="CONDITIO^" org.eventb.core.predicate="node_fn∈nodes ∖ {root} → nodes" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#:"/>
         <org.eventb.core.poPredicate name="CONDITIO_" org.eventb.core.predicate="n_id∈nodes → ℕ" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#;"/>
-        <org.eventb.core.poPredicate name="CONDITIO`" org.eventb.core.predicate="n_type={root ↦ ROOT}" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#="/>
-        <org.eventb.core.poPredicate name="CONDITIOa" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#&gt;"/>
-        <org.eventb.core.poPredicate name="CONDITIOb" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧n1≠n2∧n_type(n1)=ROOT⇔n_type(n2)≠ROOT" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#?"/>
-        <org.eventb.core.poPredicate name="CONDITIOc" org.eventb.core.predicate="∀n⦂NODES·n∈nodes∧n_type(n)=ROOT⇔n=root" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#@"/>
+        <org.eventb.core.poPredicate name="CONDITIO`" org.eventb.core.predicate="∀x⦂NODES·x∉ran(parent)⇒(tcl(parent))∼[{x}]=(∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#&gt;"/>
+        <org.eventb.core.poPredicate name="CONDITIOa" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈nodes∧n2∈nodes∧n1≠n2∧n_type(n1)=ROOT⇔n_type(n2)≠ROOT" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#?"/>
+        <org.eventb.core.poPredicate name="CONDITIOb" org.eventb.core.predicate="∀n⦂NODES·n∈nodes∧n_type(n)=ROOT⇒n=root" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#@"/>
         <org.eventb.core.poIdentifier name="action_1" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="fallback_1" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="condition_1" org.eventb.core.type="NODES"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/04_nav2_example_context.bpo|org.eventb.core.poFile#04_nav2_example_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/04_nav2_example_context.bpo|org.eventb.core.poFile#04_nav2_example_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fallback_1∈nodes" org.eventb.core.source="/Behavior Trees/04_nav2_example_context.buc|org.eventb.core.contextFile#04_nav2_example_context|org.eventb.core.axiom#+"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="condition_1∈nodes" org.eventb.core.source="/Behavior Trees/04_nav2_example_context.buc|org.eventb.core.contextFile#04_nav2_example_context|org.eventb.core.axiom#,"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="action_1∈nodes" org.eventb.core.source="/Behavior Trees/04_nav2_example_context.buc|org.eventb.core.contextFile#04_nav2_example_context|org.eventb.core.axiom#-"/>
