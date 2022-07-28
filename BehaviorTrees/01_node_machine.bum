@@ -9,7 +9,7 @@
     </org.eventb.core.event>
     <org.eventb.core.variable name="_moHyJvIiEeyivrHAG4kxjI" org.eventb.core.identifier="n_result"/>
     <org.eventb.core.invariant name="_moHyJvIiEeyivrHAG4kxjJ" org.eventb.core.label="inv2" org.eventb.core.predicate="n_result ∈ NODES → RESULT"/>
-    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="result_arrived">
+    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="root_reinitialize">
         <org.eventb.core.parameter name="_080QZvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.identifier="node"/>
         <org.eventb.core.guard name="_080QZ_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="n_type(node) = ROOT"/>
         <org.eventb.core.guard name="_080QaPbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="n_result(node) ≠ UNKNOWN"/>

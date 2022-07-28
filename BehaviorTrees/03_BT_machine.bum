@@ -13,6 +13,7 @@
         <org.eventb.core.guard name="_08wl8_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="n_type(node) = CONDITION"/>
         <org.eventb.core.guard name="_08wl9PbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="node ∈ nodes"/>
         <org.eventb.core.action name="_08ybIfbDEeyQiudq0A8KKw" org.eventb.core.assignment="analyzing_subtree(parent(node)) ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="_08ybIfbDEeyQiudq0A8KKx" org.eventb.core.label="grd4" org.eventb.core.predicate="n_result(node) = UNKNOWN"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_08ybIvbDEeyQiudq0A8KKw" org.eventb.core.comment="when ticking an action the results can be: n_result(node) :∈ {SUCCESS, FAILURE, RUNNING}" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="action_ticked">
         <org.eventb.core.parameter name="_08ybI_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.identifier="node"/>
@@ -83,7 +84,7 @@
         <org.eventb.core.guard name="_08zpTPbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="n_type(node) = FALLBACK"/>
         <org.eventb.core.guard name="_08zpTfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="n_tick(node) = TRUE"/>
         <org.eventb.core.guard name="_08zpTvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="n_result(node) = UNKNOWN"/>
-        <org.eventb.core.guard name="_08zpT_bDEeyQiudq0A8KKw" org.eventb.core.comment="previous_child_status =  FAILURE" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="∃x · (x ∈  parent∼[{node}] ∧ n_tick(x) = TRUE ∧&#10;            ∀y·(y∈parent∼[{node}] ∧ n_tick(y) = TRUE ∧ n_id(y)&lt;n_id(x))&#10;            ∧ n_result(x) = FAILURE)"/>
+        <org.eventb.core.guard name="_08zpT_bDEeyQiudq0A8KKw" org.eventb.core.comment="previous_child_status =  FAILURE" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="∃x · (x ∈  parent∼[{node}] ∧ n_tick(x) = TRUE ∧&#10;            ∀y·(y∈parent∼[{node}] ∧ n_tick(y) = TRUE ∧ n_id(y)≤n_id(x))&#10;            ∧ n_result(x) = FAILURE)"/>
         <org.eventb.core.guard name="_08zpUPbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="{x ∣ x ∈  parent∼[{node}] ∧ n_tick(x) = FALSE} ≠ ∅" org.eventb.core.theorem="true"/>
         <org.eventb.core.guard name="_08zpUfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="node ∈ nodes"/>
         <org.eventb.core.guard name="_08zpUvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd7" org.eventb.core.predicate="child ∈ {x ∣ x ∈  parent∼[{node}] ∧ n_tick(x) = FALSE ∧&#10;            ∀y·(y∈parent∼[{node}] ∧ n_tick(y) = FALSE ∧ n_id(y)≥n_id(x))}"/>
@@ -96,7 +97,7 @@
         <org.eventb.core.guard name="_08zpWfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="n_type(node) = FALLBACK"/>
         <org.eventb.core.guard name="_08zpWvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="n_tick(node) = TRUE"/>
         <org.eventb.core.guard name="_08zpW_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="n_result(node) = UNKNOWN"/>
-        <org.eventb.core.guard name="_08zpXPbDEeyQiudq0A8KKw" org.eventb.core.comment="previous_child_status =  FAILURE" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="∃x · (x ∈  parent∼[{node}] ∧ n_tick(x) = TRUE ∧&#10;            ∀y·(y∈parent∼[{node}] ∧ n_tick(y) = TRUE ∧ n_id(y)&lt;n_id(x))&#10;            ∧ n_result(x) = FAILURE)"/>
+        <org.eventb.core.guard name="_08zpXPbDEeyQiudq0A8KKw" org.eventb.core.comment="previous_child_status =  FAILURE" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="∃x · (x ∈  parent∼[{node}] ∧ n_tick(x) = TRUE ∧&#10;            ∀y·(y∈parent∼[{node}] ∧ n_tick(y) = TRUE ∧ n_id(y)≤n_id(x))&#10;            ∧ n_result(x) = FAILURE)"/>
         <org.eventb.core.guard name="_08zpXfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="{x ∣ x ∈  parent∼[{node}] ∧ n_tick(x) = FALSE}= ∅"/>
         <org.eventb.core.guard name="_08zpXvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="node ∈ nodes"/>
         <org.eventb.core.action name="_080QUPbDEeyQiudq0A8KKw" org.eventb.core.assignment="n_result(node) ≔ FAILURE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
@@ -123,8 +124,8 @@
         <org.eventb.core.action name="_080QY_bDEeyQiudq0A8KKw" org.eventb.core.assignment="n_tick(child) ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="_080QZPbDEeyQiudq0A8KKw" org.eventb.core.assignment="analyzing_subtree(node) ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="_080QZfbDEeyQiudq0A8KKw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="result_arrived">
-        <org.eventb.core.refinesEvent name="_080QafbDEeyQiudq0A8KK{" org.eventb.core.target="result_arrived"/>
+    <org.eventb.core.event name="_080QZfbDEeyQiudq0A8KKw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="root_reinitialize">
+        <org.eventb.core.refinesEvent name="_080QafbDEeyQiudq0A8KK{" org.eventb.core.target="root_reinitialize"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KK{" org.eventb.core.comment="children_unticked ∈ nodes → ℙ(nodes)" org.eventb.core.generated="false" org.eventb.core.label="inv1" org.eventb.core.predicate="⊤"/>
     <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KK|" org.eventb.core.comment="to identify the children_unticked I just used the set of all the children (parent~[{node}]) which has tick equal to true" org.eventb.core.generated="false" org.eventb.core.label="inv2" org.eventb.core.predicate="⊤"/>
@@ -139,20 +140,34 @@
     <org.eventb.core.event name="evt1" org.eventb.core.comment="restart cycle" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick_root">
         <org.eventb.core.refinesEvent name="0" org.eventb.core.target="tick_root"/>
         <org.eventb.core.guard name="1" org.eventb.core.label="grd5" org.eventb.core.predicate="node ∈ nodes"/>
+        <org.eventb.core.guard name="2" org.eventb.core.label="grd6" org.eventb.core.predicate="node = root"/>
     </org.eventb.core.event>
     <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KL/" org.eventb.core.comment="For each couple of children of a sequence node &#10;two siblings are ticked if and only if one of the two is success&#10;∀n1,n2,s·(s∈nodes ∧ n_type(s) = SEQUENCE ∧ n1 ∈ parent∼[{s}]  ∧ n2 ∈ parent∼[{s}] ∧ n_tick(n1) = TRUE ∧ n_tick(n2) = TRUE ⇔ (n_result(n1) = SUCCESS ∨ n_result(n2) = SUCCESS))" org.eventb.core.label="inv9" org.eventb.core.predicate="⊤"/>
     <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KL0" org.eventb.core.comment="For each couple of children of a fallback node &#10;two siblings are ticked if and only if one of the &#10;two is failed&#10;∀n1,n2,s·(s∈nodes∧ n_type(s) = FALLBACK ∧ n1 ∈ parent∼[{s}]  ∧ n2 ∈ parent∼[{s}]  ∧ n_tick(n1) = TRUE ∧ n_tick(n2) = TRUE ⇔ (n_result(n1) = FAILURE ∨ n_result(n2) = FAILURE))" org.eventb.core.label="inv10" org.eventb.core.predicate="⊤ "/>
     <org.eventb.core.invariant name="_08zpV_bDEeyQiudq0A8KL1" org.eventb.core.label="inv11" org.eventb.core.predicate="n_result(root)≠ UNKNOWN ⇒ (∀n·(n∈nodes ∧ analyzing_subtree(n) = FALSE))"/>
-    <org.eventb.core.event name="_08zpV_bDEeyQiudq0A8KL2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="fallback_start">
+    <org.eventb.core.event name="_08zpV_bDEeyQiudq0A8KL2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="initial_tick_fallback">
         <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="n_type(node) = FALLBACK"/>
         <org.eventb.core.parameter name="(" org.eventb.core.identifier="node"/>
         <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="n_tick(node) = TRUE"/>
         <org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="analyzing_subtree(node) = FALSE"/>
         <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="∀x·(x ∈ parent∼[{node}] ∧ n_result(x) = UNKNOWN)"/>
         <org.eventb.core.parameter name="," org.eventb.core.identifier="child"/>
-        <org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="child ∈ parent∼[{node}]"/>
-        <org.eventb.core.guard name="." org.eventb.core.label="grd6" org.eventb.core.predicate="child ∈ {x ∣ x ∈  parent∼[{node}] ∧ n_tick(x) = FALSE ∧&#10;            ∀y·(y∈parent∼[{node}] ∧ n_tick(y) = FALSE ∧ n_id(y)≥n_id(x))}"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="child ∈ {x ∣ x ∈  parent∼[{node}] ∧ n_tick(x) = FALSE ∧&#10;            ∀y·(y∈parent∼[{node}] ∧ n_tick(y) = FALSE ∧ n_id(y)≥n_id(x))}"/>
         <org.eventb.core.action name="/" org.eventb.core.assignment="n_tick(child) ≔ TRUE" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="0" org.eventb.core.assignment="analyzing_subtree(node) ≔ TRUE" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="initial_tick_sequence">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="n_type(node) = SEQUENCE"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="node"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="n_tick(node) = TRUE"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="analyzing_subtree(node) = FALSE"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="∀x·(x ∈ parent∼[{node}] ∧ n_result(x) = UNKNOWN)"/>
+        <org.eventb.core.parameter name="," org.eventb.core.identifier="child"/>
+        <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="child ∈ {x ∣ x ∈  parent∼[{node}] ∧ n_tick(x) = FALSE ∧&#10;            ∀y·(y∈parent∼[{node}] ∧ n_tick(y) = FALSE ∧ n_id(y)≥n_id(x))}"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="n_tick(child) ≔ TRUE" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="0" org.eventb.core.assignment="analyzing_subtree(node) ≔ TRUE" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_08zpV_bDEeyQiudq0A8KL3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="result_arrived">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="result_arrived"/>
     </org.eventb.core.event>
 </org.eventb.core.machineFile>
