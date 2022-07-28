@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="n_tick ≔ NODES × {FALSE}" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="n_result ≔ NODES × {UNKNOWN}" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.refinesMachine name="(" org.eventb.core.target="01_node_machine"/>
+    <org.eventb.core.seesContext name=")" org.eventb.core.target="02_tree_context"/>
+    <org.eventb.core.variable name="*" org.eventb.core.identifier="n_tick"/>
+    <org.eventb.core.invariant name="+" org.eventb.core.label="inv1" org.eventb.core.predicate="n_tick ∈ NODES → BOOL"/>
+    <org.eventb.core.variable name="," org.eventb.core.identifier="n_result"/>
+    <org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="n_result ∈ NODES → RESULT"/>
+    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="root_reinitialize">
+        <org.eventb.core.refinesEvent name="_080QafbDEeyQiudq0A8KK{" org.eventb.core.target="root_reinitialize"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt3" org.eventb.core.comment="restart cycle" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick_root">
+        <org.eventb.core.refinesEvent name="0" org.eventb.core.target="tick_root"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="result_arrived">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="n_type(node) = ROOT"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="n_result(node) = UNKNOWN"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="n_tick(node) = TRUE"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="node ∈ NODES"/>
+        <org.eventb.core.parameter name="+" org.eventb.core.identifier="node"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd5" org.eventb.core.predicate="node = root"/>
+        <org.eventb.core.parameter name="-" org.eventb.core.identifier="child"/>
+        <org.eventb.core.guard name="." org.eventb.core.comment="the child is the child with the result different by unknown" org.eventb.core.label="grd6" org.eventb.core.predicate="∃x·(x ∈  parent∼[{node}] ∧ n_result(x) ≠ UNKNOWN)"/>
+        <org.eventb.core.action name="/" org.eventb.core.assignment="n_result(node) ≔ n_result(child)" org.eventb.core.comment="assign to root the result of the child" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="0" org.eventb.core.label="grd7" org.eventb.core.predicate="child ∈ {x∣ x ∈  parent∼[{node}] ∧ n_result(x) ≠ UNKNOWN}"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>

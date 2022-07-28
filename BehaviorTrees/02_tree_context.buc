@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.comment="Tree structured model of the Behavior tree.&#10;- Single root object.&#10;- Each object other than parent has a root.&#10;- No loops in parent structure.&#10;- Each object reachable from root." org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.contextFile org.eventb.core.comment="Tree structured model of the Behavior tree.&#10;- Single root object.&#10;- Each object other than parent has a root.&#10;- No loops in parent structure.&#10;- Each object reachable from root." org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
     <org.eventb.core.extendsContext name="'" org.eventb.core.target="01_node_context"/>
-    <org.eventb.core.constant name="(" org.eventb.core.comment="the nodes in the tree (those are not changing in the tree)" org.eventb.core.identifier="nodes"/>
-    <org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="nodes ∈ ℙ(NODES)"/>
-    <org.eventb.core.constant name="*" org.eventb.core.comment="the root node" org.eventb.core.identifier="root"/>
-    <org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="root ∈ nodes"/>
+    <org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="root ∈ NODES"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="G" org.eventb.core.comment="the root of the tree" org.eventb.core.identifier="root"/>
     <org.eventb.core.constant name="," org.eventb.core.comment="A relation from each node (except root) to his parent" org.eventb.core.identifier="parent"/>
-    <org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="parent ∈ nodes ∖ {root} → nodes"/>
+    <org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="parent ∈ NODES ∖ {root} → NODES"/>
     <org.eventb.core.axiom name="." org.eventb.core.comment="No loop property, every node parent  is node itself" org.eventb.core.label="axm4" org.eventb.core.predicate="∀n·(n ⊆ parent∼[n] ⇒ n=∅)"/>
-    <org.eventb.core.constant name="/" org.eventb.core.comment="Inverse of parent (maybe is not needed)" org.eventb.core.identifier="children"/>
-    <org.eventb.core.axiom name="0" org.eventb.core.label="axm5" org.eventb.core.predicate="children ∈ nodes → ℙ(nodes)"/>
     <org.eventb.core.constant name="1" org.eventb.core.comment="Type of relation on nodes of the tree" org.eventb.core.identifier="node_rel"/>
     <org.eventb.core.constant name="2" org.eventb.core.comment="Transitive closure on a node relation. In a graph it represent every relation ot any other node in the graph.&#10;&quot;The transitive closure of an undirected graph produces a cluster graph, a disjoint union of cliques. &#10;Constructing the transitive closure is an equivalent formulation of the problem of finding the components of the graph.[1]&quot;&#10;https://en.wikipedia.org/wiki/Transitive_closure (McColl, W. F.; Noshita, K. (1986), &quot;On the number of edges in the transitive closure of a graph&quot;, Discrete Applied Mathematics, 15 (1): 67–73, doi:10.1016/0166-218X(86)90020-X, MR 0856101)" org.eventb.core.identifier="tcl"/>
-    <org.eventb.core.axiom name="3" org.eventb.core.comment="&#10;" org.eventb.core.label="axm6" org.eventb.core.predicate="node_rel = NODES  ↔ NODES"/>
+    <org.eventb.core.axiom name="3" org.eventb.core.label="axm6" org.eventb.core.predicate="node_rel = NODES  ↔  NODES"/>
     <org.eventb.core.axiom name="4" org.eventb.core.label="axm7" org.eventb.core.predicate="tcl ∈ node_rel → node_rel"/>
     <org.eventb.core.axiom name="5" org.eventb.core.comment=" r included in tcl(r)" org.eventb.core.label="axm8" org.eventb.core.predicate="∀r·(r∈node_rel ⇒ r ⊆ tcl(r))"/>
     <org.eventb.core.axiom name="6" org.eventb.core.comment="unfolding included in tcl(r)" org.eventb.core.label="axm9" org.eventb.core.predicate="∀r·(r∈node_rel ⇒  r;tcl(r) ⊆ tcl(r))"/>
     <org.eventb.core.axiom name="7" org.eventb.core.comment="tcl(r) is least" org.eventb.core.label="axm10" org.eventb.core.predicate="∀r,t·(r∈node_rel ∧ r⊆t ∧ r;t⊆t ⇒ tcl(r)⊆t)"/>
     <org.eventb.core.axiom name="8" org.eventb.core.comment="tcl(r) is a fixed point" org.eventb.core.label="axm11" org.eventb.core.predicate="∀r·r∈node_rel ⇒ tcl(r) = r ∪ (r;tcl(r))"/>
-    <org.eventb.core.constant name="9" org.eventb.core.comment="a total function on the node set" org.eventb.core.identifier="node_fn"/>
-    <org.eventb.core.axiom name=":" org.eventb.core.label="axm12" org.eventb.core.predicate="node_fn ∈ nodes∖ {root} → nodes"/>
-    <org.eventb.core.axiom name=";" org.eventb.core.label="axm13" org.eventb.core.predicate="n_id ∈ nodes → ℕ"/>
+    <org.eventb.core.axiom name=";" org.eventb.core.label="axm13" org.eventb.core.predicate="n_id ∈ NODES → ℕ"/>
     <org.eventb.core.axiom name="&gt;" org.eventb.core.comment="all leaf nodes does not have children" org.eventb.core.label="axm15" org.eventb.core.predicate="∀x·x∉ran(parent) ⇒ (tcl(parent))∼[{x}] = ∅"/>
-    <org.eventb.core.axiom name="?" org.eventb.core.label="axm16" org.eventb.core.predicate="∀n1,n2·(n1 ∈ nodes ∧ n2 ∈ nodes ∧ n1 ≠ n2 ∧ n_type(n1) = ROOT ⇔ n_type(n2) ≠ ROOT) "/>
-    <org.eventb.core.axiom name="@" org.eventb.core.comment="nodes of type ROOT cannot be children of other nodes" org.eventb.core.label="axm17" org.eventb.core.predicate="∀n·(n∈nodes ∧ n_type(n) = ROOT ⇒ n=root)"/>
+    <org.eventb.core.axiom name="@" org.eventb.core.label="axm17" org.eventb.core.predicate="∀n·(n∈NODES ∧ n_type(n) = ROOT ⇒ n=root)"/>
+    <org.eventb.core.axiom name="D" org.eventb.core.label="axm21" org.eventb.core.predicate="tcl(∅) = ∅" org.eventb.core.theorem="true"/>
+    <org.eventb.core.axiom name="F" org.eventb.core.comment="No loop property" org.eventb.core.label="axm23" org.eventb.core.predicate="∀S·S⊆parent∼[S] ⇒ S = ∅"/>
+    <org.eventb.core.axiom name="H" org.eventb.core.comment="Tree induction" org.eventb.core.label="axm24" org.eventb.core.predicate="∀S·root∈S ∧ parent∼[S]⊆S ⇒ NODES⊆S"/>
 </org.eventb.core.contextFile>

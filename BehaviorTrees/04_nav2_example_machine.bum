@@ -57,7 +57,7 @@
     </org.eventb.core.event>
     <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOgx" org.eventb.core.comment="and robot pose are the same" org.eventb.core.identifier="distance_to_object"/>
     <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOgy" org.eventb.core.label="inv1" org.eventb.core.predicate="distance_to_object ∈ ℕ "/>
-    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOgz" org.eventb.core.label="inv2" org.eventb.core.predicate="distance_to_object ≥ 3"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOgz" org.eventb.core.label="inv2" org.eventb.core.predicate="distance_to_object ≥ 2"/>
     <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOg{" org.eventb.core.identifier="time"/>
     <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOg|" org.eventb.core.label="inv3" org.eventb.core.predicate="time ∈ ℕ"/>
     <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOg~" org.eventb.core.identifier="prev_time"/>
