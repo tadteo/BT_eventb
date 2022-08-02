@@ -17,7 +17,6 @@
     <org.eventb.core.axiom name=";" org.eventb.core.label="axm13" org.eventb.core.predicate="n_id ∈ NODES → ℕ"/>
     <org.eventb.core.axiom name="&gt;" org.eventb.core.comment="all leaf nodes does not have children" org.eventb.core.label="axm15" org.eventb.core.predicate="∀x·x∉ran(parent) ⇒ (tcl(parent))∼[{x}] = ∅"/>
     <org.eventb.core.axiom name="@" org.eventb.core.label="axm17" org.eventb.core.predicate="∀n·(n∈NODES ∧ n_type(n) = ROOT ⇒ n=root)"/>
-    <org.eventb.core.axiom name="D" org.eventb.core.label="axm21" org.eventb.core.predicate="tcl(∅) = ∅" org.eventb.core.theorem="true"/>
     <org.eventb.core.axiom name="F" org.eventb.core.comment="No loop property" org.eventb.core.label="axm23" org.eventb.core.predicate="∀S·S⊆parent∼[S] ⇒ S = ∅"/>
     <org.eventb.core.axiom name="H" org.eventb.core.comment="Tree induction" org.eventb.core.label="axm24" org.eventb.core.predicate="∀S·root∈S ∧ parent∼[S]⊆S ⇒ NODES⊆S"/>
 </org.eventb.core.contextFile>

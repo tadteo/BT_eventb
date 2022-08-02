@@ -12,12 +12,12 @@
     <org.eventb.core.variable name="-" org.eventb.core.generated="false" org.eventb.core.identifier="analyzing_subtree"/>
     <org.eventb.core.event name="_MxKDoPeSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked_success">
         <org.eventb.core.refinesEvent name="_MxKDofeSEeypHJk8uzlOgw" org.eventb.core.target="condition_ticked"/>
-        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd5" org.eventb.core.predicate="distance_to_object ≥ 5"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="distance_to_object ≥ 5"/>
         <org.eventb.core.action name="_MxKDofeSEeypHJk8uzlOgy" org.eventb.core.assignment="n_result(node) ≔ SUCCESS" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked_failure">
         <org.eventb.core.refinesEvent name="_MxKDofeSEeypHJk8uzlOgw" org.eventb.core.target="condition_ticked"/>
-        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd5" org.eventb.core.predicate="distance_to_object &lt; 5"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="distance_to_object &lt; 5"/>
         <org.eventb.core.action name="_MxKDofeSEeypHJk8uzlOgy" org.eventb.core.assignment="n_result(node) ≔ FAILURE" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_MxKDoveSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="action_ticked">

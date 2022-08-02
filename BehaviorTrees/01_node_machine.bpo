@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="9">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="2">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
@@ -135,6 +135,39 @@
     <org.eventb.core.poPredicateSet name="EVTALLHYP01_node_contexy" org.eventb.core.parentSet="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTHYP01_node_contexy(" org.eventb.core.poStamp="2">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="n_result(node)=UNKNOWN" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#evt2|org.eventb.core.guard#+"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="node∈NODES" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#evt2|org.eventb.core.guard#."/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="result_arrived/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="9">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTHYP01_node_contexz'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="node∈dom(n_tick)∧n_tick∈NODES ⇸ BOOL" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#_moHyJvIiEeyivrHAG4kxjK|org.eventb.core.guard#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#_moHyJvIiEeyivrHAG4kxjK|org.eventb.core.guard#)"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTHYP01_node_contexz'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="result_arrived/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="9">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTHYP01_node_contexz("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="node∈dom(n_type)∧n_type∈NODES ⇸ TYPE" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#_moHyJvIiEeyivrHAG4kxjK|org.eventb.core.guard#+"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#_moHyJvIiEeyivrHAG4kxjK|org.eventb.core.guard#+"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTHYP01_node_contexz("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="result_arrived/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="9">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTHYP01_node_contexz)"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="node∈dom(n_result)∧n_result∈NODES ⇸ RESULT" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#_moHyJvIiEeyivrHAG4kxjK|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#_moHyJvIiEeyivrHAG4kxjK|org.eventb.core.guard#,"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTHYP01_node_contexz)"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENT01_node_contexz" org.eventb.core.parentSet="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="node" org.eventb.core.type="NODES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYP01_node_contexz'" org.eventb.core.parentSet="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTIDENT01_node_contexz" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="node∈NODES" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#_moHyJvIiEeyivrHAG4kxjK|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYP01_node_contexz(" org.eventb.core.parentSet="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTHYP01_node_contexz'" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="n_tick(node)=TRUE" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#_moHyJvIiEeyivrHAG4kxjK|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYP01_node_contexz)" org.eventb.core.parentSet="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTHYP01_node_contexz(" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="n_type(node)=ROOT" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#_moHyJvIiEeyivrHAG4kxjK|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYP01_node_contexz" org.eventb.core.parentSet="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#EVTHYP01_node_contexz)" org.eventb.core.poStamp="6">
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="n_result(node)=UNKNOWN" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.event#_moHyJvIiEeyivrHAG4kxjK|org.eventb.core.guard#,"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/01_node_machine.bpo|org.eventb.core.poFile#01_node_machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="n_tick∈NODES → BOOL" org.eventb.core.source="/Behavior Trees/01_node_machine.bum|org.eventb.core.machineFile#01_node_machine|org.eventb.core.invariant#_moHyJvIiEeyivrHAG4kxjG"/>

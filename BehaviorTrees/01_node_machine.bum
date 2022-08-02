@@ -26,4 +26,11 @@
         <org.eventb.core.parameter name="," org.eventb.core.identifier="node"/>
         <org.eventb.core.guard name="." org.eventb.core.label="grd4" org.eventb.core.predicate="node ∈ NODES"/>
     </org.eventb.core.event>
+    <org.eventb.core.event name="_moHyJvIiEeyivrHAG4kxjK" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="result_arrived">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="node ∈ NODES"/>
+        <org.eventb.core.parameter name="(" org.eventb.core.identifier="node"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="n_tick(node) = TRUE"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="n_type(node) = ROOT"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="n_result(node) = UNKNOWN"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>
