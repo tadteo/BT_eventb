@@ -33,4 +33,15 @@
         <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="n_type(node) = ROOT"/>
         <org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="n_result(node) = UNKNOWN"/>
     </org.eventb.core.event>
+    <org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="root_ticked">
+        <org.eventb.core.parameter name="_080QXPbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.identifier="node"/>
+        <org.eventb.core.parameter name="_080QXfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.identifier="child"/>
+        <org.eventb.core.guard name="_080QXvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="n_tick(node) = TRUE" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="_080QX_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="n_type(node) = ROOT"/>
+        <org.eventb.core.guard name="_080QYPbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="n_tick(child) = FALSE"/>
+        <org.eventb.core.guard name="_080QYfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="node ∈ NODES" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="_080QZPbDEeyQiudq0A8KKx" org.eventb.core.label="grd6" org.eventb.core.predicate="child ∈ NODES"/>
+        <org.eventb.core.action name="_080QY_bDEeyQiudq0A8KKw" org.eventb.core.assignment="n_tick(child) ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="_080QZPbDEeyQiudq0A8KKy" org.eventb.core.label="grd7" org.eventb.core.predicate="node ≠ child"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1656931317224" org.eventb.texttools.text_representation="context 01_node_context&#10;&#10;sets TYPE RESULT NODES&#10;&#10;constants ROOT // the root type&#10;          SEQUENCE FALLBACK CONDITION ACTION RUNNING SUCCESS FAILURE UNKNOWN&#10;          n_type // A function to map the type to a node (type are fixed during execution)&#10;          n_id // A function to a node it will be used to have order in the set of children&#10;&#10;&#10;axioms&#10;  @axm1 partition(TYPE,{ROOT}, {SEQUENCE}, {FALLBACK}, {CONDITION}, {ACTION}) // Definition of the TYPE of node type&#10;  @axm2 partition(RESULT, {RUNNING},{SUCCESS},{FAILURE},{UNKNOWN}) // Definition of the result of node type&#10;  @axm3 n_type ∈ NODES → TYPE&#10;  @axm4 n_id ∈ NODES → ℕ&#10;end" version="3">
+    <org.eventb.core.carrierSet name="_7VAH8PuFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="TYPE"/>
+    <org.eventb.core.carrierSet name="_7VAH8fuFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="RESULT"/>
+    <org.eventb.core.carrierSet name="_7VAH8vuFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="NODES"/>
+    <org.eventb.core.constant name="_7VAH8_uFEeyPVKLglLdepw" org.eventb.core.comment="the root type" org.eventb.core.generated="false" org.eventb.core.identifier="ROOT"/>
+    <org.eventb.core.constant name="_7VAH9PuFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="SEQUENCE"/>
+    <org.eventb.core.constant name="_7VAH9fuFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="FALLBACK"/>
+    <org.eventb.core.constant name="_7VAH9vuFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="CONDITION"/>
+    <org.eventb.core.constant name="_7VAH9_uFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="ACTION"/>
+    <org.eventb.core.constant name="_7VAH-PuFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="RUNNING"/>
+    <org.eventb.core.constant name="_7VAH-fuFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="SUCCESS"/>
+    <org.eventb.core.constant name="_7VAH-vuFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="FAILURE"/>
+    <org.eventb.core.constant name="_7VAvAPuFEeyPVKLglLdepw" org.eventb.core.generated="false" org.eventb.core.identifier="UNKNOWN"/>
+    <org.eventb.core.axiom name="_7VAvA_uFEeyPVKLglLdepw" org.eventb.core.comment="Definition of the TYPE of node type" org.eventb.core.generated="false" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(TYPE,{ROOT}, {SEQUENCE}, {FALLBACK}, {CONDITION}, {ACTION})"/>
+    <org.eventb.core.axiom name="_7VAvBPuFEeyPVKLglLdepw" org.eventb.core.comment="Definition of the result of node type" org.eventb.core.generated="false" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(RESULT, {RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})"/>
+    <org.eventb.core.axiom name="_7VAvBvuFEeyPVKLglLdepy" org.eventb.core.label="axm6" org.eventb.core.predicate="finite(NODES)"/>
+</org.eventb.core.contextFile>

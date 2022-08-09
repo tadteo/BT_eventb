@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
-    <org.eventb.core.extendsContext name="'" org.eventb.core.target="03_BT_context_no_tcl"/>
+    <org.eventb.core.extendsContext name="'" org.eventb.core.target="02_tree_context_no_tcl"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="(" org.eventb.core.identifier="fallback_1"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=")" org.eventb.core.comment="distance to obstacle &gt;= 5" org.eventb.core.identifier="condition_1"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="*" org.eventb.core.comment="go_forward_1" org.eventb.core.identifier="action_1"/>

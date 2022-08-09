@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
     <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
@@ -16,7 +16,7 @@
         <org.eventb.core.poIdentifier name="RUNNING" org.eventb.core.type="RESULT"/>
         <org.eventb.core.poIdentifier name="FAILURE" org.eventb.core.type="RESULT"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="axm5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="axm5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/01_node_context.bpo|org.eventb.core.poFile#01_node_context|org.eventb.core.poPredicateSet#HYP*"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·(n1∈NODES∧n2∈NODES∧n1≠n2⇒n1∈dom(n_type)∧n_type∈NODES ⇸ TYPE)∧(n1∈NODES∧n2∈NODES∧n1≠n2∧n_type(n1)=ROOT⇒n2∈dom(n_type))" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#_7VAvBvuFEeyPVKLglLdepx"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#_7VAvBvuFEeyPVKLglLdepx"/>
@@ -28,7 +28,7 @@
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="n_type∈NODES → TYPE" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#_7VAvBfuFEeyPVKLglLdepw"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="n_id∈NODES → ℕ" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#_7VAvBvuFEeyPVKLglLdepw"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/01_node_context.bpo|org.eventb.core.poFile#01_node_context|org.eventb.core.poPredicateSet#HYP*" org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/01_node_context.bpo|org.eventb.core.poFile#01_node_context|org.eventb.core.poPredicateSet#HYP*" org.eventb.core.poStamp="0">
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀n1⦂NODES,n2⦂NODES·n1∈NODES∧n2∈NODES∧n1≠n2∧n_type(n1)=ROOT⇒n_type(n2)≠ROOT" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#_7VAvBvuFEeyPVKLglLdepx"/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="finite(NODES)" org.eventb.core.source="/Behavior Trees/01_node_context.buc|org.eventb.core.contextFile#01_node_context|org.eventb.core.axiom#_7VAvBvuFEeyPVKLglLdepy"/>
     </org.eventb.core.poPredicateSet>

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.comment="Tree structured model of the Behavior tree.&#10;- Single root object.&#10;- Each object other than parent has a root.&#10;- No loops in parent structure.&#10;- Each object reachable from root." org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
-    <org.eventb.core.extendsContext name="'" org.eventb.core.target="01_node_context"/>
+    <org.eventb.core.extendsContext name="'" org.eventb.core.target="01_node_context_no_tcl"/>
     <org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="root ∈ NODES"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="G" org.eventb.core.comment="the root of the tree" org.eventb.core.identifier="root"/>
     <org.eventb.core.constant name="," org.eventb.core.comment="A relation from each node (except root) to his parent" org.eventb.core.identifier="parent"/>
     <org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="parent ∈ NODES ∖ {root} → NODES"/>
+    <org.eventb.core.axiom name="L" org.eventb.core.label="axm26" org.eventb.core.predicate="n_type ∈ NODES → TYPE"/>
+    <org.eventb.core.axiom name="M" org.eventb.core.label="axm27" org.eventb.core.predicate="n_id ∈ NODES → ℕ"/>
+    <org.eventb.core.axiom name="N" org.eventb.core.comment="Only one node of type ROOT can exist" org.eventb.core.label="axm28" org.eventb.core.predicate="∀n1,n2·(n1 ∈ NODES ∧ n2 ∈ NODES ∧ n1 ≠ n2 ∧ n_type(n1) = ROOT ⇒ n_type(n2) ≠ ROOT) "/>
     <org.eventb.core.axiom name="." org.eventb.core.comment="No loop property, every node parent  is node itself" org.eventb.core.label="axm4" org.eventb.core.predicate="∀n·(n ⊆ parent∼[n] ⇒ n=∅)"/>
-    <org.eventb.core.axiom name=";" org.eventb.core.label="axm13" org.eventb.core.predicate="n_id ∈ NODES → ℕ"/>
     <org.eventb.core.axiom name="@" org.eventb.core.label="axm17" org.eventb.core.predicate="∀n·(n∈NODES ∧ n_type(n) = ROOT ⇒ n=root)"/>
     <org.eventb.core.axiom name="F" org.eventb.core.comment="No loop property" org.eventb.core.label="axm23" org.eventb.core.predicate="∀S·S⊆parent∼[S] ⇒ S = ∅"/>
     <org.eventb.core.axiom name="H" org.eventb.core.comment="Tree induction" org.eventb.core.label="axm24" org.eventb.core.predicate="∀S·root∈S ∧ parent∼[S]⊆S ⇒ NODES⊆S"/>
-    <org.eventb.core.axiom name="I" org.eventb.core.label="axm25" org.eventb.core.predicate="∀x,y·(x∈parent∼[{root}] ∧ y∈parent∼[{root}] ⇒ x=y)"/>
+    <org.eventb.core.axiom name="I" org.eventb.core.comment="the root has just one children" org.eventb.core.label="axm25" org.eventb.core.predicate="∀x,y·(x∈parent∼[{root}] ∧ y∈parent∼[{root}] ⇒ x=y)"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="J" org.eventb.core.comment="A function to map the type to a node (type are fixed during execution)" org.eventb.core.identifier="n_type"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="K" org.eventb.core.comment="A function to a node it will be used to have order in the set of children" org.eventb.core.identifier="n_id"/>
+    <org.eventb.core.axiom name="O" org.eventb.core.label="axm29" org.eventb.core.predicate="∀x·x∉ran(parent) ⇒ parent∼[{x}] = ∅"/>
 </org.eventb.core.contextFile>

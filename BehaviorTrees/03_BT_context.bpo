@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="5">
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="5">
+<org.eventb.core.poFile org.eventb.core.poStamp="2">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="2">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
         <org.eventb.core.poIdentifier name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
@@ -40,5 +40,5 @@
         <org.eventb.core.poPredicate name="CONDITIOa" org.eventb.core.predicate="∀S⦂ℙ(NODES)·S⊆parent∼[S]⇒S=(∅ ⦂ ℙ(NODES))" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#F"/>
         <org.eventb.core.poPredicate name="CONDITIOb" org.eventb.core.predicate="∀S⦂ℙ(NODES)·root∈S∧parent∼[S]⊆S⇒NODES⊆S" org.eventb.core.source="/Behavior Trees/02_tree_context.buc|org.eventb.core.contextFile#02_tree_context|org.eventb.core.axiom#H"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_context.bpo|org.eventb.core.poFile#03_BT_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_context.bpo|org.eventb.core.poFile#03_BT_context|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="2"/>
 </org.eventb.core.poFile>
