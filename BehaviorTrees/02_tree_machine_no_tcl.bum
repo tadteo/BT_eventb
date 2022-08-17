@@ -140,11 +140,11 @@
         <org.eventb.core.guard name="_08zCMPbDEeyQiudq0A8KL'" org.eventb.core.label="grd15" org.eventb.core.predicate="n_tick(next_child) = FALSE"/>
         <org.eventb.core.guard name="_08zCMPbDEeyQiudq0A8KKz" org.eventb.core.label="grd11" org.eventb.core.predicate="n_result(previous_child) = SUCCESS"/>
         <org.eventb.core.guard name="_08zCMPbDEeyQiudq0A8KK~" org.eventb.core.label="grd14" org.eventb.core.predicate="n_result(next_child) = UNKNOWN"/>
+        <org.eventb.core.guard name="_08zCMPbDEeyQiudq0A8KL(" org.eventb.core.label="grd16" org.eventb.core.predicate="analyzing_subtree(node) = FALSE"/>
         <org.eventb.core.guard name="_08ybL_bDEeyQiudq0A8KKw" org.eventb.core.comment="if exist a child  which is ticked &#10;and its id is the maximum of the ticked child &#10;and is status is SUCCESS is means that the previous child status is SUCCES" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="∀y·(y∈parent∼[{node}] ∧ n_tick(y) = TRUE ⇒ n_id(y)≤n_id(previous_child))"/>
         <org.eventb.core.guard name="_08ybMPbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="{x ∣ x ∈  parent∼[{node}] ∧ n_tick(x) = FALSE}≠ ∅"/>
         <org.eventb.core.guard name="_08ybMfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="node ∈ NODES ∖ {root}" org.eventb.core.theorem="true"/>
         <org.eventb.core.guard name="_08ybMvbDEeyQiudq0A8KKw" org.eventb.core.comment="the next child to analyze is the child node&#10;         which has the smallest id of the&#10;         children that have not been ticked yet " org.eventb.core.generated="false" org.eventb.core.label="grd7" org.eventb.core.predicate="∀y·(y∈parent∼[{node}] ∧ n_tick(y) = FALSE ⇒ n_id(y)≥n_id(next_child))"/>
-        <org.eventb.core.guard name="_08ybM_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd8" org.eventb.core.predicate="analyzing_subtree(node) = FALSE" org.eventb.core.theorem="true"/>
         <org.eventb.core.action name="_08ybNPbDEeyQiudq0A8KKw" org.eventb.core.assignment="n_tick(next_child) ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="_08zCMPbDEeyQiudq0A8KKw" org.eventb.core.assignment="analyzing_subtree(node) ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
         <org.eventb.core.parameter name="_08zCMPbDEeyQiudq0A8KK{" org.eventb.core.identifier="next_child"/>
@@ -179,12 +179,12 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="evt14" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="sequence_ticked_success">
         <org.eventb.core.parameter name="_08zCRPbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.identifier="node"/>
-        <org.eventb.core.guard name="_08zCRfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="n_type(node) = SEQUENCE"/>
-        <org.eventb.core.guard name="_08zCTPbDEeyQiudq0A8KK}" org.eventb.core.label="grd11" org.eventb.core.predicate="node ∈ NODES ∖ {root}" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="_08zCTPbDEeyQiudq0A8KK}" org.eventb.core.label="grd1" org.eventb.core.predicate="node ∈ NODES ∖ {root}"/>
+        <org.eventb.core.guard name="_08zCTPbDEeyQiudq0A8KK~" org.eventb.core.label="grd12" org.eventb.core.predicate="n_type(node) = SEQUENCE"/>
         <org.eventb.core.guard name="_08zCRvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="n_tick(node) = TRUE"/>
         <org.eventb.core.guard name="_08zCR_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="n_result(node) = UNKNOWN"/>
         <org.eventb.core.guard name="_08zCTPbDEeyQiudq0A8KKy" org.eventb.core.label="grd7" org.eventb.core.predicate="previous_child ∈ parent∼[{node}]"/>
-        <org.eventb.core.guard name="_08zCTPbDEeyQiudq0A8KKz" org.eventb.core.label="grd8" org.eventb.core.predicate="n_tick(previous_child) = TRUE" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="_08zCTPbDEeyQiudq0A8KKz" org.eventb.core.label="grd8" org.eventb.core.predicate="n_tick(previous_child) = TRUE"/>
         <org.eventb.core.guard name="_08zCTPbDEeyQiudq0A8KK{" org.eventb.core.label="grd9" org.eventb.core.predicate="n_result(previous_child) = SUCCESS"/>
         <org.eventb.core.guard name="_08zCSPbDEeyQiudq0A8KKw" org.eventb.core.comment="previous_child_status =  SUCCESS" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="∀y·(y∈parent∼[{node}] ∧ n_tick(y) = TRUE ⇒ n_id(y)≤n_id(previous_child))"/>
         <org.eventb.core.guard name="_08zCSfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="{x ∣ x ∈  parent∼[{node}] ∧ n_tick(x) = FALSE}= ∅"/>
@@ -205,11 +205,11 @@
         <org.eventb.core.guard name="_08zpVvbDEeyQiudq0A8KK}" org.eventb.core.label="grd13" org.eventb.core.predicate="n_tick(next_child) = FALSE"/>
         <org.eventb.core.guard name="_08zpVvbDEeyQiudq0A8KKz" org.eventb.core.label="grd11" org.eventb.core.predicate="n_result(previous_child) = FAILURE"/>
         <org.eventb.core.guard name="_08zpVvbDEeyQiudq0A8KK~" org.eventb.core.label="grd14" org.eventb.core.predicate="n_result(next_child) = UNKNOWN"/>
+        <org.eventb.core.guard name="_08zpVvbDEeyQiudq0A8KL'" org.eventb.core.label="grd15" org.eventb.core.predicate="analyzing_subtree(node) = FALSE"/>
         <org.eventb.core.guard name="_08zpT_bDEeyQiudq0A8KKw" org.eventb.core.comment="previous_child_status =  FAILURE" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="∀y·(y∈parent∼[{node}] ∧ n_tick(y) = TRUE ⇒ n_id(y)≤n_id(previous_child))&#10;"/>
         <org.eventb.core.guard name="_08zpUPbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="{x ∣ x ∈  parent∼[{node}] ∧ n_tick(x) = FALSE} ≠ ∅"/>
         <org.eventb.core.guard name="_08zpUfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd6" org.eventb.core.predicate="node ∈ NODES ∖ {root}"/>
         <org.eventb.core.guard name="_08zpUvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd20 ›" org.eventb.core.predicate="∀y·(y∈parent∼[{node}] ∧ n_tick(y) = FALSE ⇒ n_id(y)≥n_id(next_child))"/>
-        <org.eventb.core.guard name="_08zpU_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd8" org.eventb.core.predicate="analyzing_subtree(node) = FALSE" org.eventb.core.theorem="true"/>
         <org.eventb.core.action name="_08zpVfbDEeyQiudq0A8KKw" org.eventb.core.assignment="n_tick(next_child) ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
         <org.eventb.core.action name="_08zpVvbDEeyQiudq0A8KKw" org.eventb.core.assignment="analyzing_subtree(node) ≔ TRUE" org.eventb.core.generated="false" org.eventb.core.label="act3"/>
         <org.eventb.core.parameter name="_08zpVvbDEeyQiudq0A8KK{" org.eventb.core.identifier="next_child"/>
@@ -232,14 +232,14 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="evt17" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.generated="false" org.eventb.core.label="fallback_ticked_running">
         <org.eventb.core.parameter name="_08zpQfbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.identifier="node"/>
-        <org.eventb.core.guard name="_08zpQvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="n_type(node) = FALLBACK"/>
-        <org.eventb.core.guard name="_08zpQ_bDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="n_tick(node) = TRUE"/>
+        <org.eventb.core.guard name="_08zpQvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd1" org.eventb.core.predicate="node ∈ NODES ∖ {root}"/>
+        <org.eventb.core.guard name="_08zpSPbDEeyQiudq0A8KK}" org.eventb.core.label="grd10" org.eventb.core.predicate="n_type(node) = FALLBACK"/>
+        <org.eventb.core.guard name="grd2" org.eventb.core.generated="false" org.eventb.core.label="grd2" org.eventb.core.predicate="n_tick(node) = TRUE"/>
         <org.eventb.core.guard name="_08zpRPbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd3" org.eventb.core.predicate="n_result(node) = UNKNOWN"/>
         <org.eventb.core.guard name="_08zpSPbDEeyQiudq0A8KKy" org.eventb.core.label="grd6" org.eventb.core.predicate="previous_child ∈ parent∼[{node}]"/>
         <org.eventb.core.guard name="_08zpSPbDEeyQiudq0A8KKz" org.eventb.core.label="grd7" org.eventb.core.predicate="n_tick(previous_child) = TRUE"/>
         <org.eventb.core.guard name="_08zpSPbDEeyQiudq0A8KK{" org.eventb.core.label="grd8" org.eventb.core.predicate="n_result(previous_child) = RUNNING"/>
-        <org.eventb.core.guard name="_08zpRfbDEeyQiudq0A8KKw" org.eventb.core.comment="previous_child_status =  RUNNING" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="∀y·(y∈parent∼[{node}] ∧ n_tick(y) = TRUE ⇒ n_id(y)≤n_id(previous_child))" org.eventb.core.theorem="true"/>
-        <org.eventb.core.guard name="_08zpRvbDEeyQiudq0A8KKw" org.eventb.core.generated="false" org.eventb.core.label="grd5" org.eventb.core.predicate="node ∈ NODES ∖ {root}"/>
+        <org.eventb.core.guard name="_08zpRfbDEeyQiudq0A8KKw" org.eventb.core.comment="previous_child_status =  RUNNING" org.eventb.core.generated="false" org.eventb.core.label="grd4" org.eventb.core.predicate="∀y·(y∈parent∼[{node}] ∧ n_tick(y) = TRUE ⇒ n_id(y)≤n_id(previous_child))"/>
         <org.eventb.core.action name="_08zpR_bDEeyQiudq0A8KKw" org.eventb.core.assignment="n_result(node) ≔ RUNNING" org.eventb.core.generated="false" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="_08zpSPbDEeyQiudq0A8KKw" org.eventb.core.assignment="analyzing_subtree(parent(node)) ≔ FALSE" org.eventb.core.generated="false" org.eventb.core.label="act2"/>
         <org.eventb.core.parameter name="_08zpSPbDEeyQiudq0A8KKx" org.eventb.core.identifier="previous_child"/>
@@ -261,5 +261,5 @@
     <org.eventb.core.variable name="evt8" org.eventb.core.identifier="analyzing_subtree"/>
     <org.eventb.core.invariant name="evt9" org.eventb.core.label="inv3" org.eventb.core.predicate="analyzing_subtree ∈ NODES → BOOL"/>
     <org.eventb.core.invariant name="evt:" org.eventb.core.comment="if children result is not UNKNOWN it means that it has been ticked " org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,s·(s∈NODES ∧ n ∈ parent∼[{s}] ∧ n_result(n) ≠ UNKNOWN ⇒ n_tick(n) = TRUE)"/>
-    <org.eventb.core.invariant name="evt22" org.eventb.core.label="inv5" org.eventb.core.predicate="∀n,s·(s∈NODES ∧ n ∈ parent∼[{s}] ∧ n_tick(n) = TRUE ⇒ n_tick(s) = TRUE)" org.eventb.core.theorem="true"/>
+    <org.eventb.core.invariant name="evt22" org.eventb.core.label="inv5" org.eventb.core.predicate="∀n,s·(s∈NODES ∧ n ∈ parent∼[{s}] ∧ n_tick(n) = TRUE ⇒ n_tick(s) = TRUE)"/>
 </org.eventb.core.machineFile>
