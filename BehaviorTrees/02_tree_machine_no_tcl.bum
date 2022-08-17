@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
         <org.eventb.core.action name="'" org.eventb.core.assignment="n_tick ≔ NODES × {FALSE}" org.eventb.core.label="act1"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="n_result ≔ NODES × {UNKNOWN}" org.eventb.core.label="act2"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="analyzing_subtree ≔ NODES × {FALSE}" org.eventb.core.label="act3"/>
@@ -262,4 +262,7 @@
     <org.eventb.core.invariant name="evt9" org.eventb.core.label="inv3" org.eventb.core.predicate="analyzing_subtree ∈ NODES → BOOL"/>
     <org.eventb.core.invariant name="evt:" org.eventb.core.comment="if children result is not UNKNOWN it means that it has been ticked " org.eventb.core.label="inv4" org.eventb.core.predicate="∀n,s·(s∈NODES ∧ n ∈ parent∼[{s}] ∧ n_result(n) ≠ UNKNOWN ⇒ n_tick(n) = TRUE)"/>
     <org.eventb.core.invariant name="evt22" org.eventb.core.label="inv5" org.eventb.core.predicate="∀n,s·(s∈NODES ∧ n ∈ parent∼[{s}] ∧ n_tick(n) = TRUE ⇒ n_tick(s) = TRUE)"/>
+    <org.eventb.core.invariant name="evt23" org.eventb.core.comment="For each couple of children of a fallback node &#10;two siblings are ticked if and only if one of the &#10;two is failed &#10;∀n1,n2,s·(s∈NODES ∧ n_type(s) = FALLBACK ∧ n1 ∈ parent∼[{s}]  ∧ n2 ∈ parent∼[{s}]  ∧ n_tick(n1) = TRUE ∧ n_tick(n2) = TRUE ∧ n1 ≠ n2⇒ (n_result(n1) = FAILURE ∨ n_result(n2) = FAILURE))" org.eventb.core.label="inv6" org.eventb.core.predicate="⊤" org.eventb.core.theorem="true"/>
+    <org.eventb.core.invariant name="evt25" org.eventb.core.comment="If parent is not ticked the child is not ticked (IT IS NOT NECESSARY IT CAN BE REMOVED)" org.eventb.core.label="inv8" org.eventb.core.predicate="∀n1,s·(s∈NODES ∧ n1 ∈ parent∼[{s}]  ∧ n_tick(s) = FALSE ⇒ n_tick(n1) = FALSE)"/>
+    <org.eventb.core.invariant name="evt24" org.eventb.core.comment="For each couple of children of a sequence node &#10;two siblings are ticked if and only if one of the two is success&#10;∀n1,n2,s·(s∈nodes ∧ n_type(s) = SEQUENCE ∧ n1 ∈ parent∼[{s}]  ∧ n2 ∈ parent∼[{s}] ∧ n_tick(n1) = TRUE ∧ n_tick(n2) = TRUE ⇔ (n_result(n1) = SUCCESS ∨ n_result(n2) = SUCCESS))" org.eventb.core.label="inv7" org.eventb.core.predicate="⊤"/>
 </org.eventb.core.machineFile>

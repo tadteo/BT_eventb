@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="77">
-    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="77">
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
         <org.eventb.core.poIdentifier name="TYPE" org.eventb.core.type="ℙ(TYPE)"/>
@@ -30,7 +30,7 @@
         <org.eventb.core.poPredicate name="CONDITIOY" org.eventb.core.predicate="∀x⦂NODES,y⦂NODES·x∈parent∼[{root}]∧y∈parent∼[{root}]⇒x=y" org.eventb.core.source="/Behavior Trees/02_tree_context_no_tcl.buc|org.eventb.core.contextFile#02_tree_context_no_tcl|org.eventb.core.axiom#I"/>
         <org.eventb.core.poPredicate name="CONDITIOZ" org.eventb.core.predicate="⊤" org.eventb.core.source="/Behavior Trees/02_tree_context_no_tcl.buc|org.eventb.core.contextFile#02_tree_context_no_tcl|org.eventb.core.axiom#O"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="77">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
         <org.eventb.core.poIdentifier name="n_result" org.eventb.core.type="ℙ(NODES×RESULT)"/>
         <org.eventb.core.poIdentifier name="analyzing_subtree" org.eventb.core.type="ℙ(NODES×BOOL)"/>
         <org.eventb.core.poIdentifier name="n_tick" org.eventb.core.type="ℙ(NODES×BOOL)"/>
@@ -39,15 +39,18 @@
         <org.eventb.core.poPredicate name="analyzing_subtreh" org.eventb.core.predicate="analyzing_subtree∈NODES → BOOL" org.eventb.core.source="/Behavior Trees/02_tree_machine_no_tcl.bum|org.eventb.core.machineFile#02_tree_machine_no_tcl|org.eventb.core.invariant#evt9"/>
         <org.eventb.core.poPredicate name="analyzing_subtrei" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈NODES∧n∈parent∼[{s}]∧n_result(n)≠UNKNOWN⇒n_tick(n)=TRUE" org.eventb.core.source="/Behavior Trees/02_tree_machine_no_tcl.bum|org.eventb.core.machineFile#02_tree_machine_no_tcl|org.eventb.core.invariant#evt:"/>
         <org.eventb.core.poPredicate name="analyzing_subtrej" org.eventb.core.predicate="∀n⦂NODES,s⦂NODES·s∈NODES∧n∈parent∼[{s}]∧n_tick(n)=TRUE⇒n_tick(s)=TRUE" org.eventb.core.source="/Behavior Trees/02_tree_machine_no_tcl.bum|org.eventb.core.machineFile#02_tree_machine_no_tcl|org.eventb.core.invariant#evt22"/>
+        <org.eventb.core.poPredicate name="analyzing_subtrek" org.eventb.core.predicate="⊤" org.eventb.core.source="/Behavior Trees/02_tree_machine_no_tcl.bum|org.eventb.core.machineFile#02_tree_machine_no_tcl|org.eventb.core.invariant#evt23"/>
+        <org.eventb.core.poPredicate name="analyzing_subtrel" org.eventb.core.predicate="∀n1⦂NODES,s⦂NODES·s∈NODES∧n1∈parent∼[{s}]∧n_tick(s)=FALSE⇒n_tick(n1)=FALSE" org.eventb.core.source="/Behavior Trees/02_tree_machine_no_tcl.bum|org.eventb.core.machineFile#02_tree_machine_no_tcl|org.eventb.core.invariant#evt25"/>
+        <org.eventb.core.poPredicate name="analyzing_subtrem" org.eventb.core.predicate="⊤" org.eventb.core.source="/Behavior Trees/02_tree_machine_no_tcl.bum|org.eventb.core.machineFile#02_tree_machine_no_tcl|org.eventb.core.invariant#evt24"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="inv4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="77">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#HYP02_tree_context_no_tcs"/>
+    <org.eventb.core.poSequent name="inv4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#HYP02_tree_context_no_tcv"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·(n∈NODES∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧n1≠n2⇒n1∈dom(n_tick)∧n_tick∈NODES ⇸ BOOL∧(n_tick(n1)=TRUE⇒n1∈dom(n_result)∧n_result∈NODES ⇸ RESULT))∧(n∈NODES∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧n1≠n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n2∈dom(n_tick)∧(n_tick(n2)=FALSE⇒n2∈dom(n_result)))" org.eventb.core.source="/Behavior Trees/03_BT_machine_no_tcl.bum|org.eventb.core.machineFile#03_BT_machine_no_tcl|org.eventb.core.invariant#_08zpV_bDEeyQiudq0A8KK~"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Behavior Trees/03_BT_machine_no_tcl.bum|org.eventb.core.machineFile#03_BT_machine_no_tcl|org.eventb.core.invariant#_08zpV_bDEeyQiudq0A8KK~"/>
-        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#HYP02_tree_context_no_tcs"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#HYP02_tree_context_no_tcv"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="77">
-        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#EVTALLHYP02_tree_context_no_tcw"/>
+    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#EVTALLHYP02_tree_context_no_tcz"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈NODES∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧n1≠n2∧(NODES × {FALSE})(n1)=TRUE∧(NODES × {UNKNOWN})(n1)=UNKNOWN⇒(NODES × {FALSE})(n2)=FALSE∧(NODES × {UNKNOWN})(n2)=UNKNOWN" org.eventb.core.source="/Behavior Trees/03_BT_machine_no_tcl.bum|org.eventb.core.machineFile#03_BT_machine_no_tcl|org.eventb.core.invariant#_08zpV_bDEeyQiudq0A8KK~"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/02_tree_machine_no_tcl.bum|org.eventb.core.machineFile#02_tree_machine_no_tcl|org.eventb.core.event#'"/>
         <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Behavior Trees/03_BT_machine_no_tcl.bum|org.eventb.core.machineFile#03_BT_machine_no_tcl|org.eventb.core.event#'"/>
@@ -55,17 +58,17 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poPredicateSet name="EVTIDENT02_tree_context_no_tcw" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="77">
+    <org.eventb.core.poPredicateSet name="EVTIDENT02_tree_context_no_tcz" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
         <org.eventb.core.poIdentifier name="n_tick'" org.eventb.core.type="ℙ(NODES×BOOL)"/>
         <org.eventb.core.poIdentifier name="n_result'" org.eventb.core.type="ℙ(NODES×RESULT)"/>
         <org.eventb.core.poIdentifier name="analyzing_subtree'" org.eventb.core.type="ℙ(NODES×BOOL)"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="EVTALLHYP02_tree_context_no_tcw" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#EVTIDENT02_tree_context_no_tcw" org.eventb.core.poStamp="77"/>
-    <org.eventb.core.poPredicateSet name="HYP02_tree_context_no_tcs" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="77">
+    <org.eventb.core.poPredicateSet name="EVTALLHYP02_tree_context_no_tcz" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#EVTIDENT02_tree_context_no_tcz" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="HYP02_tree_context_no_tcv" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="⊤" org.eventb.core.source="/Behavior Trees/03_BT_machine_no_tcl.bum|org.eventb.core.machineFile#03_BT_machine_no_tcl|org.eventb.core.invariant#_08zpV_bDEeyQiudq0A8KK{"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="⊤" org.eventb.core.source="/Behavior Trees/03_BT_machine_no_tcl.bum|org.eventb.core.machineFile#03_BT_machine_no_tcl|org.eventb.core.invariant#_08zpV_bDEeyQiudq0A8KK\|"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#HYP02_tree_context_no_tcs" org.eventb.core.poStamp="77">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/03_BT_machine_no_tcl.bpo|org.eventb.core.poFile#03_BT_machine_no_tcl|org.eventb.core.poPredicateSet#HYP02_tree_context_no_tcv" org.eventb.core.poStamp="1">
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="∀n⦂NODES,n1⦂NODES,n2⦂NODES·n∈NODES∧n1∈parent∼[{n}]∧n2∈parent∼[{n}]∧n1≠n2∧n_tick(n1)=TRUE∧n_result(n1)=UNKNOWN⇒n_tick(n2)=FALSE∧n_result(n2)=UNKNOWN" org.eventb.core.source="/Behavior Trees/03_BT_machine_no_tcl.bum|org.eventb.core.machineFile#03_BT_machine_no_tcl|org.eventb.core.invariant#_08zpV_bDEeyQiudq0A8KK~"/>
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="⊤" org.eventb.core.source="/Behavior Trees/03_BT_machine_no_tcl.bum|org.eventb.core.machineFile#03_BT_machine_no_tcl|org.eventb.core.invariant#_08zpV_bDEeyQiudq0A8KL\/"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="⊤" org.eventb.core.source="/Behavior Trees/03_BT_machine_no_tcl.bum|org.eventb.core.machineFile#03_BT_machine_no_tcl|org.eventb.core.invariant#_08zpV_bDEeyQiudq0A8KL0"/>

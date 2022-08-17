@@ -12,7 +12,7 @@
     <org.eventb.core.variable name="-" org.eventb.core.generated="false" org.eventb.core.identifier="analyzing_subtree"/>
     <org.eventb.core.event name="_MxKDoPeSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked_success">
         <org.eventb.core.refinesEvent name="_MxKDofeSEeypHJk8uzlOgw" org.eventb.core.target="condition_ticked_success"/>
-        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="distance_to_object ≤ 5" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="distance_to_object ≤ 5"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked_failure">
         <org.eventb.core.refinesEvent name="_MxKDofeSEeypHJk8uzlOgw" org.eventb.core.target="condition_ticked_failure"/>
@@ -54,11 +54,11 @@
     </org.eventb.core.event>
     <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOgx" org.eventb.core.comment="and robot pose are the same" org.eventb.core.identifier="distance_to_object"/>
     <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOgy" org.eventb.core.label="inv1" org.eventb.core.predicate="distance_to_object ∈ ℕ "/>
-    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOgz" org.eventb.core.label="inv2" org.eventb.core.predicate="distance_to_object ≥ 3"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOgz" org.eventb.core.label="inv2" org.eventb.core.predicate="distance_to_object ≥ 3 "/>
     <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOg{" org.eventb.core.identifier="time"/>
-    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOg|" org.eventb.core.comment=" /NAT" org.eventb.core.label="inv3" org.eventb.core.predicate="time ∈ ℕ"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOg|" org.eventb.core.label="inv3" org.eventb.core.predicate="time ∈ ℕ"/>
     <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOg~" org.eventb.core.identifier="prev_time"/>
-    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh'" org.eventb.core.label="inv4" org.eventb.core.predicate="prev_time ∈ 0‥10"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh'" org.eventb.core.label="inv4" org.eventb.core.predicate="prev_time ∈ ℕ "/>
     <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh(" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick_root">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="tick_root"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="time &gt; prev_time"/>
@@ -73,5 +73,11 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="initial_tick_sequence">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="initial_tick_sequence"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh," org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="action_ticked_failure">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="action_ticked_failure"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="action_ticked_running">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="action_ticked_running"/>
     </org.eventb.core.event>
 </org.eventb.core.machineFile>
