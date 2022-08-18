@@ -6,21 +6,23 @@
         <org.eventb.core.action name="'" org.eventb.core.assignment="distance_to_object ≔ 7" org.eventb.core.label="act6"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="time ≔ 1" org.eventb.core.label="act7"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="prev_time ≔ 0" org.eventb.core.label="act8"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="node_condition ≔ FALSE" org.eventb.core.label="act9"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="*" org.eventb.core.generated="false" org.eventb.core.identifier="n_tick"/>
     <org.eventb.core.variable name="," org.eventb.core.generated="false" org.eventb.core.identifier="n_result"/>
     <org.eventb.core.variable name="-" org.eventb.core.generated="false" org.eventb.core.identifier="analyzing_subtree"/>
     <org.eventb.core.event name="_MxKDoPeSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked_success">
         <org.eventb.core.refinesEvent name="_MxKDofeSEeypHJk8uzlOgw" org.eventb.core.target="condition_ticked_success"/>
-        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="distance_to_object ≤ 5"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="node_condition = TRUE"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked_failure">
         <org.eventb.core.refinesEvent name="_MxKDofeSEeypHJk8uzlOgw" org.eventb.core.target="condition_ticked_failure"/>
-        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="distance_to_object &gt; 5"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="node_condition = FALSE "/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_MxKDoveSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="action_ticked_success">
         <org.eventb.core.refinesEvent name="_MxKDo_eSEeypHJk8uzlOgw" org.eventb.core.target="action_ticked_success"/>
         <org.eventb.core.action name="_MxKDo_eSEeypHJk8uzlOgx" org.eventb.core.assignment="distance_to_object ≔ distance_to_object − 1" org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name="_MxKDo_eSEeypHJk8uzlOgy" org.eventb.core.label="grd6" org.eventb.core.predicate="node_condition = FALSE"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_TSKvDPeREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="sequence_ticked_continue">
         <org.eventb.core.refinesEvent name="_TSKvDfeREeypHJk8uzlOgw" org.eventb.core.target="sequence_ticked_continue"/>
@@ -63,13 +65,14 @@
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="tick_root"/>
         <org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="time &gt; prev_time"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="prev_time ≔ time" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="time ≔ time+1" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh)" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="initial_tick_fallback">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="initial_tick_fallback"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh*" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="root_reinitialize">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="root_reinitialize"/>
-        <org.eventb.core.action name="(" org.eventb.core.assignment="time ≔ time+1" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="time ≔ time " org.eventb.core.comment="+1" org.eventb.core.label="act3"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="initial_tick_sequence">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="initial_tick_sequence"/>
@@ -79,5 +82,16 @@
     </org.eventb.core.event>
     <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="action_ticked_running">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="action_ticked_running"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh." org.eventb.core.label="inv5" org.eventb.core.predicate="node_condition ∈ BOOL"/>
+    <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOh/" org.eventb.core.identifier="node_condition"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh2" org.eventb.core.label="inv7" org.eventb.core.predicate="(node_condition = TRUE ⇒ distance_to_object ≤ 5−1)"/>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="check_condition_true">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="distance_to_object ≤ 5"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="node_condition ≔ TRUE" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="check_condition_false">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="node_condition ≔ FALSE" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="distance_to_object &gt; 5"/>
     </org.eventb.core.event>
 </org.eventb.core.machineFile>
