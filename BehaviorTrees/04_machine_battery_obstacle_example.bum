@@ -8,28 +8,52 @@
         <org.eventb.core.action name="," org.eventb.core.assignment="battery_lvl ≔ 25" org.eventb.core.comment=" max_battery" org.eventb.core.label="act11"/>
         <org.eventb.core.action name="(" org.eventb.core.assignment="time ≔ 1" org.eventb.core.label="act7"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="prev_time ≔ 0" org.eventb.core.label="act8"/>
-        <org.eventb.core.action name="*" org.eventb.core.assignment="node_condition ≔ FALSE" org.eventb.core.label="act9"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="node_condition ≔ TRUE" org.eventb.core.label="act9"/>
     </org.eventb.core.event>
     <org.eventb.core.variable name="*" org.eventb.core.generated="false" org.eventb.core.identifier="n_tick"/>
     <org.eventb.core.variable name="," org.eventb.core.generated="false" org.eventb.core.identifier="n_result"/>
     <org.eventb.core.variable name="-" org.eventb.core.generated="false" org.eventb.core.identifier="analyzing_subtree"/>
-    <org.eventb.core.event name="_MxKDoPeSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked_success">
+    <org.eventb.core.event name="_MxKDoPeSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_3_ticked_success">
         <org.eventb.core.refinesEvent name="_MxKDofeSEeypHJk8uzlOgw" org.eventb.core.target="condition_ticked_success"/>
-        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgy" org.eventb.core.label="grd7" org.eventb.core.predicate="distance_to_obstacle ≤ 5"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="node = condition_3"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgy" org.eventb.core.label="grd7" org.eventb.core.predicate="distance_to_obstacle ≥ 5"/>
         <org.eventb.core.action name="_MxKDofeSEeypHJk8uzlOgz" org.eventb.core.assignment="node_condition ≔ TRUE" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked_failure">
+    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_3_ticked_failure">
         <org.eventb.core.refinesEvent name="_MxKDofeSEeypHJk8uzlOgw" org.eventb.core.target="condition_ticked_failure"/>
-        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="⊤"/>
-        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgy" org.eventb.core.comment="distance_to_object &gt; 5" org.eventb.core.label="grd7" org.eventb.core.predicate="distance_to_obstacle &gt; 5"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="node = condition_3"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgy" org.eventb.core.label="grd7" org.eventb.core.predicate="distance_to_obstacle &lt; 5"/>
         <org.eventb.core.action name="_MxKDofeSEeypHJk8uzlOgz" org.eventb.core.assignment="node_condition ≔ FALSE" org.eventb.core.label="act4"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="_MxKDoveSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="action_ticked_success">
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="condition_1_success">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="condition_ticked_success"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="node = condition_1"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd7" org.eventb.core.predicate="distance_to_battery ≤ 1 ∧ battery_lvl &lt; 25 "/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="condition_1_failure">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd6" org.eventb.core.predicate="node = condition_1"/>
+        <org.eventb.core.refinesEvent name="(" org.eventb.core.target="condition_ticked_failure"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd7" org.eventb.core.predicate="¬(distance_to_battery ≤ 1 ∧ battery_lvl &lt; 25)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="condition_2_success">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="condition_ticked_success"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="node = condition_2"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd7" org.eventb.core.predicate="battery_lvl ≤ distance_to_battery∗2"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOhA" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="condition_2_failure">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="condition_ticked_failure"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd6" org.eventb.core.predicate="node = condition_2"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd7" org.eventb.core.predicate="¬ (battery_lvl ≤ distance_to_battery∗2)"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_MxKDoveSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="move_left_success">
         <org.eventb.core.refinesEvent name="_MxKDo_eSEeypHJk8uzlOgw" org.eventb.core.target="action_ticked_success"/>
         <org.eventb.core.action name="_MxKDo_eSEeypHJk8uzlOgx" org.eventb.core.assignment="distance_to_obstacle ≔ distance_to_obstacle − 1" org.eventb.core.label="act4"/>
-        <org.eventb.core.guard name="_MxKDo_eSEeypHJk8uzlOgy" org.eventb.core.label="grd6" org.eventb.core.predicate="node_condition = FALSE"/>
-        <org.eventb.core.guard name="_MxKDo_eSEeypHJk8uzlOgz" org.eventb.core.comment="distance_to_obstacle &gt; 5" org.eventb.core.label="grd7" org.eventb.core.predicate="distance_to_obstacle &gt; 5"/>
+        <org.eventb.core.guard name="_MxKDo_eSEeypHJk8uzlOgz" org.eventb.core.comment="distance_to_obstacle &gt; 5" org.eventb.core.label="grd7" org.eventb.core.predicate="distance_to_obstacle ≥ 5"/>
+        <org.eventb.core.action name="_MxKDo_eSEeypHJk8uzlOg{" org.eventb.core.assignment="distance_to_battery ≔ distance_to_battery + 1" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="_MxKDo_eSEeypHJk8uzlOg|" org.eventb.core.assignment="battery_lvl ≔ battery_lvl −1" org.eventb.core.label="act6"/>
+        <org.eventb.core.guard name="_MxKDo_eSEeypHJk8uzlOg~" org.eventb.core.label="grd9" org.eventb.core.predicate="¬(distance_to_battery ≤ 1 ∧ battery_lvl &lt; 25)"/>
+        <org.eventb.core.guard name="_MxKDo_eSEeypHJk8uzlOh'" org.eventb.core.label="grd10" org.eventb.core.predicate="¬ (battery_lvl ≤ distance_to_battery∗2)"/>
+        <org.eventb.core.guard name="_MxKDo_eSEeypHJk8uzlOg}" org.eventb.core.label="grd8" org.eventb.core.predicate="node = move_left"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_TSKvDPeREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="sequence_ticked_continue">
         <org.eventb.core.refinesEvent name="_TSKvDfeREeypHJk8uzlOgw" org.eventb.core.target="sequence_ticked_continue"/>
@@ -74,6 +98,7 @@
         <org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="time &gt; prev_time"/>
         <org.eventb.core.action name=")" org.eventb.core.assignment="prev_time ≔ time" org.eventb.core.label="act3"/>
         <org.eventb.core.action name="*" org.eventb.core.assignment="time ≔ time+1" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name="+" org.eventb.core.assignment="battery_lvl ≔ battery_lvl −1" org.eventb.core.label="act5"/>
     </org.eventb.core.event>
     <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh)" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="initial_tick_fallback">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="initial_tick_fallback"/>
@@ -85,17 +110,26 @@
     <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="initial_tick_sequence">
         <org.eventb.core.refinesEvent name="'" org.eventb.core.target="initial_tick_sequence"/>
     </org.eventb.core.event>
-    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh," org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="action_ticked_failure">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="action_ticked_failure"/>
-    </org.eventb.core.event>
-    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="action_ticked_running">
-        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="action_ticked_running"/>
-    </org.eventb.core.event>
     <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh6" org.eventb.core.label="inv9" org.eventb.core.predicate="distance_to_battery ∈ ℕ"/>
-    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh7" org.eventb.core.label="inv10" org.eventb.core.predicate="battery_lvl ∈ 1‥25"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh7" org.eventb.core.label="inv10" org.eventb.core.predicate="battery_lvl ∈ ℕ"/>
     <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh." org.eventb.core.label="inv5" org.eventb.core.predicate="node_condition ∈ BOOL" org.eventb.core.theorem="true"/>
     <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOh9" org.eventb.core.identifier="battery_lvl"/>
     <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOh/" org.eventb.core.identifier="node_condition"/>
-    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh2" org.eventb.core.label="inv7" org.eventb.core.predicate="(node_condition = TRUE ⇒ distance_to_obstacle ≤ 5)"/>
-    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh5" org.eventb.core.label="inv8" org.eventb.core.predicate="(node_condition = FALSE ⇒ distance_to_obstacle ≥ 5)"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh2" org.eventb.core.comment="(node_condition = FALSE ⇒ distance_to_obstacle ≤ 5)" org.eventb.core.label="inv7" org.eventb.core.predicate="⊤"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh5" org.eventb.core.comment="(node_condition = TRUE ⇒ distance_to_obstacle ≥ 4)" org.eventb.core.label="inv8" org.eventb.core.predicate="⊤"/>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh:" org.eventb.core.comment="idle can only successed" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="idle_success">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="action_ticked_success"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="battery_lvl ≔ battery_lvl + 5" org.eventb.core.label="act4"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd6" org.eventb.core.predicate="node = idle"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh;" org.eventb.core.label="inv11" org.eventb.core.predicate="battery_lvl &gt; 0"/>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="move_right_success">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="action_ticked_success"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="distance_to_battery ≔ distance_to_battery − 1" org.eventb.core.label="act4"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="distance_to_obstacle ≔ distance_to_obstacle +1" org.eventb.core.label="act5"/>
+        <org.eventb.core.action name="*" org.eventb.core.assignment="battery_lvl ≔ battery_lvl − 1" org.eventb.core.label="act6"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="node = move_right"/>
+        <org.eventb.core.guard name="-" org.eventb.core.label="grd8" org.eventb.core.predicate="¬(distance_to_battery ≤ 1 ∧ battery_lvl &lt; 25)"/>
+        <org.eventb.core.guard name="," org.eventb.core.label="grd7" org.eventb.core.predicate="battery_lvl ≤ distance_to_battery∗2"/>
+    </org.eventb.core.event>
 </org.eventb.core.machineFile>

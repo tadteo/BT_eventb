@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="9">
+<org.eventb.core.poFile org.eventb.core.poStamp="10">
     <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="8">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
@@ -40,7 +40,7 @@
         <org.eventb.core.poIdentifier name="condition_1" org.eventb.core.type="NODES"/>
         <org.eventb.core.poIdentifier name="idle" org.eventb.core.type="NODES"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/04_battery_obstacles_context_no_tcl.bpo|org.eventb.core.poFile#04_battery_obstacles_context_no_tcl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="9">
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/04_battery_obstacles_context_no_tcl.bpo|org.eventb.core.poFile#04_battery_obstacles_context_no_tcl|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="10">
         <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="fallback_1∈NODES" org.eventb.core.source="/Behavior Trees/04_battery_obstacles_context_no_tcl.buc|org.eventb.core.contextFile#04_battery_obstacles_context_no_tcl|org.eventb.core.axiom#+"/>
         <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="sequence_1∈NODES" org.eventb.core.source="/Behavior Trees/04_battery_obstacles_context_no_tcl.buc|org.eventb.core.contextFile#04_battery_obstacles_context_no_tcl|org.eventb.core.axiom#9"/>
         <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="sequence_2∈NODES" org.eventb.core.source="/Behavior Trees/04_battery_obstacles_context_no_tcl.buc|org.eventb.core.contextFile#04_battery_obstacles_context_no_tcl|org.eventb.core.axiom#:"/>
@@ -53,7 +53,7 @@
         <org.eventb.core.poPredicate name="PRD9" org.eventb.core.predicate="move_right∈NODES" org.eventb.core.source="/Behavior Trees/04_battery_obstacles_context_no_tcl.buc|org.eventb.core.contextFile#04_battery_obstacles_context_no_tcl|org.eventb.core.axiom#@"/>
         <org.eventb.core.poPredicate name="PRD10" org.eventb.core.predicate="NODES={root,fallback_1,sequence_1,sequence_2,sequence_3,condition_1,condition_2,condition_3,idle,move_left,move_right}" org.eventb.core.source="/Behavior Trees/04_battery_obstacles_context_no_tcl.buc|org.eventb.core.contextFile#04_battery_obstacles_context_no_tcl|org.eventb.core.axiom#1"/>
         <org.eventb.core.poPredicate name="PRD11" org.eventb.core.predicate="n_type={root ↦ ROOT,fallback_1 ↦ FALLBACK,sequence_1 ↦ SEQUENCE,sequence_2 ↦ SEQUENCE,sequence_3 ↦ SEQUENCE,condition_1 ↦ CONDITION,condition_2 ↦ CONDITION,condition_3 ↦ CONDITION,idle ↦ ACTION,move_left ↦ ACTION,move_right ↦ ACTION}" org.eventb.core.source="/Behavior Trees/04_battery_obstacles_context_no_tcl.buc|org.eventb.core.contextFile#04_battery_obstacles_context_no_tcl|org.eventb.core.axiom#."/>
-        <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="n_id={root ↦ 0,fallback_1 ↦ 1,sequence_1 ↦ 2,sequence_2 ↦ 3,sequence_3 ↦ 4,condition_1 ↦ 5,idle ↦ 6,condition_2 ↦ 7,move_left ↦ 8,condition_3 ↦ 9,move_right ↦ 10}" org.eventb.core.source="/Behavior Trees/04_battery_obstacles_context_no_tcl.buc|org.eventb.core.contextFile#04_battery_obstacles_context_no_tcl|org.eventb.core.axiom#\/"/>
-        <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="parent={fallback_1 ↦ root,sequence_1 ↦ fallback_1,sequence_2 ↦ fallback_1,sequence_3 ↦ fallback_1,condition_1 ↦ sequence_1,idle ↦ sequence_1,condition_2 ↦ sequence_2,move_left ↦ sequence_2,condition_3 ↦ sequence_3,move_right ↦ sequence_3}" org.eventb.core.source="/Behavior Trees/04_battery_obstacles_context_no_tcl.buc|org.eventb.core.contextFile#04_battery_obstacles_context_no_tcl|org.eventb.core.axiom#0"/>
+        <org.eventb.core.poPredicate name="PRD12" org.eventb.core.predicate="n_id={root ↦ 0,fallback_1 ↦ 1,sequence_1 ↦ 2,sequence_2 ↦ 3,sequence_3 ↦ 4,condition_1 ↦ 5,idle ↦ 6,condition_2 ↦ 7,move_right ↦ 8,condition_3 ↦ 9,move_left ↦ 10}" org.eventb.core.source="/Behavior Trees/04_battery_obstacles_context_no_tcl.buc|org.eventb.core.contextFile#04_battery_obstacles_context_no_tcl|org.eventb.core.axiom#\/"/>
+        <org.eventb.core.poPredicate name="PRD13" org.eventb.core.predicate="parent={fallback_1 ↦ root,sequence_1 ↦ fallback_1,sequence_2 ↦ fallback_1,sequence_3 ↦ fallback_1,condition_1 ↦ sequence_1,idle ↦ sequence_1,condition_2 ↦ sequence_2,move_right ↦ sequence_2,condition_3 ↦ sequence_3,move_left ↦ sequence_3}" org.eventb.core.source="/Behavior Trees/04_battery_obstacles_context_no_tcl.buc|org.eventb.core.contextFile#04_battery_obstacles_context_no_tcl|org.eventb.core.axiom#0"/>
     </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
