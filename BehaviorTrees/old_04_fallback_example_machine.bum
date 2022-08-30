@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.core.generated="false" org.eventb.texttools.text_lastmodified="1656496783575" org.eventb.texttools.text_representation="machine 04_nav2_example_machine refines 03_BT_machine  sees 04_nav2_example_context&#10;&#10;variables n_tick n_result analyzing_subtree&#10;&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;&#10;  event condition_ticked extends condition_ticked&#10;  end&#10;&#10;  event action_ticked extends action_ticked&#10;  end&#10;&#10;  event sequence_ticked_continue extends sequence_ticked_continue&#10;  end&#10;&#10;  event sequence_ticked_failure extends sequence_ticked_failure&#10;  end&#10;&#10;  event sequence_ticked_running extends sequence_ticked_running&#10;  end&#10;&#10;  event sequence_ticked_success extends sequence_ticked_success&#10;  end&#10;&#10;  event fallback_ticked_running extends fallback_ticked_running&#10;  end&#10;&#10;  event fallback_ticked_continue extends fallback_ticked_continue&#10;  end&#10;&#10;  event fallback_ticked_failure extends fallback_ticked_failure&#10;  end&#10;&#10;  event fallback_ticked_success extends fallback_ticked_success&#10;  end&#10;&#10;  event root_ticked extends root_ticked&#10;  end&#10;&#10;  event result_arrived extends result_arrived&#10;  end&#10;end&#10;" version="5">
+    <org.eventb.core.refinesMachine name="+" org.eventb.core.target="old_03_BT_machine"/>
+    <org.eventb.core.seesContext name=")" org.eventb.core.target="old_04_fallback_example_context"/>
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="distance_to_object ≔ 3" org.eventb.core.label="act6"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="time ≔ 1" org.eventb.core.label="act7"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="prev_time ≔ 0" org.eventb.core.label="act8"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="*" org.eventb.core.generated="false" org.eventb.core.identifier="n_tick"/>
+    <org.eventb.core.variable name="," org.eventb.core.generated="false" org.eventb.core.identifier="n_result"/>
+    <org.eventb.core.variable name="-" org.eventb.core.generated="false" org.eventb.core.identifier="analyzing_subtree"/>
+    <org.eventb.core.event name="_MxKDoPeSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked_success">
+        <org.eventb.core.refinesEvent name="_MxKDofeSEeypHJk8uzlOgw" org.eventb.core.target="condition_ticked"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="distance_to_object ≤ 1"/>
+        <org.eventb.core.action name="_MxKDofeSEeypHJk8uzlOgy" org.eventb.core.assignment="n_result(node) ≔ SUCCESS" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="condition_ticked_failure">
+        <org.eventb.core.refinesEvent name="_MxKDofeSEeypHJk8uzlOgw" org.eventb.core.target="condition_ticked"/>
+        <org.eventb.core.guard name="_MxKDofeSEeypHJk8uzlOgx" org.eventb.core.comment="Some property specific to the condition we want to check" org.eventb.core.label="grd6" org.eventb.core.predicate="distance_to_object &gt; 1"/>
+        <org.eventb.core.action name="_MxKDofeSEeypHJk8uzlOgy" org.eventb.core.assignment="n_result(node) ≔ FAILURE" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_MxKDoveSEeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="action_ticked">
+        <org.eventb.core.refinesEvent name="_MxKDo_eSEeypHJk8uzlOgw" org.eventb.core.target="action_ticked"/>
+        <org.eventb.core.action name="_MxKDo_eSEeypHJk8uzlOgx" org.eventb.core.assignment="distance_to_object ≔ distance_to_object − 1" org.eventb.core.label="act3"/>
+        <org.eventb.core.action name="_MxKDo_eSEeypHJk8uzlOgy" org.eventb.core.assignment="n_result(node) ≔ SUCCESS" org.eventb.core.label="act4"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSKvDPeREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="sequence_ticked_continue">
+        <org.eventb.core.refinesEvent name="_TSKvDfeREeypHJk8uzlOgw" org.eventb.core.target="sequence_ticked_continue"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSLWFPeREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="sequence_ticked_failure">
+        <org.eventb.core.refinesEvent name="_Zn5iAPeREeypHJk8uzlOgw" org.eventb.core.target="sequence_ticked_failure"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSLWHfeREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="sequence_ticked_running">
+        <org.eventb.core.refinesEvent name="_hqHE8PeREeypHJk8uzlOgw" org.eventb.core.target="sequence_ticked_running"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSLWJveREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="sequence_ticked_success">
+        <org.eventb.core.refinesEvent name="_hqHE8feREeypHJk8uzlOgw" org.eventb.core.target="sequence_ticked_success"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSL9IveREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="fallback_ticked_running">
+        <org.eventb.core.refinesEvent name="_hqHE8veREeypHJk8uzlOgw" org.eventb.core.target="fallback_ticked_running"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSL9K_eREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="fallback_ticked_continue">
+        <org.eventb.core.refinesEvent name="_ugceMPeREeypHJk8uzlOgw" org.eventb.core.target="fallback_ticked_continue"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSL9OPeREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="fallback_ticked_failure">
+        <org.eventb.core.refinesEvent name="_ugceMfeREeypHJk8uzlOgw" org.eventb.core.target="fallback_ticked_failure"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSL9QveREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="fallback_ticked_success">
+        <org.eventb.core.refinesEvent name="_ugceMveREeypHJk8uzlOgw" org.eventb.core.target="fallback_ticked_success"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkOPeREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="root_ticked">
+        <org.eventb.core.refinesEvent name="_ugceM_eREeypHJk8uzlOgw" org.eventb.core.target="root_ticked"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOgw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.generated="false" org.eventb.core.label="result_arrived">
+        <org.eventb.core.refinesEvent name="_ugdFQPeREeypHJk8uzlOgw" org.eventb.core.target="result_arrived"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOgx" org.eventb.core.comment="and robot pose are the same" org.eventb.core.identifier="distance_to_object"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOgy" org.eventb.core.label="inv1" org.eventb.core.predicate="distance_to_object ∈ 0‥10 "/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOgz" org.eventb.core.label="inv2" org.eventb.core.predicate="distance_to_object ≥ 1"/>
+    <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOg{" org.eventb.core.identifier="time"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOg|" org.eventb.core.comment=" /NAT" org.eventb.core.label="inv3" org.eventb.core.predicate="time ∈ 0‥10"/>
+    <org.eventb.core.variable name="_TSMkQveREeypHJk8uzlOg~" org.eventb.core.identifier="prev_time"/>
+    <org.eventb.core.invariant name="_TSMkQveREeypHJk8uzlOh'" org.eventb.core.label="inv4" org.eventb.core.predicate="prev_time ∈ 0‥10"/>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh(" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick_root">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="tick_root"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="time &gt; prev_time"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="prev_time ≔ time" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh)" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="initial_tick_fallback">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="initial_tick_fallback"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh*" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="root_reinitialize">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="root_reinitialize"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="time ≔ time+1" org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="_TSMkQveREeypHJk8uzlOh+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="initial_tick_sequence">
+        <org.eventb.core.refinesEvent name="'" org.eventb.core.target="initial_tick_sequence"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>

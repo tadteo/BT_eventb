@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Behavior Trees/old_02_tree_machine.bpo|org.eventb.core.poFile#old_02_tree_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPold_02_tree_contexu" org.eventb.core.parentSet="/Behavior Trees/old_02_tree_machine.bpo|org.eventb.core.poFile#old_02_tree_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPold_02_tree_contexv" org.eventb.core.parentSet="/Behavior Trees/old_02_tree_machine.bpo|org.eventb.core.poFile#old_02_tree_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPold_02_tree_contexw" org.eventb.core.parentSet="/Behavior Trees/old_02_tree_machine.bpo|org.eventb.core.poFile#old_02_tree_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPold_02_tree_contexx" org.eventb.core.parentSet="/Behavior Trees/old_02_tree_machine.bpo|org.eventb.core.poFile#old_02_tree_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0"/>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Behavior Trees/old_02_tree_machine.bpo|org.eventb.core.poFile#old_02_tree_machine|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0"/>
+</org.eventb.core.poFile>

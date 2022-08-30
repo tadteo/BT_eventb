@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
+    <org.eventb.core.scRefinesMachine name="'" org.eventb.core.scTarget="/Behavior Trees/old_01_node_machine.bcm" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.refinesMachine#("/>
+    <org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/Behavior Trees/old_02_tree_context.bcc" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.seesContext#)"/>
+    <org.eventb.core.scInternalContext name="old_02_tree_context"/>
+    <org.eventb.core.scEvent name="old_02_tree_contexu" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.event#'">
+        <org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/Behavior Trees/old_01_node_machine.bcm|org.eventb.core.scMachineFile#old_01_node_machine|org.eventb.core.scEvent#'" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.event#'"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="old_02_tree_contexv" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="root_reinitialize" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.event#evt1">
+        <org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/Behavior Trees/old_01_node_machine.bcm|org.eventb.core.scMachineFile#old_01_node_machine|org.eventb.core.scEvent#(" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.event#evt1|org.eventb.core.refinesEvent#_080QafbDEeyQiudq0A8KK{"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="old_02_tree_contexw" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick_root" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.event#evt3">
+        <org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/Behavior Trees/old_01_node_machine.bcm|org.eventb.core.scMachineFile#old_01_node_machine|org.eventb.core.scEvent#)" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.event#evt3|org.eventb.core.refinesEvent#0"/>
+    </org.eventb.core.scEvent>
+    <org.eventb.core.scEvent name="old_02_tree_contexx" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="result_arrived" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.event#evt4">
+        <org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/Behavior Trees/old_01_node_machine.bcm|org.eventb.core.scMachineFile#old_01_node_machine|org.eventb.core.scEvent#*" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.event#evt4|org.eventb.core.refinesEvent#0"/>
+    </org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>
