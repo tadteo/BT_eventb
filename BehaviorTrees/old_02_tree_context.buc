@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.comment="Tree structured model of the Behavior tree.&#10;- Single root object.&#10;- Each object other than parent has a root.&#10;- No loops in parent structure.&#10;- Each object reachable from root." org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
-    <org.eventb.core.extendsContext name="'" org.eventb.core.target="01_node_context"/>
+    <org.eventb.core.extendsContext name="'" org.eventb.core.target="old_01_node_context"/>
     <org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="root ∈ NODES"/>
     <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="G" org.eventb.core.comment="the root of the tree" org.eventb.core.identifier="root"/>
     <org.eventb.core.constant name="," org.eventb.core.comment="A relation from each node (except root) to his parent" org.eventb.core.identifier="parent"/>
