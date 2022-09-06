@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
     <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
         <org.eventb.core.poIdentifier name="RESULT" org.eventb.core.type="ℙ(RESULT)"/>
         <org.eventb.core.poIdentifier name="NODES" org.eventb.core.type="ℙ(NODES)"/>
@@ -71,7 +71,7 @@
         <org.eventb.core.poPredicate name="distance_to_objed(" org.eventb.core.predicate="⊤" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.invariant#_08zpV_bDEeyQiudq0A8KL0"/>
         <org.eventb.core.poPredicate name="distance_to_objed)" org.eventb.core.predicate="n_result(root)≠UNKNOWN⇒(∀n⦂NODES·n∈NODES∧analyzing_subtree(n)=FALSE)" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.invariant#_08zpV_bDEeyQiudq0A8KL1"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contexy"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="10∈ℕ" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.invariant#_TSMkQveREeypHJk8uzlOgy"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#'"/>
@@ -80,7 +80,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contexy"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="10≥10" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.invariant#_TSMkQveREeypHJk8uzlOgz"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#'"/>
@@ -89,7 +89,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contexy"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈ℕ" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.invariant#_TSMkQveREeypHJk8uzlOg\|"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#'"/>
@@ -98,7 +98,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+    <org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contexy"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.invariant#_TSMkQveREeypHJk8uzlOh'"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#'"/>
@@ -116,7 +116,7 @@
         <org.eventb.core.poIdentifier name="distance_to_object'" org.eventb.core.type="ℤ"/>
     </org.eventb.core.poPredicateSet>
     <org.eventb.core.poPredicateSet name="EVTALLHYPold_04_fallback_example_contexy" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTIDENTold_04_fallback_example_contexy" org.eventb.core.poStamp="1"/>
-    <org.eventb.core.poSequent name="condition_ticked_success/n_result/EQL" org.eventb.core.accurate="false" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="condition_ticked_success/n_result/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contexz"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="n_result{node ↦ SUCCESS}=n_result" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.event#_MxKDoPeSEeypHJk8uzlOgw|org.eventb.core.action#_MxKDofeSEeypHJk8uzlOgy"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#_08wl8PbDEeyQiudq0A8KKw"/>
@@ -136,7 +136,7 @@
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="node≠root" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#_08wl8PbDEeyQiudq0A8KKw|org.eventb.core.guard#_08ybIfbDEeyQiudq0A8KKy"/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="distance_to_object≥5" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.event#_MxKDoPeSEeypHJk8uzlOgw|org.eventb.core.guard#_MxKDofeSEeypHJk8uzlOgx"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="condition_ticked_failure/n_result/EQL" org.eventb.core.accurate="false" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="condition_ticked_failure/n_result/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contex{"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="n_result{node ↦ FAILURE}=n_result" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.event#evt1|org.eventb.core.action#_MxKDofeSEeypHJk8uzlOgy"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#_08wl8PbDEeyQiudq0A8KKw"/>
@@ -156,7 +156,7 @@
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="node≠root" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#_08wl8PbDEeyQiudq0A8KKw|org.eventb.core.guard#_08ybIfbDEeyQiudq0A8KKy"/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="distance_to_object&lt;5" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.event#evt1|org.eventb.core.guard#_MxKDofeSEeypHJk8uzlOgx"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="action_ticked/inv1/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="action_ticked/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contex\|"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="distance_to_object − 1∈ℕ" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.invariant#_TSMkQveREeypHJk8uzlOgy"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#_08ybIvbDEeyQiudq0A8KKw"/>
@@ -165,7 +165,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poSequent#action_ticked\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="action_ticked/inv2/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="action_ticked/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contex\|"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="distance_to_object − 1≥10" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.invariant#_TSMkQveREeypHJk8uzlOgz"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#_08ybIvbDEeyQiudq0A8KKw"/>
@@ -174,7 +174,7 @@
         <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poSequent#action_ticked\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
         <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
     </org.eventb.core.poSequent>
-    <org.eventb.core.poSequent name="action_ticked/n_result/EQL" org.eventb.core.accurate="false" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="action_ticked/n_result/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contex\|"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="n_result{node ↦ SUCCESS}=n_result" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.event#_MxKDoveSEeypHJk8uzlOgw|org.eventb.core.action#_MxKDo_eSEeypHJk8uzlOgy"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#_08ybIvbDEeyQiudq0A8KKw"/>
@@ -313,7 +313,7 @@
         <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="node∈NODES" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#_080QW_bDEeyQiudq0A8KKw|org.eventb.core.guard#_080QYfbDEeyQiudq0A8KKw"/>
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="child∈{x⦂NODES·x∈parent∼[{node}]∧n_tick(x)=FALSE∧(∀y⦂NODES·y∈parent∼[{node}]∧n_tick(y)=FALSE∧n_id(y)≥n_id(x)) ∣ x}" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#_080QW_bDEeyQiudq0A8KKw|org.eventb.core.guard#_080QYvbDEeyQiudq0A8KKw"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="result_arrived/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="result_arrived/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contey."/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="time+1∈ℕ" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.invariant#_TSMkQveREeypHJk8uzlOg\|"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#_08zpV_bDEeyQiudq0A8KL3"/>
@@ -336,7 +336,7 @@
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="child∈{x⦂NODES·x∈parent∼[{node}]∧n_result(x)≠UNKNOWN ∣ x}" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.event#evt4|org.eventb.core.guard#."/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="n_result(child)≠UNKNOWN" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.event#evt4|org.eventb.core.guard#1"/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="tick_root/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="tick_root/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contey\/"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="time∈ℕ" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.invariant#_TSMkQveREeypHJk8uzlOh'"/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#evt1"/>
@@ -358,7 +358,7 @@
         <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="node=root" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.event#evt1|org.eventb.core.guard#2"/>
         <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="time&gt;prev_time" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.event#_TSMkQveREeypHJk8uzlOh(|org.eventb.core.guard#("/>
     </org.eventb.core.poPredicateSet>
-    <org.eventb.core.poSequent name="initial_tick/n_tick/EQL" org.eventb.core.accurate="false" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="2">
+    <org.eventb.core.poSequent name="initial_tick/n_tick/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="3">
         <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Behavior Trees/old_04_sequence_example_machine.bpo|org.eventb.core.poFile#old_04_sequence_example_machine|org.eventb.core.poPredicateSet#EVTALLHYPold_04_fallback_example_contey0"/>
         <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="n_tick{root ↦ TRUE}=n_tick" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.event#_TSMkQveREeypHJk8uzlOh)|org.eventb.core.action#("/>
         <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Behavior Trees/old_04_sequence_example_machine.bum|org.eventb.core.machineFile#old_04_sequence_example_machine|org.eventb.core.event#_TSMkQveREeypHJk8uzlOh)"/>

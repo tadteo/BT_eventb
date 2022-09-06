@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.scMachineFile org.eventb.core.accurate="false" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
     <org.eventb.core.scRefinesMachine name="'" org.eventb.core.scTarget="/Behavior Trees/old_02_tree_machine.bcm" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.refinesMachine#_08zpV_bDEeyQiudq0A8KL'"/>
+    <org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/Behavior Trees/old_03_BT_context.bcc" org.eventb.core.source="/Behavior Trees/old_03_BT_machine.bum|org.eventb.core.machineFile#old_03_BT_machine|org.eventb.core.seesContext#_08zpV_bDEeyQiudq0A8KKx"/>
     <org.eventb.core.scInternalContext name="old_01_node_context">
         <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(TYPE,{ROOT},{SEQUENCE},{FALLBACK},{CONDITION},{ACTION})" org.eventb.core.source="/Behavior Trees/old_01_node_context.buc|org.eventb.core.contextFile#old_01_node_context|org.eventb.core.axiom#_7VAvA_uFEeyPVKLglLdepw" org.eventb.core.theorem="false"/>
         <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="partition(RESULT,{RUNNING},{SUCCESS},{FAILURE},{UNKNOWN})" org.eventb.core.source="/Behavior Trees/old_01_node_context.buc|org.eventb.core.contextFile#old_01_node_context|org.eventb.core.axiom#_7VAvBPuFEeyPVKLglLdepw" org.eventb.core.theorem="false"/>
@@ -44,7 +45,9 @@
         <org.eventb.core.scConstant name="node_rel" org.eventb.core.source="/Behavior Trees/old_02_tree_context.buc|org.eventb.core.contextFile#old_02_tree_context|org.eventb.core.constant#1" org.eventb.core.type="ℙ(ℙ(NODES×NODES))"/>
         <org.eventb.core.scConstant name="tcl" org.eventb.core.source="/Behavior Trees/old_02_tree_context.buc|org.eventb.core.contextFile#old_02_tree_context|org.eventb.core.constant#2" org.eventb.core.type="ℙ(ℙ(NODES×NODES)×ℙ(NODES×NODES))"/>
     </org.eventb.core.scInternalContext>
-    <org.eventb.core.scSeesContext name="CSEES1" org.eventb.core.scTarget="/Behavior Trees/old_02_tree_context.bcc" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.seesContext#)"/>
+    <org.eventb.core.scInternalContext name="old_03_BT_context">
+        <org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Behavior Trees/old_02_tree_context.bcc|org.eventb.core.scContextFile#old_02_tree_context" org.eventb.core.source="/Behavior Trees/old_03_BT_context.buc|org.eventb.core.contextFile#old_03_BT_context|org.eventb.core.extendsContext#'"/>
+    </org.eventb.core.scInternalContext>
     <org.eventb.core.scInvariant name="old_01_node_contexu" org.eventb.core.label="inv1" org.eventb.core.predicate="n_tick∈NODES → BOOL" org.eventb.core.source="/Behavior Trees/old_01_node_machine.bum|org.eventb.core.machineFile#old_01_node_machine|org.eventb.core.invariant#_moHyJvIiEeyivrHAG4kxjG" org.eventb.core.theorem="false"/>
     <org.eventb.core.scInvariant name="old_01_node_contexv" org.eventb.core.label="inv2" org.eventb.core.predicate="n_result∈NODES → RESULT" org.eventb.core.source="/Behavior Trees/old_01_node_machine.bum|org.eventb.core.machineFile#old_01_node_machine|org.eventb.core.invariant#_moHyJvIiEeyivrHAG4kxjJ" org.eventb.core.theorem="false"/>
     <org.eventb.core.scInvariant name="old_02_tree_contexu" org.eventb.core.label="inv3" org.eventb.core.predicate="∀x⦂NODES,y⦂NODES·x∈NODES∧y∈NODES∧y∈parent∼[{y}]⇒x ↦ n_result(y)∈n_result" org.eventb.core.source="/Behavior Trees/old_02_tree_machine.bum|org.eventb.core.machineFile#old_02_tree_machine|org.eventb.core.invariant#evt5" org.eventb.core.theorem="false"/>
